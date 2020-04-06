@@ -17,8 +17,8 @@
                 <li class="nav-item dropdown active">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Areas</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        {% assign activities = site.pages | where: "layout", "wbs-area" | sort_natural: 'title' %}
-                        {% for mypage in activities %}
+                        {% assign areas = site.pages | where: "layout", "wbs-area" | sort_natural: 'wbs_no' %}
+                        {% for mypage in areas %}
                         <a class="dropdown-item" href="{{mypage.permalink}}">{{mypage.title}}</a>
                         {% endfor %}
                     </div>
