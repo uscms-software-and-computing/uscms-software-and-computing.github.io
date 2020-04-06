@@ -3,6 +3,11 @@
   {% include head.html %}
   <body>
     {% include navbar.html %}
+    <div class="jumbotron" style="background-image: url('{{page.bgimage}}')">
+      <div class="d-flex p-1 text-center">
+        <h1 class="p-1 display-1 bg-light">Hello, world!</h1>
+      </div>
+    </div>
     {{ content}}
 
   </body>
