@@ -7,4 +7,14 @@ short_title: Software
 pagetype: wbs-area
 ---
 
-Placeholder for wbs2
+## Overview
+The Software group supports production software to support the CMS experiment.
+
+## Software
+- CMSSW
+- FWLite
+- ROOT
+- WMAgent
+- glideinWMS
+- Ruccio
+- CMS Dataset Bookkeeping Service (DBS)
