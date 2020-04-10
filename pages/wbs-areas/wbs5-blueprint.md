@@ -7,4 +7,6 @@ short_title: Blueprint
 pagetype: wbs-area
 ---
 
-Placeholder for wbs5
+## Overview
+
+Coordinates forward looking discussions to help guide development and R&D for future work in U.S. CMS Software & Computing.

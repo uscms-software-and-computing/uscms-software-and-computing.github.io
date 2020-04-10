@@ -7,4 +7,8 @@ short_title: Operations
 pagetype: wbs-area
 ---
 
-Placeholder for wbs3
+## Overview
+
+Contribute to international CMS operations by providing leadership of the operations group that oversees the execution of production workflows on the distributed grid infrastructure.
+
+## CMS Submission Infrastructure and Factory Operations
