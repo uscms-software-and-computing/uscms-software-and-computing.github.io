@@ -4,22 +4,13 @@
   <body>
     {% include navbar.html %}
     <div id="container">
-      <div class="hero" >
-        <div class="container w-100 h-100">
-          <div class="row align-items-center h-100">
-            <div class="col-12">
-              <h1 class="text-center">U.S. CMS Software & Computing Operations Program</h1>
-            </div>
-          </div>
-        </div>
-        <div class="hero-back" style="background: url('{{page.bgimage}}')"></div>
-      </div>
     <div class="container"
       <main role="main">
-        {{ content}}
+        {{ content }}
       </main>
       </div>
     </div>
+    {% include footer.html %}
 
   </body>
 </html>
