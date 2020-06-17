@@ -8,8 +8,17 @@ pagetype: wbs-area
 ---
 
 ## Overview
+WBS 3 (Operations) oversees U.S. CMS contributions to the global operations of the CMS computing infrastructure.  This includes tasks such as the distribution of CMS software, operation and monitoring of the distributed database infrastructure, operation of the job submission infrastructure, operation of the Tier-0 facility at CERN, and support for global distributed computing site operations, data management, and production data processing.  The area also takes responsibility for acquiring additional computing resources at NSF- and DOE-funded HPC centers, and subsequently exploiting them through the Fermilab HEPCloud facility and monitoring their usage.
 
-Contribute to international CMS operations by providing leadership of the operations group that oversees the execution of production workflows on the distributed grid infrastructure.
 
-## CMS Submission Infrastructure and Factory Operations
-Operations will operate and maintain the Fermilab services in the Global Pool, ITB Pool, and CERN Pool systems.  This includes the glideinWMS and HTCondor services and ensuring high availability.  The team also operates and maintains the Fermilab CMS glideinWMS factory and support the factories at CERN.  
+
+Supported Services and Operations:
+   - Glide-in WMS Factory
+   - CVMFS and CMS software distribution
+   - Rucio Transfers and Monitoring
+   - CMS Global Pool
+   - Frontier & Squid
+   - The Tier-0 facility at CERN
+   - Computing operations on U.S. CMS sites
+   - CMS production data processing
+   - HPC resource utilization
