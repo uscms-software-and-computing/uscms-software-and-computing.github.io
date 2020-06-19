@@ -22,10 +22,10 @@ The Software group develops and supports software that enables CMS data processi
 * **2.1.7 HEPCloud/HPC** \[TBD, pending decision on whether to move this to WBS 4\]
 
 ### 2.2 Framework and Applications
-* 2.2.1 Framework
-* 2.2.2 FWLite
-* 2.2.3 Profiling
-* 2.2.4 ROOT
-* 2.2.5 Simulation Geometry
-* 2.2.6 Visualization
+* **2.2.1 Framework** CMSSW framework provides the ability to write reconstruction and analysis applications in a multi-threaded-capable environment with an improved efficiency. 
+* **2.2.2 FWLite** known as Framework-light enables users to write analysis code in ROOT sessions with CMS data formats and libraries available.
+* **2.2.3 Profiling** refers to the effort related to  profiling automation of the workflows in collaboration with the CMS Computing Modernization working group, and ensuring that CMSSW code is compliant with modern C++ standards, and can compile and run on advanced hardware with new architectures.
+* **2.2.4 ROOT** CMS uses ROOT to make data objects persistent. ROOT provides all the functionalities needed to deal with big data processing, statistical analysis, visualization and storage. 
+* **2.2.5 Simulation Geometry** corresponds to the detector geometry maintenance and upgrades to provide detector geometry information to the simulation and reconstruction applications of CMS. The most critical ongoing work is migration to DD4HEP for Run3.
+* **2.2.6 Visualization** project involves the development and maintenance and continued support of EVE for the ROOT community at large. Additionally, a web-based model of event visualization demonstrator is in the plans.
 * 2.2.7 Reconstruction
