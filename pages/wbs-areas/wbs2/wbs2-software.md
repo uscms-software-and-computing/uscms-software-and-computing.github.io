@@ -28,4 +28,3 @@ The Software group develops and supports software that enables CMS data processi
 * **2.2.4 ROOT** CMS uses ROOT to make data objects persistent. ROOT provides all the functionalities needed to deal with big data processing, statistical analysis, visualization and storage. 
 * **2.2.5 Simulation Geometry** corresponds to the detector geometry maintenance and upgrades to provide detector geometry information to the simulation and reconstruction applications of CMS. The most critical ongoing work is migration to DD4HEP for Run3.
 * **2.2.6 Visualization** project involves the development and maintenance and continued support of EVE for the ROOT community at large. Additionally, a web-based model of event visualization demonstrator is in the plans.
-* 2.2.7 Reconstruction
