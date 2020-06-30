@@ -5,6 +5,7 @@
 body {
   background: #FFF;
   padding-top: 90px;
+  height: 100vh;
 }
 
 .hero {
@@ -34,20 +35,27 @@ body {
   z-index: -100;
 }
 
+div#container {
+  padding-bottom: 8em;
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%; }
+
 /* Custom footer */
 
 .navbar-dark {
   @media (prefers-color-scheme: dark) {
-    @include gradient-x($black, $primary, 0%, 100%);
+    @include gradient-x($primary, $black, 0%, 100%);
   }
 }
 
 .footer-dark {
   @media not print {
-    @include gradient-x($navbar-dark-active-color, $primary, 0%, 100%);
+    @include gradient-x($primary, $navbar-dark-active-color, 0%, 100%);
   }
   @media (prefers-color-scheme: dark) {
-    @include gradient-x($black, $primary, 0%, 100%);
+    @include gradient-x($primary, $black, 0%, 100%);
   }
   border-top-color: 000c97;
 
