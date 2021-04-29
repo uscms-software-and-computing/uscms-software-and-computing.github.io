@@ -22,7 +22,7 @@ proposal: /assets/pdfs/tracking_gnns_cmsml_09302020.pdf
 presentations:
   - title: "GNNs for Tracking"
     date: 2020-09-30
-    url: https://indico.cern.ch/event/952419/contributions/4041556/attachments/2112096/3553019/tracking_gnns_cmsml_09302020.pdf
+    meetingurl: https://indico.cern.ch/event/952419/contributions/4041556/attachments/2112096/3553019/tracking_gnns_cmsml_09302020.pdf
     meeting: CMS Machine Learning Forum
     focus-area: WBS4
 ---
