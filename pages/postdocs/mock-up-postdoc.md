@@ -1,5 +1,5 @@
 ---
-permalink: /postdocs/savvy379.html
+permalink: /postdocs/mock-up-postdoc.html
 layout: postdoc
 pagetype: postdoc
 active: true
