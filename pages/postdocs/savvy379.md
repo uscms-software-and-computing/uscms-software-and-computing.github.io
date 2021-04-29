@@ -18,7 +18,7 @@ mentors:
   - Brian Bockelman (Morgridge Institute)
 project_goal: >
   AI Tracking
-proposal: /assets/pdf/test_presentation.pdf
+proposal: /assets/pdfs/tracking_gnns_cmsml_09302020.pdf
 presentations:
   - title: "GNNs for Tracking"
     date: 2020-09-30
