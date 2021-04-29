@@ -1,10 +1,10 @@
 ---
-permalink: /postdocs/zche.html
+permalink: /postdocs/savvy379.html
 layout: postdoc
 pagetype: postdoc
 active: true
 title: Post-doctoral researcher
-fellow-name: Savannah Thais
+postdoc-name: Savannah Thais
 shortname: savvy379
 project_title: Demo Track Multiplicities and Pileup Scenarios GNNs on FPGAs (Postdoc)
 dates:
