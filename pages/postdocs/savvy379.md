@@ -20,9 +20,10 @@ project_goal: >
   AI Tracking
 proposal: /assets/pdfs/tracking_gnns_cmsml_09302020.pdf
 presentations:
-  - title: "GNNs for Tracking"
+  - title: "Charged Particle Tracking using GNN"
     date: 2020-09-30
-    meetingurl: https://indico.cern.ch/event/952419/contributions/4041556/attachments/2112096/3553019/tracking_gnns_cmsml_09302020.pdf
+    url: https://indico.cern.ch/event/952419/contributions/4041556/attachments/2112096/3553019/tracking_gnns_cmsml_09302020.pdf
     meeting: CMS Machine Learning Forum
+    meetingurl: https://indico.cern.ch/event/952419/
     focus-area: WBS4
 ---
