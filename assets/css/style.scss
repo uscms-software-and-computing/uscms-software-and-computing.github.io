@@ -1,6 +1,9 @@
 ---
 ---
-@import 'bootstrap/bootstrap';
+
+@import "functions";
+@import "variables";
+@import "mixins";
 
 body {
   background: #FFF;
