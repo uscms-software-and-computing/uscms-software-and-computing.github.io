@@ -1,0 +1,153 @@
+<!doctype html>
+
+<body>
+<html lang="en-US">
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>HL-LHC R&D - US CMS Software and Computing</title>
+<link rel="stylesheet" href="/assets/css/bootstrap.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+
+    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span><img height="64" src="/assets/logos/USCMS_SC_logo.png" alt="USCMS Software and Computing"></span>
+          U.S. CMS Software and Computing
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/about/overview">Overview</a>
+                        <a class="dropdown-item" href="/about/orgranization">Organization</a>
+                        <a class="dropdown-item" href="/docs">Documentation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Areas</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        
+                        
+                        <a class="dropdown-item" href="/wbs1-facilities.html">Facilities</a>
+                        
+                        <a class="dropdown-item" href="/wbs2-software.html">Software</a>
+                        
+                        <a class="dropdown-item" href="/wbs3-operations.html">Operations</a>
+                        
+                        <a class="dropdown-item" href="/wbs4-facilities.html">HL-LHC R&D</a>
+                        
+                        <a class="dropdown-item" href="/wbs5-blueprint.html">Blueprint</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+
+<div id="container">
+  <div class="container">
+    <main role="main">
+
+      <div class="container">
+        <br>
+        <center><h1>HL-LHC R&D</h1></center>
+
+        <h2 id="overview">Overview</h2>
+
+<p>The HL-LHC area coordinates the centralized R&amp;D effort for tackling the challenges in computing, data, and analysis during the HL-LHC era.  We see the HL-LHC challenges as the following:</p>
+<ul>
+  <li>Reduce the resources required (such as CPU and disk) by the HL-LHC physics program to levels seen as supportable.</li>
+  <li>Enable analysis of much larger datasets as existing tools are not seen to scale up with the event count.</li>
+  <li>Grow our pool of resources by more efficiently using owned resources, leveraging new resource types (accelerators), and using new resources such as HPC centers.</li>
+</ul>
+
+<p>This R&amp;D area is organized into three sub-areas:</p>
+
+<ul>
+  <li><em>Analysis systems</em>: developing new facilities and approaches for analysis during the HL-LHC era.</li>
+  <li><em>Production infrastructure research</em>: evolving the existing grid infrastructure and systems to meet the challenges of HL-LHC.</li>
+  <li><em>Physics algorithms and tools</em>: provide infrastructure and software to address the issues related to code performance in order to reduce computational needs for HL-LHC.</li>
+</ul>
+
+<p>The area consists of software professionals and postdocs working on targeted year-long projects; there are significant collaborations with other projects and entities such as <a href="https://iris-hep.org">IRIS-HEP</a>, <a href="www.opensciencegrid.org">Open Science Grid</a>, <a href="https://hepcce.org/">HEP-CCE</a>, <a href="http://es.net/">ESNet</a>, and <a href="https://slateci.io/">SLATE</a>.</p>
+
+<h2 id="project-organization">Project Organization</h2>
+
+<p>The detailed area organization is:</p>
+<ul>
+  <li><em>Analysis Systems</em>: Develop tools and analysis systems for HEP that enable both innovation and the adoption of “industry standard” analytic techniques. Enable rapid interactive analysis of PB datasets.
+    <ul>
+      <li><em>Tools for Advanced Analysis</em> Provide interfaces and infrastructure to adapt HEP data in order to enable rapid analysis; projects include investments into columnar data such as <a href="https://github.com/scikit-hep/awkward-1.0#readme">Awkward Array</a>.</li>
+      <li><em>Analysis Facilities</em>.  Prototype and put into production the infrastructure required for a multi-user analysis facility exploiting the newly-developed analysis tools.</li>
+    </ul>
+  </li>
+  <li><em>Computing and Software Infrastructure</em>: Explore, evaluate, prototype, and build the infrastructure necessary for HL-LHC computing.
+    <ul>
+      <li><em>Storage</em>: Evaluate storage technologies for performance; update data formats and data-handling for efficient use and rapid transfer.</li>
+      <li><em>Provisioning of Compute Services</em>: Simplify and automate the deployment of computing services through tools like Kubernetes.</li>
+      <li><em>HPC Integration &amp; Development</em>: Develop workflow infrastructure to allow efficient use of LCF HPCs.</li>
+      <li><em>Workflow Development</em>: Research/prototype alternatives to bespoke CMS workflow management.</li>
+      <li><em>AI/ML Infrastructure</em>: Evaluate and construct methods of integrating AI training workflows for rapid development.</li>
+    </ul>
+  </li>
+  <li><em>Physics Algorithms</em>: Provide infrastructure and software to address the issues related to code performance in order to reduce computational needs for HL-LHC.
+    <ul>
+      <li><em>Adaptation for heterogeneous architectures</em>: Convert or extend existing algorithms to run on accelerators.</li>
+      <li><em>Algorithm Development</em>: R&amp;D into new algorithms, including those based on Machine Learning, that promise dramatic increases in processing speed.</li>
+    </ul>
+  </li>
+</ul>
+
+
+      </div>
+    </main>
+  </div>
+
+      <footer>
+  <div class="footer-dark">
+    <div class="container">
+      <div class="d-flex flex-row">
+        <div class="footer-vertical-center">
+          <div class="footer-logos">
+            <div class="footer-logo">
+              <img src="/assets/logos/USCMS_SC_logo.png" alt="USCMS logo">
+            </div>
+            <div class="footer-logo">
+              <img src="/assets/logos/doe.png" alt="DOE logo">
+            </div>
+            <div class="footer-logo">
+              <img src="/assets/logos/nsf-logo-128.png" alt="NSF logo">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-text p-2 ml-auto flex-grow-1 footer-vertical-center">
+
+        </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
