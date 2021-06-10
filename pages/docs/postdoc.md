@@ -10,7 +10,7 @@ pagetype: doc
 #### US CMS S&C website
 You should submit a pull request with the photo, a markdown file with the summary information above, and your proposal to this repo:
 
-https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io
+<https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io>
 
 * Add a photo named `First-Last.jpg` or `.png` to the [assets/images/team folder](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/assets/images/team). It should be 320x240 pixels.
 * Add a "`<your github username>.md`" file to the [fellows folder in the website repository](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/pages/postdocs). Here is an example:
