@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Information to add or update postdoc page - US CMS Software and Computing</title>
+<link rel="stylesheet" href="/assets/css/bootstrap.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span><img height="64" src="/assets/logos/USCMS_SC_logo.png" alt="USCMS Software and Computing"></span>
+          U.S. CMS Software and Computing
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/about/overview">Overview</a>
+                        <a class="dropdown-item" href="/about/orgranization">Organization</a>
+                        <a class="dropdown-item" href="/docs">Documentation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Areas</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        
+                        
+                        <a class="dropdown-item" href="/wbs1-facilities.html">Facilities</a>
+                        
+                        <a class="dropdown-item" href="/wbs2-software.html">Software</a>
+                        
+                        <a class="dropdown-item" href="/wbs3-operations.html">Operations</a>
+                        
+                        <a class="dropdown-item" href="/wbs4-facilities.html">HL-LHC R&D</a>
+                        
+                        <a class="dropdown-item" href="/wbs5-blueprint.html">Blueprint</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div id="container">
+      <div class="container">
+        <main role="main">
+
+          <div class="container">
+
+            <h3 id="adding-a-new-fellow-page">Adding a New Fellow Page</h3>
+
+<h4 id="us-cms-sc-website">US CMS S&amp;C website</h4>
+<p>You should submit a pull request with the photo, a markdown file with the summary information above, and your proposal to this repo:</p>
+
+<p>https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io</p>
+
+<ul>
+  <li>Add a photo named <code class="language-plaintext highlighter-rouge">First-Last.jpg</code> or <code class="language-plaintext highlighter-rouge">.png</code> to the <a href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/assets/images/team">assets/images/team folder</a>. It should be 320x240 pixels.</li>
+  <li>Add a “<code class="language-plaintext highlighter-rouge">&lt;your github username&gt;.md</code>” file to the <a href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/pages/postdocs">fellows folder in the website repository</a>. Here is an example:</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">postdoc</span>
+<span class="na">pagetype</span><span class="pi">:</span> <span class="s">postdoc</span>
+<span class="na">shortname</span><span class="pi">:</span> <span class="s">&lt;your GitHub user id&gt;</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/postdocs/&lt;your GitHub user id&gt;.html</span>
+<span class="na">postdoc-name</span><span class="pi">:</span> <span class="s">&lt;Your Name&gt;</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Post-doctoral researcher</span>
+<span class="na">active</span><span class="pi">:</span> <span class="s">True</span>
+<span class="na">dates</span><span class="pi">:</span>
+  <span class="na">start</span><span class="pi">:</span> <span class="s">&lt;start date&gt;</span>
+  <span class="na">end</span><span class="pi">:</span> <span class="s">&lt;end date&gt;</span>
+<span class="na">photo</span><span class="pi">:</span> <span class="s">/assets/images/team/&lt;First name&gt;-&lt;Last name&gt;.jpg</span>
+<span class="na">institution</span><span class="pi">:</span> <span class="s">&lt;Your institution&gt;</span>
+<span class="na">e-mail</span><span class="pi">:</span> <span class="s">&lt;Your email&gt;</span>
+<span class="na">project_title</span><span class="pi">:</span> <span class="s">&lt;Project title&gt;</span>
+<span class="na">project_goal</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">Short descrition of your project</span>
+<span class="na">mentors</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">&lt;Mentor Name - (&lt;Mentor Institution&gt;)&gt;</span>
+
+<span class="na">proposal</span><span class="pi">:</span> <span class="s">/assets/pdf/Fellow-&lt;First name&gt;-&lt;Last name&gt;-Proposal.pdf</span>
+<span class="na">presentations</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;Presentation</span><span class="nv"> </span><span class="s">Title"</span>
+    <span class="na">date</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Presentation</span><span class="nv"> </span><span class="s">Date"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">&lt;Presentation materials link&gt;</span>
+    <span class="na">meeting</span><span class="pi">:</span> <span class="s">&lt;Meeting name&gt;</span>
+    <span class="na">meetingurl</span><span class="pi">:</span> <span class="s">&lt;Meeting url - indico link, etc.&gt;</span>
+    <span class="na">recordingurl</span><span class="pi">:</span> <span class="s">&lt;Recording url&gt; (Optional)</span>
+    <span class="na">focus-area</span><span class="pi">:</span> <span class="s">&lt;Focus Area - ia,ssl,ssc,doma,as,osglhc&gt;</span>
+<span class="na">current_status</span><span class="pi">:</span> <span class="pi">&gt;</span>
+  <span class="s">A placeholder for status updates</span>
+<span class="s">---</span>
+</code></pre></div></div>
+
+<h3 id="dates">Dates</h3>
+<p>Date format for start and end dates should be – YYYY-MM-DD – i.e. 2021-12-31</p>
+
+<h3 id="presentations">Presentations</h3>
+
+<p>The meaning of the fields is the following:</p>
+
+<ul>
+  <li>title - the title of the talk: you made need to place it in double quotes, if certain characters like a colon (“:”) are included in the title</li>
+  <li>date - the date on which the presentation was made, in the numeric format “YYYY-MM-DD”</li>
+  <li>url - this should be a direct URL to the presentation file (e.g. pdf)</li>
+  <li>meeting - the name of the meeting</li>
+  <li>meetingurl - the URL for the meeting in which the presentation was made</li>
+  <li>focus-area - optionally list the relevant focus area for this presentation, using its short name, i.e. one of [ia,ssl,ssc,doma,as,osglhc]. Must be a yaml list if more than one is present.</li>
+</ul>
+
+          </div>
+        </main>
+      </div>
+
+          <footer>
+  <div class="footer-dark">
+    <div class="container">
+      <div class="d-flex flex-row">
+        <div class="footer-vertical-center">
+          <div class="footer-logos">
+            <div class="footer-logo">
+              <img src="/assets/logos/USCMS_SC_logo.png" alt="USCMS logo">
+            </div>
+            <div class="footer-logo">
+              <img src="/assets/logos/doe.png" alt="DOE logo">
+            </div>
+            <div class="footer-logo">
+              <img src="/assets/logos/nsf-logo-128.png" alt="NSF logo">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-text p-2 ml-auto flex-grow-1 footer-vertical-center">
+
+        </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+    </div>
+  </body>
+</html>
