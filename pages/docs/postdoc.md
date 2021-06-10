@@ -32,11 +32,12 @@ institution: <Your institution>
 e-mail: <Your email>
 project_title: <Project title>
 project_goal: >
-    Short descrition of your project
+    Short descrition of your project, 1-2 sentences
 mentors:
   - <Mentor Name - (<Mentor Institution>)>
 
-proposal: /assets/pdf/Fellow-<First name>-<Last name>-Proposal.pdf
+proposal: >
+    Long description of proposal, including milestones as lists without due dates
 presentations:
   - title: "<Presentation Title"
     date: "Presentation Date"
@@ -44,7 +45,6 @@ presentations:
     meeting: <Meeting name>
     meetingurl: <Meeting url - indico link, etc.>
     recordingurl: <Recording url> (Optional)
-    focus-area: <Focus Area - ia,ssl,ssc,doma,as,osglhc>
 current_status: >
   A placeholder for status updates
 ---
@@ -62,4 +62,3 @@ The meaning of the fields is the following:
   * url - this should be a direct URL to the presentation file (e.g. pdf)
   * meeting - the name of the meeting
   * meetingurl - the URL for the meeting in which the presentation was made
-  * focus-area - optionally list the relevant focus area for this presentation, using its short name, i.e. one of [ia,ssl,ssc,doma,as,osglhc]. Must be a yaml list if more than one is present.
