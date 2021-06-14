@@ -56,8 +56,6 @@ jobs:
           enable_cache: true
 
       - name: GitHub Pages action
-        run: |
-          echo ${{github.event_name}}
         if: success() success() && github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
