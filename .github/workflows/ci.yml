@@ -1,0 +1,34 @@
+name: Test and Build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup NodeJS 14
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+
+      - name: Install apt requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install libxslt-dev libxml2-dev
+          gem install bundler
+        
+      - name: Bundle install
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+        env:
+          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
