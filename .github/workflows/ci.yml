@@ -56,6 +56,8 @@ jobs:
           enable_cache: true
 
       - name: GitHub Pages action
+        run: |
+          echo ${{github.event_name}}
         if: >
           success()
           && github.ref == 'refs/heads/master'
