@@ -1,5 +1,5 @@
 ---
-permalink: /postdocs/mock-up-postdoc.html
+permalink: /postdocs/janFSchulte.html
 layout: postdoc
 pagetype: postdoc
 active: true
