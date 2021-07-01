@@ -27,7 +27,7 @@ A few sentences about the Program
          <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
          <div class="card-body d-flex flex-column">
            <div class="card-text">
-              <b><a href="{{person.permalink}}">{{person.fellow-name}}</a></b><br>
+              <b><a href="{{person.permalink}}">{{person.postdoc-name}}</a></b><br>
               <small>{{person.institution}}</small><br><br>
            </div>
            <div class="card-text mt-auto"><i>
