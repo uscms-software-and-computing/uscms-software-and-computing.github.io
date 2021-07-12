@@ -17,7 +17,7 @@ e-mail: mark.douglas.saunders@cern.ch
 mentors:
   - Kenichi Hatakeyama (Baylor University) 
 project_goal: >
-  Particle flow reconstruction using heterogenous computing
+  Develop heteogeneous Particle Flow (PF) reconstruction for the CMS Phase 2 detector, including the new detector elements. With expected significantly increased nteraction rates, we need a computationally efficient PF reconstruction algorithm to process events with a sufficient rate. Therefore, another main goal of this proposal is to update the time consuming parts of PF reconstruction to parallel-processing -friendly algorithms that run on heterogeneous computing resources.
 proposal: 
 presentations:
   - title: "PFClustering on GPUs"
