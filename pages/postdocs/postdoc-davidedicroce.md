@@ -17,7 +17,7 @@ e-mail: davide.di.croce@cern.ch
 mentors:
   - Sergei Gleyzer (The University of Alabama)
 project_goal: >
-  ML Reconstruction
+  Integration of innovative machine learning algorithms (end-to-end deep learning) into the CMS reconstruction code, leveraging heterogenous computing and hardware acceleration devices. Development of end-to-end (E2E) benchmarks, first integration of the end-to-end framework into CMS production code, and scaling studies of deep learning training and inference on heterogeneous computing devices. The new proposal extends this effort to novel E2E architectures, including graph neural networks, additional E2E reconstruction targets such as tau reconstruction and further E2E integration into CMS code.
 proposal: /assets/pdfs/USCMS_DavideDiCroce.pdf
 presentations:
   - title: "Accelerating End-to-End Deep Learning for Particle Reconstruction using CMS open data"
