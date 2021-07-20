@@ -21,11 +21,11 @@ project_goal: >
 explore physics at the High Luminosity LHC.
 proposal: /assets/pdfs/Thais_Proposal_For_Accelerators_USCMS_2021_Final.pdf
 presentations:
-  - title: "Accelerating Track Reconstruction at CMS Using FPGA Co-Processors"
-    date: 2020-09-30
-    url: /assets/pdfs/tracking_gnns_cmsml_09302020.pdf
-    meeting: CMS ML Forum
-    meetingurl: 
-    record: 
-    focus-area: Artificial Intelligence
+- title: "Accelerating Track Reconstruction at CMS Using FPGA Co-Processors"
+  date: 2020-09-30
+  url: /assets/pdfs/tracking_gnns_cmsml_09302020.pdf
+  meeting: CMS ML Forum
+  meetingurl: 
+  record: 
+  focus-area: Artificial Intelligence
 ---
