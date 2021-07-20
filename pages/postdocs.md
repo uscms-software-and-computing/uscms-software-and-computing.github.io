@@ -28,7 +28,8 @@ The Software and Computing Research Initiative provides partial funding for phys
          <div class="card-body d-flex flex-column">
            <div class="card-text">
               <b><a href="{{person.permalink}}">{{person.postdoc-name}}</a></b><br>
-              <small>{{person.institution}}</small><br><br>
+              <small>{{person.institution}}</small><br>
+              <small>{{person.project_title}}</small><br><br>
            </div>
            <div class="card-text mt-auto"><i>
              {% include postdoc_dates.html dates=person.dates %}
