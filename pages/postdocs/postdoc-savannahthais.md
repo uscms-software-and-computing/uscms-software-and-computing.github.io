@@ -17,8 +17,7 @@ e-mail: sthais@princeton.edu
 mentors:
   - Isobel Ojalvo (Princeton University)
 project_goal: >
-  This proposal is to conduct research in accelerating track reconstruction with the CMS detector using FPGA co-processors. Track finding and fitting is one of the most computationally challenging problems for event reconstruction in particle physics. Advanced Machine Learning (ML) poses as an exciting solution to the issue of algorithm scalability as many ML algorithms are expected to scale linearly with detector occupancy. The objective is to explore new methods and architectures for track reconstruction using Graph Neural Networks which will allow us to fully
-explore physics at the High Luminosity LHC.
+  This proposal is to conduct research in accelerating track reconstruction with the CMS detector using FPGA co-processors. Track finding and fitting is one of the most computationally challenging problems for event reconstruction in particle physics. Advanced Machine Learning (ML) poses as an exciting solution to the issue of algorithm scalability as many ML algorithms are expected to scale linearly with detector occupancy. The objective is to explore new methods and architectures for track reconstruction using Graph Neural Networks which will allow us to fully explore physics at the High Luminosity LHC.
 proposal: /assets/pdfs/Thais_Proposal_For_Accelerators_USCMS_2021_Final.pdf
 presentations:
 - title: "Accelerating Track Reconstruction at CMS Using FPGA Co-Processors"
