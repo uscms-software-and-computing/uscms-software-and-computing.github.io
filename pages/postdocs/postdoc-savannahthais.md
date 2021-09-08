@@ -6,7 +6,7 @@ active: true
 title: Post-doctoral researcher
 postdoc-name: Savannah Thais
 shortname: sthais
-project_title: GNN Track Reconstruction on FPGAs Accelerators at CMS (Postdoc)
+project_title: GNN Track Reconstruction on FPGAs Accelerators at CMS
 dates:
   start: 2020-09-01
   end: 2022-09-01
