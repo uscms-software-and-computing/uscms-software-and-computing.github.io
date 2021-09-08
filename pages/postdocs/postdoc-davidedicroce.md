@@ -6,7 +6,7 @@ active: true
 title: Post-doctoral researcher
 postdoc-name: Di Croce Davide
 shortname: ddicroce
-project_title: Accelerating Machine Learning Reconstruction in CMS (Postdoc)
+project_title: Accelerating Machine Learning Reconstruction in CMS
 dates:
   start: 2020-09-01
   end: 2022-09-01
