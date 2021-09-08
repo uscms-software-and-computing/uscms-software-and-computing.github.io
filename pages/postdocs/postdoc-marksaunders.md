@@ -6,7 +6,7 @@ active: true
 title: Post-doctoral researcher
 postdoc-name: Mark Saunders
 shortname: msaunder
-project_title: Heterogenous Particle Flow Reconstruction (Postdoc)
+project_title: Heterogenous Particle Flow Reconstruction
 dates:
   start: 2021-02-01
   end: 2023-02-01
