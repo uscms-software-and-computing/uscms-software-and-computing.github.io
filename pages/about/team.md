@@ -1,5 +1,5 @@
 ---
-permalink: /about/team_wbs.html
+permalink: /about/team.html
 layout: people
 title: US CMS S&C Team
 ---
