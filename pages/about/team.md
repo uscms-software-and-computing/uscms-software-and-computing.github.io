@@ -20,6 +20,6 @@ title: US CMS S&C Team
       {% for person in members %}
         {% include standard_person_card.md person=person %}
       {% endfor %}
-    {% endfor %}
+    {% endfor %} 
   </div>
 </div>
