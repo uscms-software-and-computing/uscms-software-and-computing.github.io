@@ -6,7 +6,7 @@ active: true
 title: Post-doctoral researcher
 postdoc-name: Jan-Frederik Schulte
 shortname: janfschulte
-project_title: Accelerating muon reconstruction in the CMS HLT using GPUs (Postdoc)
+project_title: Accelerating muon reconstruction in the CMS HLT using GPUs
 dates:
   start: 2021-01-01
   end: 2022-01-01
