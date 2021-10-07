@@ -6,7 +6,7 @@ active: true
 title: Post-doctoral researcher
 postdoc-name: Carlos Erice Cid
 shortname: cericeci
-project_title:  (Postdoc)
+project_title: Accelerating Pixel Unpacking and Vertex Reconstruction with GPUs
 dates:
   start: 2021-10-01
   end: 2022-10-01
