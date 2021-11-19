@@ -13,6 +13,7 @@ You should submit a pull request with the photo, a markdown file with the summar
 <https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io>
 
 * Add a photo named `First-Last.jpg` or `.png` to the [assets/images/team folder](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/assets/images/team). It should be 320x240 pixels.
+* Add a pdf of your proposal named `First-Last.pdf` to the [assets/pdfs folder](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/assets/pdfs).
 * Add a "`<your github username>.md`" file to the [fellows folder in the website repository](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/pages/postdocs). Here is an example:
 
 ```yml
@@ -36,8 +37,7 @@ project_goal: >
 mentors:
   - <Mentor Name - (<Mentor Institution>)>
 
-proposal: >
-    Long description of proposal, including milestones as lists without due dates
+proposal: /assets/pdfs/<First name>-<Last name>.pdf
 presentations:
   - title: "<Presentation Title"
     date: "Presentation Date"
