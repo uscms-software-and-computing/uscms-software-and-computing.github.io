@@ -1,3 +1,4 @@
+---
 layout: postdoc
 pagetype: postdoc
 shortname: mcremone
@@ -15,4 +16,5 @@ project_title: Cost-Benefit Analysis of Stategies for Using GPUs
 project_goal: >
     The goal of the project is to evaluate pros and cons of different strategies for using hardware accelerators, more specifically GPUs, to address the computing challenges of the HL-LHC.
 mentors:
-  - <Kevin Lannon - (University	of Notre Dame)>
+  - Kevin Lannon - (University	of Notre Dame)
+ ---
