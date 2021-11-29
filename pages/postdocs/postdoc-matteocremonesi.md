@@ -9,7 +9,7 @@ active: True
 dates:
   start: 2021-07-01
   end: 2021-06-30
-photo: /assets/images/team/Matteo-Cremonesi.jpg
+photo: /assets/images/team/Matteo_Cremonesi.jpg
 institution: University of Notre Dame
 e-mail: mcremone@nd.edu
 project_title: Cost-Benefit Analysis of Strategies for Using GPUs
