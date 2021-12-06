@@ -17,5 +17,5 @@ mentors:
   - Kevin Lannon - (University	of Notre Dame)
 project_goal: >
   The goal of the project is to evaluate pros and cons of different strategies for using hardware accelerators, more specifically GPUs, to address the computing challenges of the HL-LHC.
-proposal:
+proposal: /assets/pdfs/cremonesi_notre_dame_proposal_2020.pdf
 ---
