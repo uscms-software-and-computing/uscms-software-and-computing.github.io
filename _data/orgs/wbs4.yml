@@ -1,7 +1,8 @@
 Name: HL-LHC R&D
 wbs_no: 4
 personnel:
-  - b_bockelman
   - m_hildreth
+  - l_gray
   - dsperka
   - burt
+  - dlange
