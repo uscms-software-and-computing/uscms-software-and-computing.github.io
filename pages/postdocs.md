@@ -23,7 +23,7 @@ The Software and Computing Research Initiative provides partial funding for phys
 <div class="container-fluid">
   <div class="row">
     {% for person in postdocs %}
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 14rem;">
          <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
          <div class="card-body d-flex flex-column">
            <div class="card-text">
