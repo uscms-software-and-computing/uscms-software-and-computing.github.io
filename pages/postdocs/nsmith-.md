@@ -22,6 +22,13 @@ mentors:
 
 proposal: /assets/pdfs/Jayatilaka_USCMSpostdoc_proposal.pdf
 presentations:
+  - title: "Object Stores for CMS data"
+    date: 2022-02-22
+    url: https://indico.cern.ch/event/1131679/contributions/4748741/attachments/2396026/4096861/ncsmith-uscms-objectstores.pdf
+    meeting: HL-LHC R&D Initiative Meeting
+    meetingurl: https://indico.cern.ch/event/1131679/
+    record: 
+    focus-area: Storage
 current_status: >
-  In planning
+  In progress
 ---
