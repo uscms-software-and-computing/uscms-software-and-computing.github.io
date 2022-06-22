@@ -1,13 +1,13 @@
 ---
-permalink: /postdocs.html
+permalink: /fellows.html
 layout: default
-title: US CMS S&C Research Initiative
+title: US CMS S&C Research Fellows
 ---
 
-# U.S. CMS Software and Computing Research Initiative
+# U.S. CMS Software & Computing Fellows
 
 
-The Software and Computing Research Initiative provides partial funding for physicists working in areas where R&D are needed to meet the goals of Software and Computing for the HL-LHC. Projects span the different R&D focus areas, including advanced algorithms, analysis systems, and underlying infrastructure.  The overall goal is to make computation of all types feasible and efficient at HL-LHC scale.
+The Software and Computing Research Initiative provides funding for undergraduate students in various research areas.
 
 {% assign fellows = site.pages | where: "pagetype", "fellow"
                                | last_name_sort: "fellow-name"
@@ -18,7 +18,7 @@ The Software and Computing Research Initiative provides partial funding for phys
 {% assign inactive-postdocs = fellows | reject: "active" %}
 
 
-# Current U.S. CMS Post Doctoral Researchers
+# Current Fellows
 
 <div class="container-fluid">
   <div class="row">
