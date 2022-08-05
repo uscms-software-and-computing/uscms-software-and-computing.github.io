@@ -9,3 +9,4 @@ title: "Documentation for USCMS S&C website"
 * [Adding a new page](/docs/add_new)
 * [Perfoming a pull request](/docs/pull_request)
 * [Adding a postdoc page](/docs/postdoc)
+* [Adding an intern page](/docs/intern)
