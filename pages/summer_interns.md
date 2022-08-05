@@ -1,10 +1,10 @@
 ---
-permalink: /summer_interns.html
+permalink: /interns.html
 layout: default
-title: US CMS S&C Research Summer Interns
+title: US CMS S&C Research Interns
 ---
 
-# U.S. CMS Software & Computing Summer Interns
+# U.S. CMS Software & Computing Interns
 
 
 The Software and Computing Research Initiative provides funding for undergraduate students in various research areas.
