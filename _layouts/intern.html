@@ -13,8 +13,8 @@
           <img src="{{page.photo}}" width="150px">
           <br>
           <br>
-          <b> Fellowship dates: </b>
-          {% include fellow_dates.html dates=page.dates %}
+          <b> Internship dates: </b>
+          {% include postdoc_dates.html dates=page.dates %}
           <br>
           <b> Home Institution:</b> {{ page.institution }}
           <br>
@@ -54,7 +54,7 @@
         <ul>
           {% for presentation in page.presentations %}
             {% assign prettydate = presentation.date | date: "%-d %b %Y" %}
-            <li>{{prettydate}} - <a href="{{presentation.url}}">"{{presentation.title}}"</a>, {{page.fellow-name}}, <a href="{{presentation.meetingurl}}">{{presentation.meeting}}</a>
+            <li>{{prettydate}} - <a href="{{presentation.url}}">"{{presentation.title}}"</a>, {{page.intern-name}}, <a href="{{presentation.meetingurl}}">{{presentation.meeting}}</a>
             {% if presentation.recordingurl %}
               Recording: <a href="{{presentation.recordingurl}}">{{presentation.title}}</a></li>
             {% endif %}
