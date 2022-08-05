@@ -18,7 +18,7 @@ You should submit a pull request with the photo, a markdown file with the summar
 * Add a pdf of your proposal named `First-Last.pdf` to the [assets/pdfs folder](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/assets/pdfs).
 * Add a "`<your github username>.md`" file to the [interns folder in the website repository](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/tree/master/pages/interns). Here is an example:
 
-*Please Note*:  In the markdown file you create, ensure you set the “active” attribute to True – (i.e.  active: True).  Otherwise, your entry will not appear on our Fellows page.
+*Please Note*:  In the markdown file you create, ensure you set the “active” attribute to True – (i.e.  active: True).  Otherwise, your entry will not appear on our Interns page.
 
 Be sure to include your project summary in the project_goal field.
 
@@ -30,8 +30,8 @@ You can leave the “presentations” and “current_status” fields blank for 
 layout: intern
 pagetype: intern
 shortname: <your GitHub user id>
-permalink: /fellows/<your GitHub user id>.html
-fellow-name: <Your Name>
+permalink: /interns/<your GitHub user id>.html
+intern-name: <Your Name>
 title: <Your Name> - USCMS S&C Intern
 active: True
 dates:
