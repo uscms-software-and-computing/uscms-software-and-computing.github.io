@@ -22,7 +22,30 @@ The Software and Computing Research Initiative provides partial funding for phys
 
 <div class="container-fluid">
   <div class="row">
-    {% for person in postdocs %}
+    {% for person in active-postdocs %}
+      <div class="card" style="width: 14rem;">
+         <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
+         <div class="card-body d-flex flex-column">
+           <div class="card-text">
+              <b><a href="{{person.permalink}}">{{person.postdoc-name}}</a></b><br>
+              <small>{{person.institution}}</small><br><br>
+              <small><b>{{person.project_title}}</b></small><br><br>
+           </div>
+           <div class="card-text mt-auto"><i>
+             {% include postdoc_dates.html dates=person.dates %}
+           </i><br></div>
+         </div>
+      </div>
+    {% endfor %}
+  </div>
+  <br>
+</div>
+
+# Former U.S. CMS Post Doctoral Researchers
+
+<div class="container-fluid">
+  <div class="row">
+    {% for person in inactive-postdocs %}
       <div class="card" style="width: 14rem;">
          <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
          <div class="card-body d-flex flex-column">
