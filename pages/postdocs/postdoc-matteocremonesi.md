@@ -5,7 +5,7 @@ shortname: mcremone
 permalink: /postdocs/postdoc-matteocremonesi.html
 postdoc-name: Matteo Cremonesi
 title: Research Associate
-active: True
+active: false
 dates:
   start: 2021-07-01
   end: 2021-06-30
