@@ -2,7 +2,7 @@
 permalink: /postdocs/postdoc-savannahthais.html
 layout: postdoc
 pagetype: postdoc
-active: true
+active: false
 title: Post-doctoral researcher
 postdoc-name: Savannah Thais
 shortname: sthais
@@ -27,4 +27,6 @@ presentations:
   meetingurl: 
   record: 
   focus-area: Artificial Intelligence
+current_status: >
+  September 2022 - Columbia University
 ---
