@@ -2,7 +2,7 @@
 permalink: /postdocs/postdoc-davidedicroce.html
 layout: postdoc
 pagetype: postdoc
-active: true
+active: false
 title: Post-doctoral researcher
 postdoc-name: Di Croce Davide
 shortname: ddicroce
@@ -27,4 +27,6 @@ presentations:
     meetingurl: https://indico.cern.ch/event/948465/
     record: https://cds.cern.ch/record/2767065
     focus-area: Artificial Intelligence
+current_status: >
+  Postdoctoral Researcher at EPFL
 ---
