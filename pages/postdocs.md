@@ -4,6 +4,7 @@ layout: default
 title: US CMS S&C Research Initiative
 ---
 
+
 # U.S. CMS Software and Computing Research Initiative
 
 The Software and Computing Research Initiative provides partial funding for physicists working in areas where R&D are needed to meet the goals of Software and Computing for the HL-LHC. Projects span the different R&D focus areas, including advanced algorithms, analysis systems, and underlying infrastructure.  The overall goal is to make computation of all types feasible and efficient at HL-LHC scale.
