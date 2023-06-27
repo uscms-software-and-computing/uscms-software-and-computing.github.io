@@ -40,11 +40,6 @@ presentations:
     url: <https://indico.cern.ch/event/1103637/contributions/4821874/>
     meeting: <CTD2022: 7th International Connecting the Dots Workshop>
     meetingurl: <https://indico.cern.ch/event/1103637/>
-  - title: "Offloading Deterministic Annealing Vertex Reconstruction on GPUs"
-    date: "2022-04-25"
-    url: <https://indico.cern.ch/event/1152032/contributions/4840102/attachments/2430742/4162255/Primary_Vertexing_GPU_Tracking_POG_Presentation.pdf>
-    meeting: <Tracking POG meeting>
-    meetingurl: <https://indico.cern.ch/event/1152032/>
   - title: "Deterministic annealing vertex reconstruction on GPU"
     date: "2022-03-11"
     url: <https://indico.cern.ch/event/1144949/contributions/4823046/attachments/2425113/4151697/PV_Apr11_HLTGPUmeeting.pdf>
