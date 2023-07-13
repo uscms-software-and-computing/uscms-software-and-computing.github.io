@@ -4,7 +4,7 @@ layout: people
 title: US CMS S&C Team
 ---
 
-{% include image_caption.html url="..//assets/images/230712 - Org Chart.png" alt="US CMS S&C Org Chart" description="" %}
+{% include org_chart.html %}
 
 {% include wbs_list.html %}
 {% assign areas = wbs_list | hash_fetch: site.data.orgs | sort_natural: "wbs_no" %}

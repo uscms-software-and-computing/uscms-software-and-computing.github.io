@@ -4,8 +4,7 @@ layout: people
 title: Institute Team
 ---
 
-{% include image_caption.html url="../assets/images/230712 - Org Chart.png" alt="US CMS S&C Org Chart" description="" %}
-
+{% include org_chart.html %}
 
 {% include institution_list.html %}
 {% assign members = site.data.people | values
