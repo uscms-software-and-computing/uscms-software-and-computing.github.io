@@ -9,7 +9,7 @@ shortname:
 project_title: Advancing Machine Learning Inference with Columnar Analysis at CMS Analysis Facilities
 dates:
   start: 2023-01-01
-  end: 2024-01-01
+  end: 2025-01-01
 photo: /assets/images/team/Nick-Manganelli.jpg
 institution: University of Colorado Boulder
 website:

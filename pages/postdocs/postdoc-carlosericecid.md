@@ -9,7 +9,7 @@ shortname: cericeci
 project_title: Accelerating Pixel Unpacking and Vertex Reconstruction with GPUs
 dates:
   start: 2021-10-01
-  end: 2023-10-01
+  end: 2024-10-01
 photo: /assets/images/team/Carlos-Erice-Cid.png
 institution: Boston University
 website:
