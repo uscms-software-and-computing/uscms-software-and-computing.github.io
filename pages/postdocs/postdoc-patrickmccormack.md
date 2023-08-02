@@ -2,7 +2,7 @@
 permalink: /postdocs/postdoc-patrickmccormack.html
 layout: postdoc
 pagetype: postdoc
-active: true
+active: false
 title: Post-doctoral researcher
 postdoc-name: Patrick McCormack
 shortname: p_mccormack

@@ -8,7 +8,7 @@ title: Post-doctoral researcher
 active: True
 dates:
   start: 2022-01-01
-  end: 2023-01-01
+  end: 2024-01-01
 photo: /assets/images/team/Nick-Smith.jpg
 institution: Fermilab
 e-mail: nick.smith@cern.ch
