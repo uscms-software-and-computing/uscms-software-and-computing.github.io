@@ -18,7 +18,7 @@ The Software and Computing Research Initiative provides funding for undergraduat
 {% assign inactive-intern = interns | reject: "active" %}
 
 
-# Current Fellows
+# Current Interns
 
 <div class="container-fluid">
   <div class="row">
