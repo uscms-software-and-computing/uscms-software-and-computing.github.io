@@ -48,6 +48,9 @@ presentations:
 current_status: >
   In progress. Have successfully developed denoising diffusion model for calorimeter
   simulation that achieves state of the art results on public datasets.
-  Next steps are to explore diffusing from fast simulation rather than pure noise 
-  and to apply the model to simulate the current CMS calorimeter and eventually the HGCal design. 
+  A paper summarizing these results has been posted to the arXiv ([link](https://arxiv.org/abs/2308.03876)) and submitted to Phys. Rev. D for
+  publication. 
+  Next steps are to explore different methods of improving the generation
+  speed, including diffusing from existing fast simulation rather than pure noise. 
+  Following this, we will apply the model to simulate the current CMS calorimeter and eventually the HGCal design. 
 ---
