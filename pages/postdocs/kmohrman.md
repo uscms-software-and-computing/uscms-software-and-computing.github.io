@@ -15,8 +15,8 @@ e-mail: k.mohrman@ufl.edu
 project_title: Deploying GPU algorithms through SONIC
 project_goal: >
     The goal of the project is to demonstrate at a sufficiently large scale the reconstruction algorithm workflow within CMSSW to be processed, where the client jobs are running on one site, while the Line Segment Tracking (LST) algorithm will be executed on GPUs on computing nodes at another site connected through SONIC (Services for Optimized Network Inference on Co-processors) framework.
-    LST (Line Segment Tracking) is a tracking algorithm that takes advantage of double-layer design of the HL-LHC outer tracker in order to perform hit correlations in a parallel way with GPUs.
-    SONIC (Services for Optimized Network Inference on Co-processors) is a framework that provides GPUs as a service to clients running at different sites. 
+    LST is a tracking algorithm that takes advantage of double-layer design of the HL-LHC outer tracker in order to perform hit correlations in a parallel way with GPUs.
+    SONIC is a framework that provides GPUs as a service to clients running at different sites. 
     Combining the LST algorithm with the SONIC framework is the goal of the project, in which we aim to to demonstrate the execution of the LST algorithm on GPUs at an external site (apart from the site where the client jobs are run) via the SONIC framework.
 mentors:
   - Philip Chang - (University of Florida)
