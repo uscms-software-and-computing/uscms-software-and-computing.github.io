@@ -12,9 +12,9 @@ dates:
 photo: /assets/images/team/Jethro-Gaglione.jpg
 institution: Vanderbilt University
 e-mail: jethrogaglione@gmail.com
-project_title: Development of a Distributed GPU ML Training Facility at Vanderbilt's ACCRE Cluster
+project_title: Development of a Distributed GPU Machine Learning Training Facility at Vanderbilt's ACCRE Cluster
 project_goal: >
-    The objective of this project is to leverage the knowledge and hardware available within the Vanderbilt research computing center (ACCRE) to develop a prototype distributed GPU ML training facility. We aim to provide the efficiency boost of training on a multi-GPU platform to CMS users and beyond, while abstracting away the highly technical details necessary to do so.  
+    The objective of this project is to leverage the knowledge and hardware available within the Vanderbilt research computing center (ACCRE) to develop a prototype distributed GPU machine learning training facility. We aim to provide the efficiency boost of training on a multi-GPU platform to CMS users and beyond, while abstracting away the highly technical details necessary to do so.  
 mentors:
   - Andrew Melo - (Vanderbilt University)>
 
