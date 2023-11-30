@@ -22,18 +22,11 @@ mentors:
 
 proposal: /assets/pdfs/Jayatilaka_USCMSpostdoc_proposal.pdf
 presentations:
-  - title: "Object Stores for CMS data: initial presentation"
-    date: 2022-02-22
-    url: https://indico.cern.ch/event/1131679/contributions/4748741/attachments/2396026/4096861/ncsmith-uscms-objectstores.pdf
-    meeting: HL-LHC R&D Initiative Meeting
-    meetingurl: https://indico.cern.ch/event/1131679/
-    record: 
-    focus-area: Storage
-  - title: "Ceph S3 Object Storage for CMS data"
-    date: 2022-10-27
-    url: https://indico.cern.ch/event/1106990/contributions/5097031/
-    meeting: ACAT 2022
-    meetingurl: https://indico.cern.ch/event/1106990/
+  - title: "Object Stores for CMS data"
+    date: 2023-11-08
+    url: https://indico.cern.ch/event/1341608/contributions/5648183/attachments/2748905/4784080/ncsmith-blueprint-objectstores.pdf
+    meeting: S&C Blueprint Meeting - USCMS Storage R&D
+    meetingurl: https://indico.cern.ch/event/1341608/
     record: 
     focus-area: Storage
   - title: "A Ceph S3 Object Data Store for HEP"
@@ -43,6 +36,20 @@ presentations:
     meetingurl: https://indico.jlab.org/event/459
     record: 
     focus-area: Storage
+  - title: "Ceph S3 Object Storage for CMS data"
+    date: 2022-10-27
+    url: https://indico.cern.ch/event/1106990/contributions/5097031/
+    meeting: ACAT 2022
+    meetingurl: https://indico.cern.ch/event/1106990/
+    record: 
+    focus-area: Storage
+  - title: "Object Stores for CMS data: initial presentation"
+    date: 2022-02-22
+    url: https://indico.cern.ch/event/1131679/contributions/4748741/attachments/2396026/4096861/ncsmith-uscms-objectstores.pdf
+    meeting: HL-LHC R&D Initiative Meeting
+    meetingurl: https://indico.cern.ch/event/1131679/
+    record: 
+    focus-area: Storage
 current_status: >
-  In progress, pending renewal
+  In progress. Single- and multi-client scaling tests of the Ceph object service were presented at CHEP, proceedings to be posted. Now working with CMSSW Core Framework team and RNTuple developers to integrate RNTuple into CMSSW, to leverage RNTuple object storage backend capabilities rather than writing a custom implementation. An automated data ingestion system demonstrator is being developed, where FTS transfers files directly to the S3 endpoint, which then triggers a conversion routine to explode the files into the object data format.
 ---
