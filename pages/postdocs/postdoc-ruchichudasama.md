@@ -2,7 +2,7 @@
 permalink: /postdocs/postdoc-ruchichudasama.html
 layout: postdoc
 pagetype: postdoc
-active: true
+active: false
 title: Post-doctoral researcher
 postdoc-name: Ruchi Chudasama
 shortname: 
