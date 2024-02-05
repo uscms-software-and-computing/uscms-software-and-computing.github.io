@@ -13,30 +13,30 @@ photo: /assets/images/team/Antonio-Linares.jpg
 institution: University of Wisconsin Madison
 e-mail: a.linares@cern.ch
 project_title: CMS T0 Operator
-project_goal: 
-"My name is Antonio Linares, I studied Physics at Universidad de los Andes in Bogota, Colombia.
-During my bachelor’s degree I realized I enjoy Computer Science, so after graduation I took
-my career to follow that path. My desire towards learning more about computer systems
-while staying in direct touch with Physics motivated me to be an intern as a Tier 0
-Operator for CMS at Fermilab. Ever since I started the internship, I have learned a lot about
-computing. To put it in perspective, allow me to describe the job.
-During data taking, the LHC produces 8 to 10 GB of data per second. This massive rate puts a lot
-of pressure on the resources available, since all data must be saved, reconstructed, and then
-sent to several desired destinations. The main issue during saving the data is the storage: at 10
-GB/s, any technical or availability problem with the disk or tape resources may result in loss of
-data. To keep up with the high data taking rate, Tier 0 must generate all the output data in a
-timely manner to allow the deletion of the LHC data. This is done through reconstruction
-workflows with the use of thousands of computers at CERN. Again, any technical issue that
-arises through the reconstruction of data will keep the input data from being deleted and
-potentially risking storage for new data. All the output data is processed again to generate more
-compressed files of the data and allow their distribution to desired destinations.
-Tier 0 is then a job consisting heavily of operations such as monitoring the performance of the
-computer resources, the progress of the reconstructing workflows, the available storage, the
-data taking rates, among other things. Also, testing of new software for the data reconstruction
-is often necessary during data taking, which also concerns Tier 0. Finally, when everything is
-running smoothly or no data is being taken, Tier 0 focuses on developing tools to facilitate their
-tasks. All of this means that a Tier 0 Operator ends up understanding the roots of how the CMS
-system is set up. This translates into massive computing knowledge."
+project_goal: > 
+  "My name is Antonio Linares, I studied Physics at Universidad de los Andes in Bogota, Colombia.
+  During my bachelor’s degree I realized I enjoy Computer Science, so after graduation I took
+  my career to follow that path. My desire towards learning more about computer systems
+  while staying in direct touch with Physics motivated me to be an intern as a Tier 0
+  Operator for CMS at Fermilab. Ever since I started the internship, I have learned a lot about
+  computing. To put it in perspective, allow me to describe the job.
+  During data taking, the LHC produces 8 to 10 GB of data per second. This massive rate puts a lot
+  of pressure on the resources available, since all data must be saved, reconstructed, and then
+  sent to several desired destinations. The main issue during saving the data is the storage: at 10
+  GB/s, any technical or availability problem with the disk or tape resources may result in loss of
+  data. To keep up with the high data taking rate, Tier 0 must generate all the output data in a
+  timely manner to allow the deletion of the LHC data. This is done through reconstruction
+  workflows with the use of thousands of computers at CERN. Again, any technical issue that
+  arises through the reconstruction of data will keep the input data from being deleted and
+  potentially risking storage for new data. All the output data is processed again to generate more
+  compressed files of the data and allow their distribution to desired destinations.
+  Tier 0 is then a job consisting heavily of operations such as monitoring the performance of the
+  computer resources, the progress of the reconstructing workflows, the available storage, the
+  data taking rates, among other things. Also, testing of new software for the data reconstruction
+  is often necessary during data taking, which also concerns Tier 0. Finally, when everything is
+  running smoothly or no data is being taken, Tier 0 focuses on developing tools to facilitate their
+  tasks. All of this means that a Tier 0 Operator ends up understanding the roots of how the CMS
+  system is set up. This translates into massive computing knowledge."
 mentors:
   - Jennifer Adelman-McCarthy - (FNAL)
 ---
