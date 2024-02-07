@@ -88,6 +88,10 @@
 
 <p>You can leave the “presentations” and “current_status” fields blank for now.  (Make sure to include the fields)</p>
 
+<p>Make sure to follow the format explicitly.  The file needs to include “—” characters are the top and bottom of this header section.  The tabs and spaceing are important as well.</p>
+
+<p>Anything between “&lt;&gt;” characters should be replaced with your information without the “&lt;&gt;” characters (i.e. <your GitHub="" user=""> becomes rct225, not <rct225>)</rct225></your></p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">intern</span>
@@ -105,18 +109,11 @@
 <span class="na">e-mail</span><span class="pi">:</span> <span class="s">&lt;Your email&gt;</span>
 <span class="na">project_title</span><span class="pi">:</span> <span class="s">&lt;Project title&gt;</span>
 <span class="na">project_goal</span><span class="pi">:</span> <span class="pi">&gt;</span>
-    <span class="s">Short description of your project</span>
+  <span class="s">Short description of your project.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate ex. Vivamus sit amet malesuada orci. Integer blandit sem non auctor convallis. Donec at suscipit arcu. Donec placerat ex blandit magna finibus ultrices. Vivamus ultrices, nunc ac sodales vehicula, ante metus ultrices quam, in euismod dolor risus eu neque. Proin auctor magna vel lacus dictum efficitur. Praesent mauris nunc, imperdiet nec hendrerit non, pulvinar vel tortor. Donec gravida ac turpis dapibus ultricies. Sed lobortis felis vel euismod fringilla.</span>
 <span class="na">mentors</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">&lt;Mentor Name - (&lt;Mentor Institution&gt;)&gt;</span>
 
-<span class="na">proposal</span><span class="pi">:</span> <span class="s">/assets/pdf/&lt;find-your-file&gt;</span>
 <span class="na">presentations</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;Presentation</span><span class="nv"> </span><span class="s">Title"</span>
-    <span class="na">date</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Presentation</span><span class="nv"> </span><span class="s">Date"</span>
-    <span class="na">url</span><span class="pi">:</span> <span class="s">&lt;Presentation materials link&gt;</span>
-    <span class="na">meeting</span><span class="pi">:</span> <span class="s">&lt;Meeting name&gt;</span>
-    <span class="na">meetingurl</span><span class="pi">:</span> <span class="s">&lt;Meeting url - indico link, etc.&gt;</span>
-    <span class="na">recordingurl</span><span class="pi">:</span> <span class="s">&lt;Recording url&gt; (Optional)</span>
 <span class="na">current_status</span><span class="pi">:</span> <span class="pi">&gt;</span>
   <span class="s">A placeholder for status updates</span>
 <span class="na">github-username</span><span class="pi">:</span> <span class="s">&lt;Your git-hub username&gt;</span>
@@ -126,18 +123,6 @@
 
 <h3 id="dates">Dates</h3>
 <p>Date format for start and end dates should be – YYYY-MM-DD – i.e. 2021-12-31</p>
-
-<h3 id="presentations">Presentations</h3>
-
-<p>The meaning of the fields is the following:</p>
-
-<ul>
-  <li>title - the title of the talk: you made need to place it in double quotes, if certain characters like a colon (“:”) are included in the title</li>
-  <li>date - the date on which the presentation was made, in the numeric format “YYYY-MM-DD”</li>
-  <li>url - this should be a direct URL to the presentation or page containing the presentation. For Indico, link to the contribution, not the PDF or other links.</li>
-  <li>meeting - the name of the meeting</li>
-  <li>meetingurl - the URL for the meeting in which the presentation was made</li>
-</ul>
 
           </div>
         </main>
