@@ -24,6 +24,10 @@ Be sure to include your project summary in the project_goal field.
 
 You can leave the “presentations” and “current_status” fields blank for now.  (Make sure to include the fields)
 
+Make sure to follow the format explicitly.  The file needs to include "---" characters are the top and bottom of this header section.  The tabs and spaceing are important as well.
+
+Anything between "<>" characters should be replaced with your information without the "<>" characters (i.e. <your GitHub user id> becomes rct225, not <rct225>)
+
 ```yml
 
 ---
@@ -42,18 +46,11 @@ institution: <Your institution>
 e-mail: <Your email>
 project_title: <Project title>
 project_goal: >
-    Short description of your project
+  Short description of your project.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate ex. Vivamus sit amet malesuada orci. Integer blandit sem non auctor convallis. Donec at suscipit arcu. Donec placerat ex blandit magna finibus ultrices. Vivamus ultrices, nunc ac sodales vehicula, ante metus ultrices quam, in euismod dolor risus eu neque. Proin auctor magna vel lacus dictum efficitur. Praesent mauris nunc, imperdiet nec hendrerit non, pulvinar vel tortor. Donec gravida ac turpis dapibus ultricies. Sed lobortis felis vel euismod fringilla.
 mentors:
   - <Mentor Name - (<Mentor Institution>)>
 
-proposal: /assets/pdf/<find-your-file>
 presentations:
-  - title: "<Presentation Title"
-    date: "Presentation Date"
-    url: <Presentation materials link>
-    meeting: <Meeting name>
-    meetingurl: <Meeting url - indico link, etc.>
-    recordingurl: <Recording url> (Optional)
 current_status: >
   A placeholder for status updates
 github-username: <Your git-hub username>
@@ -63,13 +60,3 @@ gitlab-url: <URL for your GitLab repo> (Optional)
 
 ### Dates
 Date format for start and end dates should be -- YYYY-MM-DD -- i.e. 2021-12-31
-
-### Presentations
-
-The meaning of the fields is the following:
-
-  * title - the title of the talk: you made need to place it in double quotes, if certain characters like a colon (":") are included in the title
-  * date - the date on which the presentation was made, in the numeric format "YYYY-MM-DD"
-  * url - this should be a direct URL to the presentation or page containing the presentation. For Indico, link to the contribution, not the PDF or other links.
-  * meeting - the name of the meeting
-  * meetingurl - the URL for the meeting in which the presentation was made
