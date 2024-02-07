@@ -51,7 +51,10 @@ institution: <Your institution>
 e-mail: <Your email>
 project_title: <Project title>
 project_goal: >
-  Short description of your project.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate ex. Vivamus sit amet malesuada orci. Integer blandit sem non auctor convallis. Donec at suscipit arcu. Donec placerat ex blandit magna finibus ultrices. Vivamus ultrices, nunc ac sodales vehicula, ante metus ultrices quam, in euismod dolor risus eu neque. Proin auctor magna vel lacus dictum efficitur. Praesent mauris nunc, imperdiet nec hendrerit non, pulvinar vel tortor. Donec gravida ac turpis dapibus ultricies. Sed lobortis felis vel euismod fringilla.
+  Short description of your project.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate ex. Vivamus sit amet malesuada orci. 
+  Integer blandit sem non auctor convallis. Donec at suscipit arcu. Donec placerat ex blandit magna finibus ultrices. Vivamus ultrices, nunc ac sodales 
+  vehicula, ante metus ultrices quam, in euismod dolor risus eu neque. Proin auctor magna vel lacus dictum efficitur. Praesent mauris nunc, imperdiet nec 
+  hendrerit non, pulvinar vel tortor. Donec gravida ac turpis dapibus ultricies. Sed lobortis felis vel euismod fringilla.
 mentors:
   - <Mentor Name - (<Mentor Institution>)>
 
@@ -62,5 +65,3 @@ github-username: <Your git-hub username>
 gitlab-url: <URL for your GitLab repo> (Optional)
 ---
 ```
-
-
