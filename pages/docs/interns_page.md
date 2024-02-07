@@ -28,6 +28,11 @@ Make sure to follow the format explicitly.  The file needs to include "---" char
 
 Anything between "<>" characters should be replaced with your information without the "<>" characters (i.e. <your GitHub user id> becomes rct225, not <rct225>)
 
+### Dates
+Date format for start and end dates should be -- YYYY-MM-DD -- i.e. 2021-12-31
+
+You can test changes to your page by following the directions found in the [README](https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io) file for the website repository.
+
 ```yml
 
 ---
@@ -58,5 +63,4 @@ gitlab-url: <URL for your GitLab repo> (Optional)
 ---
 ```
 
-### Dates
-Date format for start and end dates should be -- YYYY-MM-DD -- i.e. 2021-12-31
+
