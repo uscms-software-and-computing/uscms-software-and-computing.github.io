@@ -90,7 +90,7 @@
         <br>
         <h3>Project: Automating algorithm loading and executing on GPUs for SONIC</h3>
 
-        Automating the process of loading and executing machine learning algorithms on GPUs is an essential aspect of the SONIC project. SONIC, short for Services for Optimized Network Inference on Coprocessors, aims to optimize computing resource utilization for large-scale data processing involving the use of machine learning algorithms to identify and categorize reconstructed particles from collisions.
+        Automating the process of loading and executing algorithms on GPUs is an essential aspect of the SONIC project. SONIC, short for Services for Optimized Network Inference on Coprocessors, aims to optimize computing resource utilization for large-scale data processing involving the use of ML and non-ML algorithms to identify and categorize reconstructed particles from collisions.
 
         <br>
         <br>
@@ -176,12 +176,23 @@
         <b>Presentations</b>
         <ul>
           
+          
+          <li> - <a href="">""</a>, Yao Yao, <a href=""></a>
+            
+          
         </ul>
         <hr>
 
         <b>Current Status</b>
         <br>
-        
+        - The project is in progress
+  - Learned to run SONIC miniAOD workflow at Purdue Tier2 cluster.
+  - Learned to measure throughput and latency with the tools provided to measure miniAOD workflow for both GPU triton server and CPU direct inference, and interpret the performance.
+  - Wrote the sonic-nized producer of particle transformer for B-jet tagging in Run 3 miniAOD workflow. Tested its performance for both GPU triton server and CPU direct inference with CMSSW_14_1_0_pre0 and a 2023 TTbar MC sample.
+  - TODO: Integrate the sonic-nized producer to official CMSSW release.
+  - TODO: Understand Patatrack-as-a-service as an example of using non-NL algorithm on GPU server. 
+  - TODO: After getting Triton server to work with the linux system that CMSSW is working on, will start to discuss with SONIC team about how to implement automation on algorithm loading and execution. 
+
         <br>
         <br>
         
