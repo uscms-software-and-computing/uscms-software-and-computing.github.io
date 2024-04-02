@@ -21,8 +21,6 @@ mentors:
 proposal: /assets/pdfs/Jethro-Gaglione.pdf
 presentations:
 current_status: >
-The last quarter we have incorporated and finalized testing on submission of jobs to the cluster via an mlflow-slurm interface that allows users to take advantage of cluster capabilities via MLflow projects. These nicely package the intended training project along with package and system requirements for easy reproducibility without having to explicitly learn Slurm scheduler directives and scripting. Work is ongoing to make a REST-based MLflow interface, which will allow CMS users without ACCRE accounts to submit training workflows remotely.
-
-We have also begun investigating the incorporating the use of Optuna as a suggested framework for hyperparameter optimization. This can work seamlessly with MLFlow and Slurm, and takes advantage of Bayesian optimization and pruning to efficiently run HPO.
+The last quarter we have incorporated and finalized testing on submission of jobs to the cluster via an mlflow-slurm interface that allows users to take advantage of cluster capabilities via MLflow projects. These nicely package the intended training project along with package and system requirements for easy reproducibility without having to explicitly learn Slurm scheduler directives and scripting. Work is ongoing to make a REST-based MLflow interface, which will allow CMS users without ACCRE accounts to submit training workflows remotely. We have also begun investigating the incorporating the use of Optuna as a suggested framework for hyperparameter optimization. This can work seamlessly with MLFlow and Slurm, and takes advantage of Bayesian optimization and pruning to efficiently run HPO.
 
 ---
