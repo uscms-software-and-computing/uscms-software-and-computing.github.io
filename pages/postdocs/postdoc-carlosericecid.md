@@ -18,8 +18,18 @@ mentors:
   - David Sperka (Boston University)
   - Zeynep Demiragli (Boston University)	
 project_goal: >
-  The proposed project consists of two thrusts: (1) adapting pixel unpacking to execute on GPUs and (2) adapting the vertex reconstruction algorithm to execute on GPUs. These projects are synergistic and leverage existing expertise at Boston University in back-end readout electronics to expand the group's research program into the area of heterogeneous computing for the HL-LHC era. The pixel unpacking project will serve as an educational bridge project, and the vertex reconstruction effort will take advantage of the gained expertise to accelerate a resource-intensive portion of the HL-LHC reconstruction.
+  The proposed project consists of two thrusts: (1) adapting pixel unpacking to execute on GPUs and (2) adapting the vertex reconstruction algorithm to execute on GPUs and, more in general, to generic heterogeneous architectures through the Alpaka libraries. These projects are synergistic and leverage existing expertise at Boston University in back-end readout electronics to expand the group's research program into the area of heterogeneous computing for the HL-LHC era. The pixel unpacking project will serve as an educational bridge project, and the vertex reconstruction effort will take advantage of the gained expertise to accelerate a resource-intensive portion of the HL-LHC reconstruction.
 presentations:
+  - title: "Update on heterogeneous vertexing: Alpaka migration"
+    date: 2024-03-11
+    url: https://indico.cern.ch/event/1387237/contributions/5851271/attachments/2817240/4918586/PV_forTRKPOG_Mar11-1.pdf
+    meeting: TRK POG meeting 
+    meetingurl: https://indico.cern.ch/event/1387237/
+  - title: "Heterogeneous Primary Vertex reconstruction with Alpaka"
+    date: 2023-12-18
+    url: https://indico.cern.ch/event/1354273/contributions/5712248/attachments/2774247/4834397/PV_forTRKPOG_Dec18.pdf
+    meeting: TRK POG meeting
+    meetingurl: https://indico.cern.ch/event/1354273/
   - title: "GPU-based algorithms for primary vertex reconstruction at CMS"
     date: 2023-05-08
     url: https://indico.jlab.org/event/459/contributions/11412/
