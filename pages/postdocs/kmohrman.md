@@ -30,11 +30,16 @@ presentations:
     meeting: <Tracking POG Meeting>
     meetingurl: <https://indico.cern.ch/event/1337451/>
 
+  - title: "Project status update: LST with the SONIC framework"
+    date: "February 12, 2023"
+    url: <https://indico.cern.ch/event/1374894/contributions/5778400/attachments/2799411/4883360/sonic_lst_update_feb12_2024.pdf>
+    meeting: <Tracking POG Meeting>
+    meetingurl: <https://indico.cern.ch/event/1374894/>
+
+
 current_status: 
-  - The project is in progress
-    - Learned to run the LST workflow in order to reproduce LST plots from Philip Chang's LST CHEP presentation
-    - Have gotten set up at Purdue and run the test SONIC workflow (MAOD workflow) and successfully ran the setup where the cmsRun script runs on the login node, and the cmsTriton script runs on a different node
-    - Have gotten the workflow (same one we got running at Purdue) running at UF (with cmsRun on one node without any GPUs and cmsTriton on a different node)
-    - Tested with cmsRun at Purdue and cmsTriton at UF, but hit issue with nodes not being able to talk to each other, paused this direction for now
-    - Currently working to adapt the LST workflow with SONIC (starting with the client side i.e. reworking the producer with SONIC)
+  - Preliminary work: First learned to run the LST workflow in order to reproduce LST plots from Philip Chang's LST CHEP presentation. Set up at Purdue and ran the test SONIC workflow (MAOD workflow) and successfully ran the setup where the cmsRun script runs on the login node, and the cmsTriton script runs on a different node. Have gotten the same workflow running at UF (with cmsRun on one node without any GPUs and cmsTriton on a different node). Tested with cmsRun at Purdue and cmsTriton at UF, but hit issue with nodes not being able to talk to each other, paused this direction for now.
+  - Setting up LST backend: Successfully set up and ran example Patatrack as a service example at Purdue and at UF. Produced a draft version of SONIC compatible LST producer. Removed ROOT dependencies from LST in order to enable the successful compilation and running of the standalone TrackLooper LST within the server singularity environment from the SONIC PatatrackAAS example. Created a backend (modeled after the PatatrackAAS identity_backend example) that can compile and run LST (though currently the inputs to the evaluation are already hard coded within the backend) using the PatatrackAAS client as a standin to trigger the backend code to be run.
+  - Next steps: Work on connecting the LST client side with the server side to enable the transfer LST inputs from the client to the backend, and to return the results back to the client
+
 ---
