@@ -48,9 +48,10 @@ presentations:
 current_status: >
   In progress. Have successfully developed denoising diffusion model for calorimeter
   simulation that achieves state of the art results on public datasets.
+  
   A paper summarizing these was published in [Phys.Rev.D](https://doi.org/10.1103/PhysRevD.108.072014). 
+  
   We have since implemented further improvements to the model, which have led to improved energy response modeling and faster generation times. We also developed an alternate version of our diffusion model that was able to use existing fast simulation as an additional input, which allowed the model to achieve high quality results in fewer diffusion steps.
 
-We have begun working on simulations of the CMS HGCal. Using initial R&D simulation of the HGCal we are developing a pipeline to convert between the CMS SimHit format and HGCal geometry and to the data format needed by our model and back. We are also preparing a production of significantly larger samples of HGCal simulation which will test the scalability of our model to cover the entire simulation phase space. 
- 
+  We have begun working on simulations of the CMS HGCal. Using initial R&D simulation of the HGCal we are developing a pipeline to convert between the CMS SimHit format and HGCal geometry and to the data format needed by our model and back. We are also preparing a production of significantly larger samples of HGCal simulation which will test the scalability of our model to cover the entire simulation phase space. 
 ---
