@@ -20,16 +20,16 @@ mentors: >
 
 proposal: /assets/pdfs/Mohamed-Darwish.pdf
 presentations:
-- title: "Energy regression and PID"
+  - title: "Energy regression and PID"
     date: "June 6, 2024"
-    url: <https://indico.cern.ch/event/1414106/sessions/547218/attachments/2872414/5029541/Ticl_Meeting_6Jun.pdf>
-    meeting: <TICL Reconstruction Working Meeting>
-    meetingurl: <https://indico.cern.ch/event/1414106/>
-- title: "Upates on Energy regression and PID"
+    url: https://indico.cern.ch/event/1414106/sessions/547218/attachments/2872414/5029541/Ticl_Meeting_6Jun.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1414106/
+  - title: "Upates on Energy regression and PID"
     date: "June 13, 2024"
-    url: <https://indico.cern.ch/event/1414122/sessions/547234/attachments/2876913/5038451/Ticl_Meeting_13Jun.pdf>
-    meeting: <TICL Reconstruction Working Meeting>
-    meetingurl: <https://indico.cern.ch/event/1414122/>
+    url: https://indico.cern.ch/event/1414122/sessions/547234/attachments/2876913/5038451/Ticl_Meeting_13Jun.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1414122/
 
 current_status: >
     <br>
