@@ -46,88 +46,40 @@ presentations:
     focus-area: Simulation
 
 
-current_status:
-    <br>
-    <b>2024 Q2 </b>
-    <br>
-    Progress
-    <ul>
-        <li>
-        Completed full data pipeline for training on CMS HGCal simulation.
-        </li>
-        <li>
-        Trained first models to reproduce single photon HGCalEE showers in a limited
-        energy range at fixed rapidity and angle. Captured basic structure of
-        the shower but modeling of some features can be improved
-        </li>
-        <li>
-        Developed first version of the model which uses existing
-        fastsim as an input to reduce number of diffusion steps needed for high quality
-        generation by using conditional distillation technique
-        </li>
+current_status: >
+  <br>
+  <b>2024 Q2 </b>
+  <br>
 
-    </ul>
-    Next steps
-    <ul>
-        <li>
-        Generate a larger set of CMS HGCal simulations covering a larger phase
-        space. Use these simulations to train the model at a larger scale.
-        </li>
-        <li>
-        Improve the modeling of some HGCal shower features (energy per layer, radial spread of the shower, occupancy) 
-        </li>
-        <li>
-        Develop testing suite to quantitatively validate performance of trained model
-        </li>
-        <li>
-        Further optimize usage of existing fast sim input to improve speedup
-        gains
-        </li>
-    </ul>
+  *   Progress
+      *   Completed full data pipeline for training on CMS HGCal simulation.
+      *   Trained first models to reproduce single photon HGCalEE showers in a limited energy range at fixed rapidity and angle. Captured basic structure of the shower but modeling of some features can be improved
+      *   Developed first version of the model which uses existing fastsim as an input to reduce number of diffusion steps needed for high quality generation by using conditional distillation technique
+  *   Next steps
+      *   Generate a larger set of CMS HGCal simulations covering a larger phase space. Use these simulations to train the model at a larger scale.
+      *   Improve the modeling of some HGCal shower features (energy per layer, radial spread of the shower, occupancy) 
+      *   Develop testing suite to quantitatively validate performance of trained model
+      *   Further optimize usage of existing fast sim input to improve speedup gains
 
 
-    <br>
-    <b>2024 Q1 </b>
-    <br>
-    Progress
-    <ul>
-        <li>
-        Began development of pipeline for training on CMS HGCal simulation,
-        including handling complicated geometry.
-        </li>
-        <li>
-        Began development of hybrid model which incorporates existing fast
-        simulation to reduce time needed for generation of high quality showers
-        </li>
+  <br>
+  <b>2024 Q1 </b>
+  <br>
 
-    </ul>
-    Next steps
-    <ul>
-        <li>
-        Complete HGCal simulation pipeline, train first models.
-        </li>
-        <li>
-        Complete developement of hybrid model. Test speed up gains from its
-        usage
-        </li>
-    </ul>
+  *   Progress
+      *   Began development of pipeline for training on CMS HGCal simulation, including handling complicated geometry.
+      *   Began development of hybrid model which incorporates existing fast simulation to reduce time needed for generation of high quality showers
+  *   Next steps
+      *   Complete HGCal simulation pipeline, train first models.
+      *   Complete developement of hybrid model. Test speed up gains from its usage
 
 
-    <br>
   <b>2023 and prior </b>
-    <br>
 
-    Progress
-    <ul>
-  Have successfully developed denoising diffusion model for calorimeter
-  simulation that achieves state of the art results on public datasets.
-  Paper published in <a href="https://doi.org/10.1103/PhysRevD.108.072014"> Phys.Rev.D 108 (2023) </a>
-    </ul>
-
-    Next steps
-    <ul>
-  Next steps are to explore different methods of improving the generation
-  speed, including diffusing from existing fast simulation rather than pure noise. 
-  Following this, we will apply the model to simulate the current CMS calorimeter and eventually the HGCal design. 
-    </ul>
+  *   Progress
+      *   Have successfully developed denoising diffusion model for calorimeter simulation that achieves state of the art results on public datasets.
+      *   Paper published in <a href="https://doi.org/10.1103/PhysRevD.108.072014"> Phys.Rev.D 108 (2023) </a>
+  *   Next steps
+      *   Next steps are to explore different methods of improving the generation speed, including diffusing from existing fast simulation rather than pure noise. 
+      *   Following this, we will apply the model to simulate the current CMS calorimeter and eventually the HGCal design. 
 ---

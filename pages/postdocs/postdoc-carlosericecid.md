@@ -77,4 +77,35 @@ presentations:
     meetingurl: https://indico.cern.ch/event/1097778/
 
 proposal: /assets/pdfs/USCMS_CarlosEriceCid.pdf
+
+
+current_status: >
+
+  <br>
+  <b>2024 Q2</b>
+  <br>
+
+  After the porting of the vertexing to Alpaka we worked to solve a significant issue related that was causing a significant compilation time (2+ hours) to make it something usable at the central production level and applied some additional recommendations to other parts of the code (including the usage of common objects for other items shared by the reco chain, such as BeamSpot). To discuss this with experts we presented it into the HLT development with [GPUs meeting](https://indico.cern.ch/event/1350959/contributions/6008868/attachments/2879300/5043707/PV_forHLTGPU_June17-4.pdf) and got some additional feedback for its validation. We also presented a summary of the status and plans in the [US-CMS All-Hands workshop](https://indico.cern.ch/event/1406858/contributions/5913032/subcontributions/486559/attachments/2877545/5039820/PV_forHandsOnMeeting_June13-1.pdf) including our short terms and longer plans for the inclusion of timing.
+
+
+  <br>
+  <b>2024 Q1</b>
+  <br>
+
+  We finished the migration to Alpaka of the 3D vertex clustering (Deterministic Annealing in Blocks) with weighted means fitter. The validation and timing measurements were presented at the Tracking POG meeting
+  We got several comments since and are now in the process of incorporating them and opening the official PR into CMSSW. We will now begin to explore the inclusion of timing information in the Alpaka/GPU implementation.
+      
+  <br>
+  <b>2023 Q4</b>
+  <br>
+
+  In this quarter we continued with the implementation of the vertexing code as an Alpaka  plugin for cms-sw and started measuring its performance. We currently have a working version of the whole 3D vertexing (clusterizing + fitting) working both as a standalone CUDA and an Alpaka version. Our most immediate plans are to show the current setup on the TRK POG (we are scheduled for a presentation late December) and start the process of a PR to central cms-sw to make available with the collaboration. In parallel we plan on working  version of the code for 4D vertexing (including timing) for the next quarter.
+      
+  <br>
+  <b>2023 Q3</b>
+  <br>
+
+  This quarter we finalized a CUDA version of the vertex fitting code and provided improvements in the internal GPU dataformat so the CPU-GPU copying time is reduced. We provided a first comparison of the full on-GPU algorithm with the equivalent full on-CPU ones and progressed in the Alpaka porting of the code. For the later we plan to take part in the incoming Hackathon in October to further discuss its possibilities with Alpaka experts.
+      
+
 ---
