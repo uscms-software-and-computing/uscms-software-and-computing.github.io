@@ -73,28 +73,28 @@
 
       <div>
         <br>
-        <center><h1>USCMS Researcher: Nick Smith</h1>
+        <center><h1>USCMS Researcher: Mohamed Darwish</h1>
 
-          <img src="/assets/images/team/Nick-Smith.jpg" width="150px">
+          <img src="/assets/images/team/Mohamed-Darwish.jpg" width="150px">
           <br>
           <br>
           <b> Postdoc dates: </b>
-          Jan 2022 - Jan 2024<br/>
+          Mar 2024 - Feb 2025<br/>
 
           <br>
-          <b> Home Institution:</b> Fermilab
+          <b> Home Institution:</b> Baylor University
           <br>
           <br>
         </center>
 
         <br>
-        <h3>Project: Object Storage for CMS in the HL-LHC era</h3>
+        <h3>Project: Developing heterogeneous particle flow reconstruction for the CMS Phase 2 detector</h3>
 
-        Demonstrate feasability of using Ceph object store technology to store and retrieve CMS event data products at a finer granularity than file-level. Benchmark storage usage and analysis access performance and compare to traditional file-level storage solutions.
+        The goal of the project is to develop particle flow reconstruction for the CMS Phase 2, using 'The Iterative CLustering' (TICL) as a baseline, to improve physics performance, and to establish a coherent PF reconstruction across all calorimeters. TICL is a modular framework developed for heterogeneous infrastructure that provides particle shower reconstruction and particle flow candidate reconstruction. It was primarily developed for HGCAL but could also work well for other calorimeter regions, thus enabling coherent reconstruction across all calorimeter regions. Additionally, we will work on further completing the transition of the CUDA-based software-implemented PF modules to a portability library, 'Alpaka,' and deploy it not only for use at the high-level trigger (HLT) but also for offline reconstruction.
 
         <br>
         <br>
-        More information: <a href = "/assets/pdfs/Jayatilaka_USCMSpostdoc_proposal.pdf">My project proposal</a><br>
+        More information: <a href = "/assets/pdfs/Mohamed-Darwish.pdf">My project proposal</a><br>
 
         <br>
         <b>Mentors: </b> <br>
@@ -164,76 +164,9 @@
             
             
             
-            <p>Bo Jayatilaka (Fermilab)</p>
-
-            
-          </li>
-          
-          <li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <p>David Mason (Fermilab)</p>
+            <ul>
+  <li>Kenichi Hatakeyama - (Baylor University)</li>
+</ul>
 
             
           </li>
@@ -246,19 +179,11 @@
         <ul>
           
           
-          <li>8 Nov 2023 - <a href="https://indico.cern.ch/event/1341608/contributions/5648183/attachments/2748905/4784080/ncsmith-blueprint-objectstores.pdf">"Object Stores for CMS data"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1341608/">S&C Blueprint Meeting - USCMS Storage R&D</a>
+          <li>6 Jun 2024 - <a href="https://indico.cern.ch/event/1414106/sessions/547218/attachments/2872414/5029541/Ticl_Meeting_6Jun.pdf">"Energy regression and PID"</a>, Mohamed Darwish, <a href="https://indico.cern.ch/event/1414106/">TICL Reconstruction Working Meeting</a>
             
           
           
-          <li>9 May 2023 - <a href="https://indico.jlab.org/event/459/contributions/11308/">"A Ceph S3 Object Data Store for HEP"</a>, Nick Smith, <a href="https://indico.jlab.org/event/459">CHEP 2023</a>
-            
-          
-          
-          <li>27 Oct 2022 - <a href="https://indico.cern.ch/event/1106990/contributions/5097031/">"Ceph S3 Object Storage for CMS data"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1106990/">ACAT 2022</a>
-            
-          
-          
-          <li>22 Feb 2022 - <a href="https://indico.cern.ch/event/1131679/contributions/4748741/attachments/2396026/4096861/ncsmith-uscms-objectstores.pdf">"Object Stores for CMS data: initial presentation"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1131679/">HL-LHC R&D Initiative Meeting</a>
+          <li>13 Jun 2024 - <a href="https://indico.cern.ch/event/1414122/sessions/547234/attachments/2876913/5038451/Ticl_Meeting_13Jun.pdf">"Upates on Energy regression and PID"</a>, Mohamed Darwish, <a href="https://indico.cern.ch/event/1414122/">TICL Reconstruction Working Meeting</a>
             
           
         </ul>
@@ -266,7 +191,33 @@
 
         <b>Current Status</b>
         <br>
-        <p>In progress. Single- and multi-client scaling tests of the Ceph object service were presented at CHEP, proceedings to be posted. Now working with CMSSW Core Framework team and RNTuple developers to integrate RNTuple into CMSSW, to leverage RNTuple object storage backend capabilities rather than writing a custom implementation. An automated data ingestion system demonstrator is being developed, where FTS transfers files directly to the S3 endpoint, which then triggers a conversion routine to explode the files into the object data format.</p>
+        <p><br /> <b>2024 Q2 </b> <br /> Progress &lt;ul&gt;
+    &lt;li&gt;
+Our first task is participating in updating TICLv4 to TICLv5, which is responsible for object reconstruction in the HGCAL. We started by working on the linking between the tracksters and tracks within TICLv5.
+    &lt;/li&gt;
+    &lt;li&gt;
+While working on the linking, we identified a group of bugs within the code. Fortunately, thanks to the prompt response from the team, all the reported issues have been successfully resolved.
+    &lt;/li&gt;
+    &lt;li&gt;
+We started updating the DNN model responsible for energy regression and particle identification (PID). First, we retrained the model to account for the improvements in the code that will be included in v5. Additionally, we split the model into two separate models: one for energy regression and one for PID.
+    &lt;/li&gt;
+    &lt;li&gt;
+We then updated and optimized the models to enhance their efficiency, saving them in ONNX format. Additionally, we optimized them for prediction time to ensure faster evaluation times.
+    &lt;/li&gt;
+    &lt;li&gt;
+We successfully integrated the new models within TICLv5 in CMSSW.
+    &lt;/li&gt;
+&lt;/ul&gt; Next steps &lt;ul&gt;
+    &lt;li&gt;
+We are looking forward to merging the updates into the official CMSSW releases
+    &lt;/li&gt;
+    &lt;li&gt;
+Try using GNN (Graph Neural Network) for energy regression and PID instead of CNN.
+    &lt;/li&gt;
+    &lt;li&gt;
+We will proceed to enhance the linking between tracksters and tracks within the code.
+    &lt;/li&gt;
+&lt;/ul&gt;</p>
 
         <br>
         <br>
@@ -275,7 +226,7 @@
         <ul>
           
           <li>
-            <i class="fas fa-envelope-square"></i><a href = "mailto:nick.smith@cern.ch"> Send me an email</a><br>
+            <i class="fas fa-envelope-square"></i><a href = "mailto:mohamed.anwar@cern.ch"> Send me an email</a><br>
           </li>
           
           
