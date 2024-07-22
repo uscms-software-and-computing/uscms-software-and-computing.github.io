@@ -38,32 +38,31 @@ current_status: >
     Progress
     <ul>
         <li>
-	Our first task is participating in updating TICLv4 to TICLv5, which is responsible for object reconstruction in the HGCAL. We started by working on the linking between the tracksters and tracks within TICLv5.
+    Our first task is participating in updating TICLv4 to TICLv5, which is responsible for object reconstruction in the HGCAL. We started by working on the linking between the tracksters and tracks within TICLv5.
         </li>
         <li>
-	While working on the linking, we identified a group of bugs within the code. Fortunately, thanks to the prompt response from the team, all the reported issues have been successfully resolved.
+    While working on the linking, we identified a group of bugs within the code. Fortunately, thanks to the prompt response from the team, all the reported issues have been successfully resolved.
         </li>
         <li>
-	We started updating the DNN model responsible for energy regression and particle identification (PID). First, we retrained the model to account for the improvements in the code that will be included in v5. Additionally, we split the model into two separate models: one for energy regression and one for PID.
+    We started updating the DNN model responsible for energy regression and particle identification (PID). First, we retrained the model to account for the improvements in the code that will be included in v5. Additionally, we split the model into two separate models: one for energy regression and one for PID.
         </li>
         <li>
-	We then updated and optimized the models to enhance their efficiency, saving them in ONNX format. Additionally, we optimized them for prediction time to ensure faster evaluation times.
+    We then updated and optimized the models to enhance their efficiency, saving them in ONNX format. Additionally, we optimized them for prediction time to ensure faster evaluation times.
         </li>
-	</li>
         <li>
-	We successfully integrated the new models within TICLv5 in CMSSW.
+    We successfully integrated the new models within TICLv5 in CMSSW.
         </li>
     </ul>
     Next steps
     <ul>
         <li>
-	We are looking forward to merging the updates into the official CMSSW releases
+    We are looking forward to merging the updates into the official CMSSW releases
         </li>
         <li>
-	Try using GNN (Graph Neural Network) for energy regression and PID instead of CNN.
+    Try using GNN (Graph Neural Network) for energy regression and PID instead of CNN.
         </li>
         <li>
-	We will proceed to enhance the linking between tracksters and tracks within the code.
+    We will proceed to enhance the linking between tracksters and tracks within the code.
         </li>
     </ul>
 ---

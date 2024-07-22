@@ -61,5 +61,5 @@ The Software and Computing Research Initiative provides partial funding for phys
       </div>
     {% endfor %}
   </div>
-  <br>
+  <br> 
 </div>
