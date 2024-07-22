@@ -42,110 +42,56 @@ presentations:
     meeting: <Tracking POG Meeting>
     meetingurl: <https://indico.cern.ch/event/1374894/>
 
-current_status: 
+current_status: >
     <br>
     <b>2024 Q2 </b>
     <br>
-    Progress
-    <ul>
-        <li>
-        Completed first working version of SONICized LST client and backend (where data is passed from client to server, LST evaluations are performed at the server, and outputs are sent back to the client)
-        </li>
-        <li>
-        Demonstrated the ability to run the SONICized LST workflow with client and server on different nodes at the same site (Purdue)
-        </li>
-        <li>
-        Performed preliminary timing studies of a simple testing workflow, obtained comparable performance to the standard non-SONIC LST
-        </li>
-        <li>
-        Currently working on tracking down some differences between SONICized LST results and the main branch results
-        </li>
-    </ul>
-    Next steps
-    <ul>
-        <li>
-        Further timing studies to explore the behavior with multiple concurrent instances of the LST workflow (to understand the scaling and how many instances are required to saturate the GPU) 
-        </li>
-        <li>
-        Depending on progress, potentially explore moving to Alpaka backend 
-        </li>
-        <li>
-        Depending on progress, potentially attempt to execute the SONICized LST with client and server at different sites (e.g. UF and Purdue) 
-        </li>
-    </ul>
+
+    *   Progress
+        *   Completed first working version of SONICized LST client and backend (where data is passed from client to server, LST evaluations are performed at the server, and outputs are sent back to the client)
+        *   Demonstrated the ability to run the SONICized LST workflow with client and server on different nodes at the same site (Purdue)
+        *   Performed preliminary timing studies of a simple testing workflow, obtained comparable performance to the standard non-SONIC LST
+        *   Currently working on tracking down some differences between SONICized LST results and the main branch results
+    *   Next steps
+        *   Further timing studies to explore the behavior with multiple concurrent instances of the LST workflow (to understand the scaling and how many instances are required to saturate the GPU) 
+        *   Depending on progress, potentially explore moving to Alpaka backend 
+        *   Depending on progress, potentially attempt to execute the SONICized LST with client and server at different sites (e.g. UF and Purdue) 
 
     <br>
     <b>2024 Q1</b>
     <br>
-    Progress
-    <ul>
-        <li>
-        Removed ROOT dependencies from LST in order to enable the successful compilation and running of the standalone TrackLooper LST within the server singularity environment from an existing example 
-        </li>
-        <li>
-        Created a backend (modeled after the identity_backend example) that can compile and run LST (though currently the inputs to the evaluation are already hard coded within the backend) using an example client as a standin to trigger the backend code to be run 
-        </li>
-    </ul>
-    Next steps
-    <ul>
-        <li>Work on connecting the LST client side with the server side to enable the transfer LST inputs from the client to the backend, and to return the results back to the client </li>
-    </ul>
+
+    *   Progress
+        *   Removed ROOT dependencies from LST in order to enable the successful compilation and running of the standalone TrackLooper LST within the server singularity environment from an existing example 
+        *   Created a backend (modeled after the identity_backend example) that can compile and run LST (though currently the inputs to the evaluation are already hard coded within the backend) using an example client as a standin to trigger the backend code to be run 
+    *   Next steps
+        *   Work on connecting the LST client side with the server side to enable the transfer LST inputs from the client to the backend, and to return the results back to the client
 
     <br>
     <b>2023 Q4</b>
     <br>
-    Progress
-    <ul>
-        <li>
-        Successfully set up and ran an example at Purdue and at UF
-        </li>
-        <li>
-        Produced a draft version of SONIC compatible LST producer
-        </li>
-        <li>
-        Using the server singularity environment, currently working to compile LST code within the singularity environment (involves extracting LST code from ROOT dependence and validating the changes)
-        </li>
-    </ul>
-    Next steps
-    <ul>
-        <li>
-        Validate the version of the LST code where the ROOT dependences have been removed (and create a PR)
-        </li>
-        <li>
-        Once the LST code is independent from ROOT and able to be compiled within the singularity env, the next step will be to interface between the server side and client side
-        </li>
-    </ul>
+
+    *   Progress
+        *   Successfully set up and ran an example at Purdue and at UF
+        *   Produced a draft version of SONIC compatible LST producer
+        *   Using the server singularity environment, currently working to compile LST code within the singularity environment (involves extracting LST code from ROOT dependence and validating the changes)
+    *   Next steps
+        *   Validate the version of the LST code where the ROOT dependences have been removed (and create a PR)
+        *   Once the LST code is independent from ROOT and able to be compiled within the singularity env, the next step will be to interface between the server side and client side
 
     <br>
     <b>2023 Q3</b>
     <br>
-    Progress
-    <ul>
-        <li>
-        Learned to run the LST workflow in order to reproduce LST plots
-        </li>
-        <li>
-        Have gotten set up at Purdue and run their test workflow (MAOD workflow) and successfully ran the setup where the cmsRun script runs on the login node, and the cmsTriton script runs on a different node
-        </li>
-        <li>
-        Have gotten the workflow (same one we got running at Purdue) running at UF (with cmsRun on one node without any GPUs and cmsTriton on a different node)
-        </li>
-        <li>
-        Tested with cmsRun at Purdue and cmsTriton at UF, but hit issue with nodes not being able to talk to each other, paused this direction for now
-        </li>
-        <li>
-        Began working to adapt the LST workflow with SONIC, starting on the "client side" i.e. reworking the producer with SONIC
-        </li>
-    </ul>
-    Next steps
-    <ul>
-        <li>
-        Plan to continue to adapt the LST workflow with SONIC
-        </li>
-        <li>
-        Will present an overview of the project at tracker meeting Oct 30, 2023
-        </li>
-    </ul>
+
+    *   Progress
+        *   Learned to run the LST workflow in order to reproduce LST plots
+        *   Have gotten set up at Purdue and run their test workflow (MAOD workflow) and successfully ran the setup where the cmsRun script runs on the login node, and the cmsTriton script runs on a different node
+        *   Have gotten the workflow (same one we got running at Purdue) running at UF (with cmsRun on one node without any GPUs and cmsTriton on a different node)
+        *   Tested with cmsRun at Purdue and cmsTriton at UF, but hit issue with nodes not being able to talk to each other, paused this direction for now
+        *   Began working to adapt the LST workflow with SONIC, starting on the "client side" i.e. reworking the producer with SONIC
+    *   Next steps
+        *   Plan to continue to adapt the LST workflow with SONIC
+        *   Will present an overview of the project at tracker meeting Oct 30, 2023
 
 
 ---
