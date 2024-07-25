@@ -5,7 +5,7 @@ shortname: nsmith-
 permalink: /postdocs/nsmith-.html
 postdoc-name: Nick Smith
 title: Post-doctoral researcher
-active: True
+active: False
 dates:
   start: 2022-01-01
   end: 2024-01-01
