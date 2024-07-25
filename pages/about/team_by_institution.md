@@ -37,4 +37,4 @@ title: US CMS S&C Team
     {% include standard_person_card.md person=former_person %}
 {% endfor %}
 </div>
-</div>
+</div> 
