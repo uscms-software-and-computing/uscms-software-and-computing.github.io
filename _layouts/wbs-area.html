@@ -10,7 +10,8 @@
         <br>
         <center><h1>{{ page.title }}</h1></center>
           <div class="container-fluid">
-            <div class="row justify-content-center">
+<!--             <div class="row justify-content-center"> -->
+            <div class="row flex-fill">  
               {% include wbs_list.html %}
 
               {% assign areas = wbs_list | hash_fetch: site.data.orgs | where_exp:"item", "item.wbs_no == page.wbs_no" %}
