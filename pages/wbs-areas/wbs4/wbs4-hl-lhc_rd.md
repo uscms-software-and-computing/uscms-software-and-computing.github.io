@@ -36,5 +36,5 @@ The detailed area organization is:
    - *AI/ML Infrastructure*: Evaluate and construct methods of integrating AI training workflows for rapid development.
 - *Physics Algorithms*: Provide infrastructure and software to address the issues related to code performance in order to reduce computational needs for HL-LHC.
    - *Adaptation for heterogeneous architectures*: Convert or extend existing algorithms to run on accelerators.
-   - *Algorithm Development*: R&D into new algorithms, including those based on Machine Learning, that promise dramatic increases in processing speed.
+   - *Algorithm Development*: R&D into new algorithms, including those based on Machine Learning, that promise dramatic increases in processing speed. 
 
