@@ -59,4 +59,4 @@ gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 # will not work with macOS's Ruby 2.3
 gem 'ffi', '~> 1.10'
 
-gem "webrick", "~> 1.8"
+gem "webrick", ">= 1.8.2"
