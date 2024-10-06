@@ -79,7 +79,7 @@
           <br>
           <br>
           <b> Postdoc dates: </b>
-          Sep 2023 - Aug 2024<br/>
+          Sep 2023 - Aug 2025<br/>
 
           <br>
           <b> Home Institution:</b> University of Florida
@@ -88,13 +88,13 @@
         </center>
 
         <br>
-        <h3>Project: Deploying GPU algorithms through SONIC</h3>
+        <h3>Project: Benchmarking current capabilities and exploring the acceleration of columnar processing via heterogeneous architectures (2024-2025). Deploying GPU algorithms through SONIC (2023-2024).</h3>
 
-        The goal of the project is to demonstrate at a sufficiently large scale the reconstruction algorithm workflow within CMSSW to be processed, where the client jobs are running on one site, while the Line Segment Tracking (LST) algorithm will be executed on GPUs on computing nodes at another site connected through SONIC (Services for Optimized Network Inference on Co-processors) framework. LST is a tracking algorithm that takes advantage of double-layer design of the HL-LHC outer tracker in order to perform hit correlations in a parallel way with GPUs. SONIC is a framework that provides GPUs as a service to clients running at different sites.  Combining the LST algorithm with the SONIC framework is the goal of the project, in which we aim to to demonstrate the execution of the LST algorithm on GPUs at an external site (apart from the site where the client jobs are run) via the SONIC framework.
+        2024-2025: This project aims to benchmark the performance of the step of late-stage data analysis (in which nanoAOD formatted data is transformed into histograms) for realistic CMS analyses in order to understand current capabilities, scaling, and bottlenecks for columnar analysis workflows; acceleration of the columnar processing via GPU offloading will also be explored.  The results of these studies will help to illuminate the challenges and opportunities that lie ahead as CMS pushes towards rapid and efficient turnarounds of HL-LHC physics analyses.  An ongoing CMS multi-boson analysis will be used as the example application for the proposed explorations.  The analysis is fairly representative of a mature CMS analysis studying Run 2 and early Run 3 data, and is implemented in the coffea framework.  We will aim to benchmark the performance that is able to be achieved under various configurations in order to understand where the bottlenecks lie and how the analysis scales towards skimming and processing larger data volumes.  We will also aim to demonstrate the feasibility of running a portion of the analysis on GPUs and to enumerate the developments that would remain in order to run the analysis fully on GPUs. 2023-2024: The goal of the project is to demonstrate at a sufficiently large scale the reconstruction algorithm workflow within CMSSW to be processed, where the client jobs are running on one site, while the Line Segment Tracking (LST) algorithm will be executed on GPUs on computing nodes at another site connected through SONIC (Services for Optimized Network Inference on Co-processors) framework. LST is a tracking algorithm that takes advantage of double-layer design of the HL-LHC outer tracker in order to perform hit correlations in a parallel way with GPUs. SONIC is a framework that provides GPUs as a service to clients running at different sites.  Combining the LST algorithm with the SONIC framework is the goal of the project, in which we aim to to demonstrate the execution of the LST algorithm on GPUs at an external site (apart from the site where the client jobs are run) via the SONIC framework.
 
         <br>
         <br>
-        More information: <a href = "/assets/pdfs/Kelci-Mohrman.pdf">My project proposal</a><br>
+        More information: <a href = "/assets/pdfs/Kelci-Mohrman-2024.pdf">My project proposal</a><br>
 
         <br>
         <b>Mentors: </b> <br>
@@ -186,15 +186,19 @@
         <ul>
           
           
-          <li>3 Jun 2024 - <a href="<https://indico.cern.ch/event/1418266/contributions/5961841/attachments/2869550/5023598/sonic_lst_update_jun03_2024.pdf>">"Line Segment Tracking using SONIC"</a>, Kelci Mohrman, <a href="<https://indico.cern.ch/event/1418266/#35-line-segment-tracking-using>"><Tracking POG Meeting></a>
+          <li>9 Sep 2024 - <a href="https://indico.cern.ch/event/1443183/contributions/6095381/attachments/2923974/5132502/sonic_lst_summary_sep09_2024.pdf">"LST with SONIC framework"</a>, Kelci Mohrman, <a href="https://indico.cern.ch/event/1443183/#50-update-on-soniclst-developm">Tracking POG Meeting</a>
             
           
           
-          <li>23 Oct 2023 - <a href="<https://indico.cern.ch/event/1337451/contributions/5630393/attachments/2738948/4763938/kmohrman_sonic_lst_intro_oct23_2023.pdf>">"Project introduction and plans: LST with the SONIC framework"</a>, Kelci Mohrman, <a href="<https://indico.cern.ch/event/1337451/>"><Tracking POG Meeting></a>
+          <li>3 Jun 2024 - <a href="https://indico.cern.ch/event/1418266/contributions/5961841/attachments/2869550/5023598/sonic_lst_update_jun03_2024.pdf">"Line Segment Tracking using SONIC"</a>, Kelci Mohrman, <a href="https://indico.cern.ch/event/1418266/#35-line-segment-tracking-using">Tracking POG Meeting</a>
             
           
           
-          <li>12 Feb 2023 - <a href="<https://indico.cern.ch/event/1374894/contributions/5778400/attachments/2799411/4883360/sonic_lst_update_feb12_2024.pdf>">"Project status update: LST with the SONIC framework"</a>, Kelci Mohrman, <a href="<https://indico.cern.ch/event/1374894/>"><Tracking POG Meeting></a>
+          <li>12 Feb 2024 - <a href="https://indico.cern.ch/event/1374894/contributions/5778400/attachments/2799411/4883360/sonic_lst_update_feb12_2024.pdf">"Project status update: LST with the SONIC framework"</a>, Kelci Mohrman, <a href="https://indico.cern.ch/event/1374894/">Tracking POG Meeting</a>
+            
+          
+          
+          <li>23 Oct 2023 - <a href="https://indico.cern.ch/event/1337451/contributions/5630393/attachments/2738948/4763938/kmohrman_sonic_lst_intro_oct23_2023.pdf">"Project introduction and plans: LST with the SONIC framework"</a>, Kelci Mohrman, <a href="https://indico.cern.ch/event/1337451/">Tracking POG Meeting</a>
             
           
         </ul>
@@ -202,7 +206,30 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2024 Q2 </b> <br /></p>
+        <p><br /> <b>2024 Q3 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Set up the larger-scale “step3” LST workflow implemented with SONIC (previously had just been running a testing workflow)</li>
+      <li>Performed qualitative validation of SONICized LST implementation of the step3 workflow (by running producing the DQM plots and comparing with master branch SONIC)
+        <ul>
+          <li>Obtained qualitative agreement. (Exact agreement not expected because the versions of LST being used are slightly different between the master branch and the SONICized implementation. The SONIC LST backend is based on the outdated cuda_branch of LST because Alpaka is not yet available in the server environment for SONIC.)</li>
+        </ul>
+      </li>
+      <li>Performed more detailed timing studies (at the Purdue T2)
+        <ul>
+          <li>Tested running with multiple concurrent instances of LST cmsRun jobs and measured the runtime and examined the GPU usage</li>
+          <li>Observed the scaling behavior (larger numbers of concurrent instances were taking disproportionately longer to run) but did not seem to be due to saturating the GPU (so there would likely be a bottleneck elsewhere)</li>
+          <li>Observed some differences in the run times between the master branch of LST and the SONICized LST</li>
+          <li>Encountered memory errors before we could saturate the GPU</li>
+          <li>Set up the SONICized LST implementation at a different site (UF T2) and demonstrated successful runs with the client at the Purdue T2 and the server at the UF T2 (and the other way around)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2024 Q2 </b> <br /></p>
 <ul>
   <li>Progress
     <ul>
