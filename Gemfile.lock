@@ -105,8 +105,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.8.3)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.9)
     rouge (3.30.0)
     rubocop (1.12.1)
       parallel (~> 1.10)
@@ -126,7 +125,6 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
-    strscan (3.1.0)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     timers (4.3.5)
