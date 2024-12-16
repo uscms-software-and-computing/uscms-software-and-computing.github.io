@@ -22,7 +22,7 @@ The Software and Computing Research Initiative provides funding for undergraduat
 
 <div class="container-fluid">
   <div class="row">
-    {% for person in interns %}
+    {% for person in active-interns %}
       <div class="card" style="width: 14rem;">
          <img class="card-img-top" src="{{person.photo}}" alt="Card image cap">
          <div class="card-body d-flex flex-column">
