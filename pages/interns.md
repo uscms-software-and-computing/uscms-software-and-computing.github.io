@@ -14,8 +14,8 @@ The Software and Computing Research Initiative provides funding for undergraduat
                                | reverse
                                | iris_hep_fellow_sort
                                | reverse %}
-{% assign active-intern = interns | select: "active" %}
-{% assign inactive-intern = interns | reject: "active" %}
+{% assign active-interns = interns | select: "active" %}
+{% assign inactive-interns = interns | reject: "active" %}
 
 
 # Current Interns
