@@ -2,7 +2,6 @@
 layout: postdoc
 pagetype: postdoc
 shortname: jinzhou
-permalink: /postdocs/jinzhou.html
 postdoc-name: Jin Zhou
 title: PhD Student
 active: True
