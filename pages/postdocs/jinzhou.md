@@ -21,7 +21,6 @@ mentors:
   - Douglas Thain (Cooperative Computing Lab, University of Notre Dame)
   - Kevin Lannon (Physics department, University of Notre Dame)
 
-
 current_status: >
   <br>
   <b>2025 Q1 </b>
