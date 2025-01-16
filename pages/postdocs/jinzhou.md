@@ -29,12 +29,12 @@ current_status: >
 
   *   Progress
       *   
-      *   Developed the large-input first (LIF) algorithm and the pruning algorithm which effectively reduce the storage consumption for over 90% while running hundreds of thousands of tasks.
+      *   Developed the large-input first (LIF) algorithm and the pruning algorithm which effectively reduce the storage consumption by over 90% while running hundreds of thousands of tasks.
       *   Enhanced the resource allocation and temp file replication on the task scheduler side.
       *   Attempted to submit a paper to IPDPS 2025 though was rejected.
   *   Next steps
-      *   Sketch a paper aobut effectively using limited storage to accomplish enormous computations.
+      *   Sketch a paper about effectively using limited storage to accomplish enormous computations.
       *   Develop an algorithm that divides long running tasks in DV5 into smaller ones, which reduces the overhead of rerunning tasks on worker evictions but increases the latency of scheduling a large number of small tasks, so the next plan would be trying to strike a balance between task scheduling and fault tolerance.
-      *   Develop an algorithm that checkpoints remote temp files on time to reduce the risk of losign critical files.
+      *   Develop an algorithm that checkpoints remote temp files on time to reduce the risk of losing critical files.
 
 ---
