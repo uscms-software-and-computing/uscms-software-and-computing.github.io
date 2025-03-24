@@ -8,7 +8,7 @@ title: Chan-anun Rungphitakchai - USCMS S&C Intern
 active: True
 dates:
   start: 2023-06-01
-  end: 2024-05-31
+  end: 2025-05-31
 photo: /assets/images/team/Chan-anun-Rungphitakchai.jpg
 institution: University of Wisconsin Madison
 e-mail: rungphitakch@wisc.edu
