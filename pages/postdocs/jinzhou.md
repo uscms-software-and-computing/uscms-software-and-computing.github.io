@@ -1,4 +1,5 @@
 ---
+permalink: /postdocs/jinzhou.html
 layout: postdoc
 pagetype: postdoc
 shortname: jinzhou
