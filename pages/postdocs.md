@@ -18,7 +18,7 @@ The Software and Computing Research Initiative provides partial funding for phys
 {% assign inactive-postdocs = postdocs | reject: "active" %}
 
 
-# Current U.S. CMS Post Doctoral Researchers
+# Current U.S. CMS R&D Initiative Researchers
 
 <div class="container-fluid">
   <div class="row">
@@ -41,7 +41,7 @@ The Software and Computing Research Initiative provides partial funding for phys
   <br>
 </div>
 
-# Former U.S. CMS Post Doctoral Researchers
+# Former U.S. CMS R&D Initiative Researchers
 
 <div class="container-fluid">
   <div class="row">

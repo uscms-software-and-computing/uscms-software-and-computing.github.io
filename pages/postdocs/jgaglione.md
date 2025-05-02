@@ -8,7 +8,7 @@ title: Post-doctoral researcher
 active: True
 dates:
   start: 2024-01-01
-  end: 2024-12-31
+  end: 2025-09-30
 photo: /assets/images/team/Jethro-Gaglione.jpg
 institution: Vanderbilt University
 e-mail: jethrogaglione@gmail.com
@@ -38,9 +38,9 @@ current_status: >
   <br>
   This quarter, we made significant progress integrating the btag POG ML training framework b-hive into an MLflow project which can be submitted to the Machine Learning Training Facility (MLTF). This work is very close to being merged, which will make it the first production CMS ML workflow integrated with the MLTF.
 
-Work on hardware capabilities continues to hit delays due to issues with firmwares provided by the manufacturer. Engineers were unable to remotely diagnose the issue, leading Vanderbilt to ship the hardware back for hands-on inspection. This was successful, the engineers were able to find a subtle bug at the PCI-E layer, and updated/flashed the firmware to solve it. As of this writing, the hardware is being shipped back to Vanderbilt with the assertion from the manufacturer that it is fixed. This will, of course, push back hardware-related milestones.
+  Work on hardware capabilities continues to hit delays due to issues with firmwares provided by the manufacturer. Engineers were unable to remotely diagnose the issue, leading Vanderbilt to ship the hardware back for hands-on inspection. This was successful, the engineers were able to find a subtle bug at the PCI-E layer, and updated/flashed the firmware to solve it. As of this writing, the hardware is being shipped back to Vanderbilt with the assertion from the manufacturer that it is fixed. This will, of course, push back hardware-related milestones.
 
-Vanderbilt developers have completed a first draft of the MLflow “gateway” server, which provides a REST-based job submission infrastructure (similar to CMS’ CRAB functionality). This will allow automated submission of training tasks (e.g. for CI/CD) via REST, or CLI-based job submission using a MLflow plugin which users can install into their environments. The functionality is currently basic, stubbing out the API, but has token-based authentication enabled to the point that the service can be securely accessed. The next work is to implement the missing functions so this service can be opened to alpha users in Q4.
+  Vanderbilt developers have completed a first draft of the MLflow “gateway” server, which provides a REST-based job submission infrastructure (similar to CMS’ CRAB functionality). This will allow automated submission of training tasks (e.g. for CI/CD) via REST, or CLI-based job submission using a MLflow plugin which users can install into their environments. The functionality is currently basic, stubbing out the API, but has token-based authentication enabled to the point that the service can be securely accessed. The next work is to implement the missing functions so this service can be opened to alpha users in Q4.
 
 
 

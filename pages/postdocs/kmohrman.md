@@ -5,6 +5,7 @@ shortname: kmohrman
 permalink: /postdocs/kmohrman.html
 postdoc-name: Kelci Mohrman
 title: Post-doctoral researcher
+project_title: Benchmarking current capabilities and exploring the acceleration of columnar processing via heterogeneous architectures (2025) and Deploying GPU algorithms through SONIC (2023)
 active: True
 dates:
   start: 2023-09-01
@@ -12,7 +13,6 @@ dates:
 photo: /assets/images/team/Kelci-Mohrman.png
 institution: University of Florida
 e-mail: k.mohrman@ufl.edu
-project_title: 
 project_goal: >
     <br>
     <b>2024-2025: Benchmarking current capabilities and exploring the acceleration of columnar processing via heterogeneous architectures </b>
