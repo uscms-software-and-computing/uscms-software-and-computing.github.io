@@ -73,28 +73,28 @@
 
       <div>
         <br>
-        <center><h1>USCMS Researcher: Nick Smith</h1>
+        <center><h1>USCMS Researcher: Jethro Gaglione</h1>
 
-          <img src="/assets/images/team/Nick-Smith.jpg" width="150px">
+          <img src="/assets/images/team/Jethro-Gaglione.jpg" width="150px">
           <br>
           <br>
           <b> Postdoc dates: </b>
-          Jan 2022 - Jan 2024<br/>
+          Jan 2024 - Sep 2025<br/>
 
           <br>
-          <b> Home Institution:</b> Fermilab
+          <b> Home Institution:</b> Vanderbilt University
           <br>
           <br>
         </center>
 
         <br>
-        <h3>Project: Object Storage for CMS in the HL-LHC era</h3>
+        <h3>Project: Development of a Distributed GPU Machine Learning Training Facility at Vanderbilt's ACCRE Cluster</h3>
 
-        Demonstrate feasability of using Ceph object store technology to store and retrieve CMS event data products at a finer granularity than file-level. Benchmark storage usage and analysis access performance and compare to traditional file-level storage solutions.
+        The objective of this project is to leverage the knowledge and hardware available within the Vanderbilt research computing center (ACCRE) to develop a prototype distributed GPU machine learning training facility. We aim to provide the efficiency boost of training on a multi-GPU platform to CMS users and beyond, while abstracting away the highly technical details necessary to do so.  
 
         <br>
         <br>
-        More information: <a href = "/assets/pdfs/Jayatilaka_USCMSpostdoc_proposal.pdf">My project proposal</a>, <a href = "/assets/pdfs/NickSmith_RD_FinalReport.pdf">My project final report</a><br> 
+        More information: <a href = "/assets/pdfs/Jethro-Gaglione.pdf">My project proposal</a><br> 
 
         <br>
         <b>Mentors: </b> <br>
@@ -176,88 +176,9 @@
             
             
             
-            <p>Bo Jayatilaka (Fermilab)</p>
-
-            
-          </li>
-          
-          <li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <p>David Mason (Fermilab)</p>
+            <ul>
+  <li>Andrew Melo - (Vanderbilt University)</li>
+</ul>
 
             
           </li>
@@ -270,19 +191,11 @@
         <ul>
           
           
-          <li>8 Nov 2023 - <a href="https://indico.cern.ch/event/1341608/contributions/5648183/attachments/2748905/4784080/ncsmith-blueprint-objectstores.pdf">"Object Stores for CMS data"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1341608/">S&C Blueprint Meeting - USCMS Storage R&D</a>
+          <li>8 Apr 2024 - <a href="<https://docs.google.com/presentation/d/1mK_AvZ3sJ9DhR1ZyzQk2NGb5MFS2VvprgtLx-k-gy3o/edit#slide=id.p>">"Machine Learning Training Facility at Vanderbilt"</a>, Jethro Gaglione, <a href="<https://indico.cern.ch/event/1400420/>"><Production Group Meeting></a>
             
           
           
-          <li>9 May 2023 - <a href="https://indico.jlab.org/event/459/contributions/11308/">"A Ceph S3 Object Data Store for HEP"</a>, Nick Smith, <a href="https://indico.jlab.org/event/459">CHEP 2023</a>
-            
-          
-          
-          <li>27 Oct 2022 - <a href="https://indico.cern.ch/event/1106990/contributions/5097031/">"Ceph S3 Object Storage for CMS data"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1106990/">ACAT 2022</a>
-            
-          
-          
-          <li>22 Feb 2022 - <a href="https://indico.cern.ch/event/1131679/contributions/4748741/attachments/2396026/4096861/ncsmith-uscms-objectstores.pdf">"Object Stores for CMS data: initial presentation"</a>, Nick Smith, <a href="https://indico.cern.ch/event/1131679/">HL-LHC R&D Initiative Meeting</a>
+          <li>19 Jul 2024 - <a href="<https://indico.cern.ch/event/1438068/>">"Machine Learning Training Facility at Vanderbilt - A Prototype for Efficient and Reproducible ML Training"</a>, Jethro Gaglione, <a href="<https://indico.cern.ch/event/1438068/>"><Fast ML Co-processor Meeting></a>
             
           
         </ul>
@@ -290,7 +203,13 @@
 
         <b>Current Status</b>
         <br>
-        <p>In progress. Single- and multi-client scaling tests of the Ceph object service were presented at CHEP, proceedings to be posted. Now working with CMSSW Core Framework team and RNTuple developers to integrate RNTuple into CMSSW, to leverage RNTuple object storage backend capabilities rather than writing a custom implementation. An automated data ingestion system demonstrator is being developed, where FTS transfers files directly to the S3 endpoint, which then triggers a conversion routine to explode the files into the object data format.</p>
+        <p><br /> <b>2024 Q3</b> <br /> This quarter, we made significant progress integrating the btag POG ML training framework b-hive into an MLflow project which can be submitted to the Machine Learning Training Facility (MLTF). This work is very close to being merged, which will make it the first production CMS ML workflow integrated with the MLTF.
+Work on hardware capabilities continues to hit delays due to issues with firmwares provided by the manufacturer. Engineers were unable to remotely diagnose the issue, leading Vanderbilt to ship the hardware back for hands-on inspection. This was successful, the engineers were able to find a subtle bug at the PCI-E layer, and updated/flashed the firmware to solve it. As of this writing, the hardware is being shipped back to Vanderbilt with the assertion from the manufacturer that it is fixed. This will, of course, push back hardware-related milestones.
+Vanderbilt developers have completed a first draft of the MLflow “gateway” server, which provides a REST-based job submission infrastructure (similar to CMS’ CRAB functionality). This will allow automated submission of training tasks (e.g. for CI/CD) via REST, or CLI-based job submission using a MLflow plugin which users can install into their environments. The functionality is currently basic, stubbing out the API, but has token-based authentication enabled to the point that the service can be securely accessed. The next work is to implement the missing functions so this service can be opened to alpha users in Q4.</p>
+
+<p><br /> <b>2024 Q2</b> <br /> While in more advanced stages of implementing and testing a variety of ML frameworks for training, logging metrics, hyperparameter optimization, and the deployment and reproducibility of these (via MLflow, Optuna, etc. see last quarter update), we have begun branching out to the ML community to gauge some of their needs and make them aware of the our facility (MLTF). We presented information on MLTF to the CMS ML production group on 4/8 (https://indico.cern.ch/event/1400420/), and we are set to give a talk on July 19th at Fermilab’s Fast Machine Learning Coprocessor meeting. We have been in touch with the BTV POG developers regarding their ongoing ML training framework project, B-hive, which currently trains the DeepFlavor tagging algorithm. We are exploring how we could best incorporate this framework and enhance its features with the frameworks we currently plan to encourage use of at MLTF. We continue to implement and test uses of our current frameworks to enhance productivity and efficiency, such as system usage metric tracking via MLflow.
+<br /> <b>2024 Q1</b> <br /> The last quarter we have incorporated and finalized testing on submission of jobs to the cluster via an mlflow-slurm interface that allows users to take advantage of cluster capabilities via MLflow projects. These nicely package the intended training project along with package and system requirements for easy reproducibility without having to explicitly learn Slurm scheduler directives and scripting. Work is ongoing to make a REST-based MLflow interface, which will allow CMS users without ACCRE accounts to submit training workflows remotely. We have also begun investigating the incorporating the use of Optuna as a suggested framework for hyperparameter optimization. This can work seamlessly with MLFlow and Slurm, and takes advantage of Bayesian optimization and pruning to efficiently run HPO.
+<br /> <b>2023 Q3</b> <br /> We have chosen appropriate hardware to purchase for the PoC, but delays in FNAL procurement have made it so we can’t order yet. Gaglione will join the effort on Oct 1 (as planned), and we will work with substitute hardware in the interim.</p>
 
         <br>
         <br>
@@ -299,7 +218,7 @@
         <ul>
           
           <li>
-            <i class="fas fa-envelope-square"></i><a href = "mailto:nick.smith@cern.ch"> Send me an email</a><br>
+            <i class="fas fa-envelope-square"></i><a href = "mailto:jethrogaglione@gmail.com"> Send me an email</a><br>
           </li>
           
           
