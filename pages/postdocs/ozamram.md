@@ -5,7 +5,7 @@ shortname: ozamram
 permalink: /postdocs/ozamram.html
 postdoc-name: Oz Amram
 title: Post-doctoral researcher
-active: True
+active: False
 dates:
   start: 2022-09-12
   end: 2024-09-12
@@ -22,6 +22,7 @@ mentors:
   - Kevin Pedro (Fermilab)
 
 proposal: /assets/pdfs/Oz-Amram.pdf
+finalreport: /assets/pdfs/OzAmram_RD_FinalReport.pdf
 presentations:
   - title: "Machine Learning Models for Calorimeter Simulation"
     date: 2022-11-08

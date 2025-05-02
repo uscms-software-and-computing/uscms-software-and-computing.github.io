@@ -8,7 +8,7 @@ title: Post-doctoral researcher
 active: True
 dates:
   start: 2024-03-01
-  end: 2025-02-28
+  end: 2025-11-30
 photo: /assets/images/team/Mohamed-Darwish.jpg
 institution: Baylor University
 e-mail: mohamed.anwar@cern.ch

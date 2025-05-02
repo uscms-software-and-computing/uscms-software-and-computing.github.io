@@ -21,6 +21,7 @@ mentors:
   - David Mason (Fermilab)
 
 proposal: /assets/pdfs/Jayatilaka_USCMSpostdoc_proposal.pdf
+finalreport: /assets/pdfs/NickSmith_RD_FinalReport.pdf
 presentations:
   - title: "Object Stores for CMS data"
     date: 2023-11-08

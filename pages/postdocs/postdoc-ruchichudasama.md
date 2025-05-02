@@ -19,6 +19,7 @@ mentors:
 project_goal: >
   Development of end-to-end deep learning algorithms to improve the electron and tau identification in low momentum regime using graph neural networks and vision transformers. Integrate the electron and tau benchmarks into CMS software framework and scaling studies of deep learning training and inference on heterogeneous hardware platforms relying on containerization. Additionally, extend the end-to-end deep learning for electron and tau mass regression. 
 proposal: /assets/pdfs/USCMS_Ruchi_Chudasama.pdf
+finalreport: /assets/pdfs/RuchiChudasama_RD_FinalReport.pdf
 presentations:
   - title: "End-to-end deep learning inference with CMSSW via ONNX using Docker "
     date: 2023-05-09
