@@ -24,7 +24,6 @@ mentors:
 
 current_status: >
   <br>
-  <br>
   <b>2025 Q1 </b>
   <br>
 
