@@ -189,6 +189,14 @@
         <ul>
           
           
+          <li>2 Apr 2025 - <a href="<https://indico.cern.ch/event/1530757/contributions/6440909/attachments/3043765/5377591/SONIC%20updates%20-%20O&C%20April%202025.pdf>">"SONIC updates"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1530757/>"><O&C weekly meeting></a>
+            
+          
+          
+          <li>25 Jun 2024 - <a href="<https://indico.cern.ch/event/1427247/contributions/6010809/attachments/2884511/5055317/SONIC%20for%20ML%20algorithms-1.pdf>">"SONIC for ML algorithms"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1427247/>"><CMS week Machine Learning Forum></a>
+            
+          
+          
           <li>1 Mar 2024 - <a href="<https://indico.cern.ch/event/1372201/contributions/5834098/attachments/2811033/4906211/SONIC%20in%20CMS%20and%20ATLAS.pdf>">"SONIC in CMS and ATLAS"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1372201/overview>"><SONIC Heterogeneous Computing for Science Workshop></a>
             
           
@@ -197,19 +205,61 @@
 
         <b>Current Status</b>
         <br>
-        <ul>
-  <li>Progress Report
+        <p><br /> <b>2025 Q2 </b> <br /></p>
+<ul>
+  <li>Progress
     <ul>
-      <li>Learned to run SONIC miniAOD workflow at Purdue Tier2 cluster.</li>
-      <li>Learned to measure throughput and latency with the tools provided to measure miniAOD workflow for both GPU triton server and CPU direct inference, and interpret the performance.</li>
-      <li>Wrote the sonic-nized producer of particle transformer for B-jet tagging in Run 3 miniAOD workflow. Tested its performance for both GPU triton server and CPU direct inference with CMSSW_14_1_0_pre0 and a 2023 TTbar MC sample.</li>
+      <li>Successfully developed an Alpaka demo on the Nvidia Triton server as a preliminary test before implementing the backend for LST. Created an Alpaka demo that adds two float vectors and outputs a float vector. Modified the code so that input and output types are compatible with the Triton server. The code was compiled similarly to the LST standalone code, using a Makefile, linking the ALPAKA and BOOST libraries from /cvmfs, and generating both a CUDA shared object and a CPU shared object.</li>
+      <li>Developed a custom backend to load the Alpaka demo code into the Triton server. This included supporting multiple inputs per inference request and defining input and output buffers. All backend changes were adapted for compatibility with the more recent Triton server version 24.11, compared to the previous LST on SONIC setup, which was based on server version 21.04. Both shared objects are successfully loaded by the Nvidia Triton server and produce correct outputs. Some additional sanity checks are still ongoing.</li>
+      <li>Collaborated with the University of Florida team (supervised by Dr.Philip Chang) to assist student Alexandra Aponte in initiating the project to adapt the latest LST code for SONIC.</li>
+      <li>Mentored graduate students Ethan Colbert and Arghya Ranjan Das in developing a producer to support GloParT on the Nvidia Triton server. This work is currently in progress.</li>
+      <li>Future Plans: Implement direct inference and harmonize the SONIC interface.</li>
     </ul>
   </li>
-  <li>Next Steps
+</ul>
+
+<p><br /> <b>2025 Q1 </b> <br /></p>
+
+<ul>
+  <li>Progress
     <ul>
-      <li>Integrate the sonic-nized producer to official CMSSW release.</li>
-      <li>Understand Patatrack-as-a-service as an example of using non-NL algorithm on GPU server.</li>
-      <li>After getting Triton server to work with the linux system that CMSSW is working on, will start to discuss with SONIC team about how to implement automation on algorithm loading and execution.</li>
+      <li>Used perf_analyzer to study the throughput and latency of the CUDA code for LST on Nvidia Triton server. Observed some latency in data transmission.</li>
+      <li>Investigated the compilation process of the standalone LST Alpaka code. Developed a “helloWorld” Alpaka example that follows the same compilation procedure as the LST standalone code, using a Makefile, and produces a shared object for loading into the Triton server. Plan to test the “helloWorld” example with the Triton server as an initial step to explore the technical requirements for running Alpaka code with Triton.</li>
+      <li>The SONIC producer for UParTAK4_V01 has been successfully merged into CMSSW.</li>
+      <li>Provided a tutorial to Purdue graduate student Yibo Zhong, who successfully developed the SONIC producer for MLPF. Investigated output differences between CPU direct inference and GPU direct inference, where the Triton server produced NaN values in the output. The issue was traced to onnxruntime compatibility with the cuDNN version. Updating to a more recent CMSSW version resolved the inference discrepancy between CPU and GPU, and switching to a newer Triton server version eliminated the NaN output issue.</li>
+      <li>Future Plans: Implement direct inference and harmonize the SONIC interface.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2024 Q3 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>The ParticleTransformer SONIC producer was merged into CMSSW in August. The Run3 AOD-to-MiniAOD workflow is currently being tested with tasks prepared by PPD, and jobs are expected to run on Purdue resources. This testing is being carried out by Dr. Lisa Paspalaki and Dr. Dmitry Kondratyev and is still ongoing.</li>
+      <li>Regarding the model issue with the Unified Particle Transformer, confirmed with the author that the dimension swap within their model does not affect inference results. Therefore, the problem lies in the model’s conversion from PyTorch to ONNX.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2024 Q2 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Completed the ParticleTransformer sonic producer implementation; the code was reviewed and is ready to be integrated into CMSSW.</li>
+      <li>Modified the Unified Particle Transformer PyTorch-to-ONNX model conversion, after discussion with the model’s author, to support dynamic batching, enabling multiple jets to be sent to the server in a single request.</li>
+      <li>Nearly completed the Unified Particle Transformer producer implementation. Due to the high structural similarity to the ParticleTransformer producer, the producer structure is suggested to be modified to reduce code duplication.</li>
+      <li>Measured throughput for each ML model using perf_analyzer.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2023 Q4 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Learned how to run the SONIC MiniAOD workflow on the Purdue Tier-2 cluster.</li>
+      <li>Learned how to measure throughput and latency using the available tools to evaluate the MiniAOD workflow performance for both GPU Triton server inference and CPU direct inference, and how to interpret the results.</li>
     </ul>
   </li>
 </ul>
