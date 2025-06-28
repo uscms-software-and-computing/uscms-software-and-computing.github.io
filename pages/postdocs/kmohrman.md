@@ -45,6 +45,11 @@ mentors:
 
 
 presentations:
+  - title: "Towards rapid and efficient analyses at scale"
+    date: "May 21, 2025"
+    url: https://indico.cern.ch/event/1499327/contributions/6510006/
+    meeting: 2025 US CMS Annual Collaboration Meeting (poster session)
+    meetingurl: https://indico.cern.ch/event/1499327/
   - title: "LST with SONIC framework"
     date: "Sept 9, 2024"
     url: https://indico.cern.ch/event/1443183/contributions/6095381/attachments/2923974/5132502/sonic_lst_summary_sep09_2024.pdf
@@ -68,6 +73,41 @@ presentations:
 
 
 current_status: >
+    <br>
+    <b>2025 Q2 </b>
+    <br>
+
+    *   Testing the coffea202X skimming capabilities and benchmarking performance:
+        *   Testing the skimming workflow (cortado) developed last quarter, now running at realistic R2+R3 scale, with unskimmed inputs from SMP-24-015 (200/fb) as the test case
+        *   Encountered challenges when attempting to process datasets in parallel, working with TaskVine developers on handling this, using their new "dynamic data reduction" implementation with cortado
+        *   Benchmarking wall time and Hz/core with varying numbers of CPU cores (at UF T2)
+        *   Able to achieve processing of full 13 TB inputs in a few hours with a few thousand cores (at UF)
+        *   Physics validation of output skim underway, debugging in progress
+    *   Explore the acceleration of the columnar processing via GPU offloading:
+        *   Working on implementing and testing 8 ADL Benchmark Queries on GPU
+        *   Four Queries are successfully implemented and show agreement with CPU outputs
+        *   Four Queries have uncovered bugs in the cuda backends, reported on the relevant repositories, with debugging is in progress
+        *   Performance comparisons of the GPU implemented Queries show performance improvements (over CPU) of up to ~800x
+
+    <br>
+    <b>2025 Q1 </b>
+    <br>
+
+    *  Progress on testing the coffea202X skimming capabilities and benchmark performance:
+        *   Set up a coffea 202X-based skimming workflow (cortado)
+        *   Tested single file and single dataset (~4M events) runs locally and with the TaskVine scheduler, and documenting performance
+        *   Working towards realistic R2+R3 scale tests: Transferred a realistic R2+R3 200/fb scale set of unskimmed samples to the UF T2 (~13.5 TB, ~12B events, ~400 datasets of data and MC, corresponding to the set used in the SMP-24-015 analysis)
+
+    <br>
+    <b>2024 Q4 </b>
+    <br>
+
+    *   Wrapped up project, prepared the project summary document, documented the code and setup
+    *   Worked with SONIC team to help with the handoff of the project, helping to get another member of the team set up and successfully run the SONIC+LST workflow
+    *   Transitioning into columnar R&D project (benchmark the performance of the step of end-user data analysis, and explore the acceleration of columnar processing with GPUs)
+        *   Starting with the exploration of the the performance and scaling of the skimming step with coffea 202X
+        *   Progress: successfully set up and ran a 202X skimmer on one file
+
     <br>
     <b>2024 Q3 </b>
     <br>
