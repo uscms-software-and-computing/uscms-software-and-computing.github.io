@@ -45,6 +45,16 @@ mentors:
 
 
 presentations:
+  - title: "Benchmarking analysis workflows"
+    date: "July 23, 2025"
+    url: https://indico.cern.ch/event/1565053/#2-benchmarking-analysis-workfl
+    meeting: CMS CAT general meeting
+    meetingurl: https://indico.cern.ch/event/1565053
+  - title: "Towards rapid and efficient columnar-based analyses at scale"
+    date: "July 14, 2025"
+    url: https://indico.cern.ch/event/1515852/timetable/?view=standard#9-towards-rapid-and-efficient
+    meeting: PyHEP.dev 2025 - Python in HEP Developer's Workshop
+    meetingurl: https://indico.cern.ch/event/1515852/
   - title: "Towards rapid and efficient analyses at scale"
     date: "May 21, 2025"
     url: https://indico.cern.ch/event/1499327/contributions/6510006/
