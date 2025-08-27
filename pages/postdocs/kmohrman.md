@@ -45,6 +45,11 @@ mentors:
 
 
 presentations:
+  - title: "Towards rapid and efficient analyses at scale"
+    date: "August 28, 2025"
+    url: https://indico.cern.ch/event/1493037/timetable/?view=standard#347-towards-rapid-and-efficien
+    meeting: Lepton Photon 2025 (poster session)
+    meetingurl: https://agenda.hep.wisc.edu/event/2188/
   - title: "Benchmarking analysis workflows"
     date: "July 23, 2025"
     url: https://indico.cern.ch/event/1565053/#2-benchmarking-analysis-workfl
