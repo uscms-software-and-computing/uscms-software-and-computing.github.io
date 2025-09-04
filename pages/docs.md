@@ -10,3 +10,4 @@ title: "Documentation for USCMS S&C website"
 * [Perfoming a pull request](/docs/pull_request)
 * [Adding a postdoc page](/docs/postdoc)
 * [Adding an intern page](/docs/intern)
+* [Org Chart Image](/docs/org_chart)
