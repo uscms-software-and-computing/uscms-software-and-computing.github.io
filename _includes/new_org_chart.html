@@ -4,7 +4,7 @@
   <title>USCMS S&C Org Chart (Auto-Generated)</title>
   <style>
     body { background:#fff; font-family:sans-serif; }
-    .chart-container { position:relative; width:1600px; height:1200px; margin:auto; border:2px solid #000; }
+    .chart-container { position:relative; width:1200px; height:800px; margin:auto;}
 
     .node { position:absolute; text-align:center; }
     .node.root { width:300px; }
@@ -30,7 +30,7 @@
 </head>
 <body>
 <div id="chart" class="chart-container">
-  <canvas id="connectorCanvas" width="1600" height="1200"></canvas>
+  <canvas id="connectorCanvas" width="1200" height="800"></canvas>
 </div>
 
 {% capture liquid_layoutMap %}
@@ -179,14 +179,14 @@ const instShortByPerson = JSON.parse({{ liquid_instShortByPerson | strip_newline
 
 /* Positions: Blueprint intentionally excluded */
 const positions = {
-  management: {left:650, top:40,   title:"Software & Computing", type:"root"},
-  facilities: {left:500, top:220,  title:"Facilities", type:"leaf"},
-  software:   {left:500, top:360,  title:"Software", type:"leaf"},
-  operations: {left:800, top:220,  title:"Operations", type:"leaf"},
-  hllhc:      {left:800, top:360,  title:"HL-LHC R&D", type:"leaf"},
-  infra:      {left:560, top:500,  title:"Infrastructure", type:"leaf"},
-  algo:       {left:670, top:500,  title:"Algorithms", type:"leaf"},
-  analysis:   {left:780, top:500,  title:"Analysis", type:"leaf"}
+  management: {left:450, top:40,   title:"Software & Computing", type:"root"},
+  facilities: {left:300, top:220,  title:"Facilities", type:"leaf"},
+  software:   {left:300, top:360,  title:"Software", type:"leaf"},
+  operations: {left:600, top:220,  title:"Operations", type:"leaf"},
+  hllhc:      {left:600, top:360,  title:"HL-LHC R&D", type:"leaf"},
+  infra:      {left:360, top:500,  title:"Infrastructure", type:"leaf"},
+  algo:       {left:470, top:500,  title:"Algorithms", type:"leaf"},
+  analysis:   {left:580, top:500,  title:"Analysis", type:"leaf"}
   
   /*
   Example: If you ever want to show Blueprint (currently invisible),
