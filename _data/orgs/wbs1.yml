@@ -1,4 +1,6 @@
 name: Facilities
+area-shortname: facilities
+title: Facilities
 wbs_no: 1
 personnel:
   - PerilousApricot

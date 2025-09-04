@@ -1,5 +1,7 @@
-Name: Software
+name: Software
 wbs_no: 2
+area-shortname: software
+title: Software
 personnel:
   - ssehrish
   - klannon

@@ -1,5 +1,7 @@
-Name: Operations
+name: Operations
 wbs_no: 3
+area-shortname: operations
+title: Operations
 personnel:
   - nhduongvn
   - s_norberg
