@@ -1,4 +1,6 @@
-Name: HL-LHC R&D
+name: HL-LHC R&D
+area-shortname: hllhc
+title: HL-LHC R&D
 wbs_no: 4
 personnel:
   - l_gray

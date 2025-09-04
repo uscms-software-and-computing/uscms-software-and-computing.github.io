@@ -1,0 +1,346 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>USCMS S&C Org Chart (Auto-Generated)</title>
+  <style>
+    body { background:#fff; font-family:sans-serif; }
+    .chart-container { position:relative; width:1200px; height:800px; margin:auto;}
+
+    .node { position:absolute; text-align:center; }
+    .node.root { width:300px; }
+    .node.leaf { width:200px; }
+
+    .node-box {
+      border:2px solid #000; padding:10px; background:#fff;
+      font-size:14px; font-weight:normal; line-height:1.4; text-align:left;
+      box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .node-box strong { display:block; text-align:center; font-size:15px; margin-bottom:6px; }
+    .person-line { font-size:12px; }
+    .title-line  { font-size:11px; font-style:italic; color:#555; margin-left:2px; }
+
+    .photo-left,.photo-right,.photo-below{
+      position:absolute; width:75px; height:75px; object-fit:cover;
+    }
+    .photo-left{ left:-85px; top:50%; transform:translateY(-50%); }
+    .photo-right{ right:-85px; top:50%; transform:translateY(-50%); }
+    .photo-below{ top:100%; margin-top:8px; }
+    canvas { position:absolute; top:0; left:0; z-index:0; }
+  </style>
+</head>
+<body>
+<div id="chart" class="chart-container">
+  <canvas id="connectorCanvas" width="1200" height="800"></canvas>
+</div>
+
+{% capture liquid_layoutMap %}
+{
+{% assign first = true %}
+{% for org in site.data.orgs %}
+  {% assign area = org[1].area-shortname %}
+  {% if area != "hllhc" %}
+    {% unless first %},{% endunless %}
+    "{{ area }}": [
+      {% for sn in org[1].personnel %}
+        {% assign person = site.data.people[sn] %}
+        {
+          "name": {{ person.name | jsonify }},
+          "shortname": {{ person.shortname | jsonify }},
+          "title": {{ person.title | jsonify }},
+          "institution": {{ person.institution | jsonify }},
+          "photo": {{ person.photo | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+    {% assign first = false %}
+  {% endif %}
+{% endfor %}
+
+, "hllhc": [
+  {% assign hllhc = site.data.orgs["wbs4"] %}
+  {% assign count = 0 %}
+  {% for sn in hllhc.personnel %}
+    {% assign person = site.data.people[sn] %}
+    {% if person.sub-wbs == 0 %}
+      {% if count > 0 %},{% endif %}
+      {
+        "name": {{ person.name | jsonify }},
+        "shortname": {{ person.shortname | jsonify }},
+        "title": {{ person.title | jsonify }},
+        "institution": {{ person.institution | jsonify }},
+        "photo": {{ person.photo | jsonify }}
+      }
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+]
+
+, "analysis": [
+  {% assign count = 0 %}
+  {% for sn in hllhc.personnel %}
+    {% assign person = site.data.people[sn] %}
+    {% if person.sub-wbs == 1 %}
+      {% if count > 0 %},{% endif %}
+      {
+        "name": {{ person.name | jsonify }},
+        "shortname": {{ person.shortname | jsonify }},
+        "title": {{ person.title | jsonify }},
+        "institution": {{ person.institution | jsonify }},
+        "photo": {{ person.photo | jsonify }}
+      }
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+]
+
+, "infra": [
+  {% assign count = 0 %}
+  {% for sn in hllhc.personnel %}
+    {% assign person = site.data.people[sn] %}
+    {% if person.sub-wbs == 2 %}
+      {% if count > 0 %},{% endif %}
+      {
+        "name": {{ person.name | jsonify }},
+        "shortname": {{ person.shortname | jsonify }},
+        "title": {{ person.title | jsonify }},
+        "institution": {{ person.institution | jsonify }},
+        "photo": {{ person.photo | jsonify }}
+      }
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+]
+
+, "algo": [
+  {% assign count = 0 %}
+  {% for sn in hllhc.personnel %}
+    {% assign person = site.data.people[sn] %}
+    {% if person.sub-wbs == 3 %}
+      {% if count > 0 %},{% endif %}
+      {
+        "name": {{ person.name | jsonify }},
+        "shortname": {{ person.shortname | jsonify }},
+        "title": {{ person.title | jsonify }},
+        "institution": {{ person.institution | jsonify }},
+        "photo": {{ person.photo | jsonify }}
+      }
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+]
+
+, "blueprint": [
+  {% assign count = 0 %}
+  {% for sn in hllhc.personnel %}
+    {% assign person = site.data.people[sn] %}
+    {% if person.sub-wbs == 4 %}
+      {% if count > 0 %},{% endif %}
+      {
+        "name": {{ person.name | jsonify }},
+        "shortname": {{ person.shortname | jsonify }},
+        "title": {{ person.title | jsonify }},
+        "institution": {{ person.institution | jsonify }},
+        "photo": {{ person.photo | jsonify }}
+      }
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+]
+}
+{% endcapture %}
+
+{% capture liquid_titles %}
+{
+{% for org in site.data.orgs %}
+  "{{ org[1].area-shortname }}": {{ org[1].title | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endfor %},
+  "analysis": "Analysis",
+  "infra": "Infrastructure",
+  "algo": "Algorithms",
+  "blueprint": "Blueprint"
+}
+{% endcapture %}
+
+{% capture liquid_instShortByPerson %}
+{
+  {% for inst in site.data.institutions %}
+    {% for sn in inst.personnel %}
+      "{{ sn }}": "{{ inst.inst-shortname | escape }}"{% unless forloop.last and forloop.parentloop.last %},{% endunless %}
+    {% endfor %}
+  {% endfor %}
+}
+{% endcapture %}
+
+<script>
+/* Parse Liquid-generated JSON */
+const layoutMap = JSON.parse({{ liquid_layoutMap | strip_newlines | strip | jsonify }});
+const titles = JSON.parse({{ liquid_titles | strip_newlines | strip | jsonify }});
+const instShortByPerson = JSON.parse({{ liquid_instShortByPerson | strip_newlines | strip | jsonify }});
+
+/* Positions: Blueprint intentionally excluded */
+const positions = {
+  management: {left:450, top:40,   title:"Software & Computing", type:"root"},
+  facilities: {left:300, top:220,  title:"Facilities", type:"leaf"},
+  software:   {left:300, top:360,  title:"Software", type:"leaf"},
+  operations: {left:600, top:220,  title:"Operations", type:"leaf"},
+  hllhc:      {left:600, top:360,  title:"HL-LHC R&D", type:"leaf"},
+  infra:      {left:360, top:500,  title:"Infrastructure", type:"leaf"},
+  algo:       {left:470, top:500,  title:"Algorithms", type:"leaf"},
+  analysis:   {left:580, top:500,  title:"Analysis", type:"leaf"}
+  
+  /*
+  Example: If you ever want to show Blueprint (currently invisible),
+  just uncomment and adjust coordinates like so:
+
+  blueprint: {left:900, top:500, title:"Blueprint", type:"leaf"}
+  */
+};
+
+/* Overlay YAML titles */
+Object.keys(positions).forEach(k => {
+  if (titles[k]) positions[k].title = titles[k];
+});
+
+/* Titles to always display */
+const showTitleForShort = new Set(["tulika176","d_hufnagel","rct225","j_letts","nsmith-"]);
+
+const chart = document.getElementById('chart');
+
+/* Photo helpers */
+function addPhotos(key, div, names){
+  if (["facilities","software"].includes(key)) {
+    names.forEach((p,i)=>{
+      const img = document.createElement('img');
+      img.className = 'photo-left';
+      if (i === 1) img.style.left = '-170px';
+      if (p.photo) img.src = p.photo;
+      img.alt = p.name;
+      div.appendChild(img);
+    });
+  } else if (["operations","hllhc"].includes(key)) {
+    names.forEach((p,i)=>{
+      const img = document.createElement('img');
+      img.className = 'photo-right';
+      if (i === 1) img.style.right = '-170px';
+      if (p.photo) img.src = p.photo;
+      img.alt = p.name;
+      div.appendChild(img);
+    });
+  } else if (key === "management") {
+    names.forEach((p,i)=>{
+      const img = document.createElement('img');
+      img.className = i === 0 ? 'photo-left' : 'photo-right';
+      if (i === 1) img.style.right = '-85px';
+      if (i === 2) img.style.right = '-170px';
+      if (p.photo) img.src = p.photo;
+      img.alt = p.name;
+      div.appendChild(img);
+    });
+  } else if (["infra","algo","analysis"].includes(key)) {
+    const imgSize = 75;
+    const gap = 8;
+    const count = names.length;
+    const groupWidth = count * imgSize + Math.max(0, count - 1) * gap;
+    const nodeW = div.offsetWidth;
+    const startX = Math.max(0, Math.round((nodeW - groupWidth) / 2));
+    names.forEach((p,i)=>{
+      const img = document.createElement('img');
+      img.className = 'photo-below';
+      img.style.left = `${startX + i * (imgSize + gap)}px`;
+      if (p.photo) img.src = p.photo;
+      img.alt = p.name;
+      div.appendChild(img);
+    });
+  }
+}
+
+/* Render a node */
+function mkNode(key){
+  const {left, top, title, type} = positions[key];
+  const div = document.createElement('div');
+  div.className = `node ${type}`;
+  div.style.left = `${left}px`;
+  div.style.top  = `${top}px`;
+
+  const box = document.createElement('div');
+  box.className = 'node-box';
+
+  const strong = document.createElement('strong');
+  strong.textContent = title;
+  box.appendChild(strong);
+
+  const names = (layoutMap[key]||[]).filter(Boolean);
+
+  names.forEach(p => {
+    const instShort = instShortByPerson[p.shortname] || p.institution || "";
+    const nameLine = document.createElement('div');
+    nameLine.className = 'person-line';
+    nameLine.textContent = instShort ? `${p.name} (${instShort})` : p.name;
+    box.appendChild(nameLine);
+
+    if (showTitleForShort.has(p.shortname) && p.title) {
+      const t = document.createElement('div');
+      t.className = 'title-line';
+      t.textContent = p.title;
+      box.appendChild(t);
+    }
+  });
+
+  div.appendChild(box);
+  chart.appendChild(div);
+  addPhotos(key, div, names);
+
+  return div;
+}
+
+/* Build nodes */
+const nodes = {};
+Object.keys(positions).forEach(k => { nodes[k]=mkNode(k); });
+
+/* Connectors */
+const canvas = document.getElementById('connectorCanvas');
+const ctx = canvas.getContext('2d');
+ctx.lineWidth = 2; ctx.strokeStyle = '#000';
+
+function rect(el){ const r = el.getBoundingClientRect(), p = canvas.getBoundingClientRect(); return {
+  left:r.left-p.left, right:r.right-p.left, top:r.top-p.top, bottom:r.bottom-p.top, width:r.width, height:r.height
+};}
+function center(el){ const r=rect(el); return {x:r.left+r.width/2,y:r.top+r.height/2};}
+function topCenter(el){ const r=rect(el); return {x:r.left+r.width/2,y:r.top};}
+function bottomCenter(el){ const r=rect(el); return {x:r.left+r.width/2,y:r.bottom};}
+function line(x1,y1,x2,y2){ ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke(); }
+function setLeftByCenter(nodeEl, targetCenterX){
+  const r = rect(nodeEl);
+  nodeEl.style.left = `${Math.round(targetCenterX - r.width/2)}px`;
+}
+
+window.onload = () => {
+  const {management, facilities, software, operations, hllhc, infra, algo, analysis} = nodes;
+
+  const trunkX = (center(facilities).x + center(operations).x) / 2;
+  setLeftByCenter(management, trunkX);
+
+  const hCenter = center(hllhc).x;
+  const smallGap = 220;
+  const centers = [hCenter - smallGap, hCenter, hCenter + smallGap];
+  [infra, algo, analysis].forEach((el, i) => setLeftByCenter(el, centers[i]));
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  const yConnector = center(software).y;
+  line(bottomCenter(management).x, bottomCenter(management).y, bottomCenter(management).x, yConnector);
+
+  line(center(facilities).x, center(facilities).y, center(operations).x, center(operations).y);
+  line(center(software).x, center(software).y, center(hllhc).x, center(hllhc).y);
+
+  const barY = topCenter(infra).y - 20;
+  line(center(hllhc).x, bottomCenter(hllhc).y, center(hllhc).x, barY);
+
+  [infra, algo, analysis].forEach(node=>{
+    line(center(hllhc).x, barY, center(node).x, barY);
+    line(center(node).x, barY, topCenter(node).x, topCenter(node).y);
+  });
+};
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@ layout: people
 title: US CMS S&C Team
 ---
 
-{% include org_chart.html %}
+{% include new_org_chart.html %}
 
 {% include institution_list.html %}
 {% assign univs = institution_list | hash_fetch: site.data.institutions | sort_natural: "name" %}
