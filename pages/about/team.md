@@ -4,7 +4,7 @@ layout: people
 title: US CMS S&C Team
 ---
 
-{% include org_chart.html %}
+{% include new_org_chart.html %}
 
 {% include wbs_list.html %}
 {% assign areas = wbs_list | hash_fetch: site.data.orgs | sort_natural: "wbs_no" %}

@@ -4,7 +4,7 @@ layout: people
 title: Institute Team
 ---
 
-{% include org_chart.html %}
+{% include new_org_chart.html %}
 
 {% include institution_list.html %}
 {% assign members = site.data.people | values
