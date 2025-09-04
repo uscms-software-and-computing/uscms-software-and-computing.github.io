@@ -1,10 +1,9 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en-US">
-    <head>
+  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<title>US CMS S&C Team - US CMS Software and Computing</title>
+<title>Generate an Org Chart image - US CMS Software and Computing</title>
 <link rel="stylesheet" href="/assets/css/bootstrap.css" crossorigin="anonymous">
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/org-chart.css">
@@ -16,7 +15,6 @@
 </head>
 
   <body>
-
     
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
@@ -65,22 +63,11 @@
     </div>
 </nav>
 
-    
-
-
-<div id="container">
-    <div class="container page">
+    <div id="container">
+      <div class="container">
         <main role="main">
-            <div class="presentation toppagelinks">
-                <div class="inner">
-                    Team:
-                    <a href="/about/team.html">by area</a>
-                    &#8226;
-                    <a href="/about/team_by_institution.html">by institution</a>
-                    &#8226;
-                    <a href="/about/team_alphabetical.html">by name</a>.
-                </div>
-            </div>
+
+          <div class="container">
 
             <div id="chart" class="chart-container">
   <canvas id="connectorCanvas" width="1200" height="800"></canvas>
@@ -300,452 +287,59 @@ window.onload = () => {
 };
 </script>
 
-<h1>Full Team</h1>
-<p><br /></p>
+<!-- 2) Add a button near the chart -->
+<p><button id="savePng">
+  Download PNG
+</button></p>
 
-<div class="container-fluid">
-  <div class="row">
-    
-      
+<!-- 3) Add this script block (after your existing <script> that renders the chart) -->
+<script>
+  // If your photos might be cross-origin, ensure images don't taint the capture:
+  // (You already create <img> elements in addPhotos—this sets crossOrigin there.)
+  const originalAddPhotos = addPhotos;
+  addPhotos = function(key, div, names){
+    names.forEach(p => { if (p && p.photo) { /* hint for CORS */ } });
+    originalAddPhotos(key, div, names);
+    // Set crossOrigin on any images we just appended
+    div.querySelectorAll('img').forEach(img => {
+      if (!img.crossOrigin) img.crossOrigin = 'anonymous';
+      // If images are on a CDN you control, make sure it sends: Access-Control-Allow-Origin: *
+    });
+  };
 
+  document.getElementById('savePng').addEventListener('click', async () => {
+    const chartEl = document.getElementById('chart');
 
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/David_Sperka.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://www.bu.edu/physics/profile/david-sperka/">David Sperka</a></b><br />
- 
- <small>Boston University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>HL-LHC R&amp;D Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
+    // Ensure the connector canvas is up to date (your code already draws on load)
+    // Optionally re-run your layout routine here if you draw on resize.
 
-      
-    
-      
+    // 2x scale = sharper export; increase to 3 for print quality
+    const scale = 3;
 
+    const canvas = await html2canvas(chartEl, {
+      backgroundColor: '#fff',
+      scale,
+      useCORS: true,
+      logging: false,
+      windowWidth: chartEl.scrollWidth,
+      windowHeight: chartEl.scrollHeight
+    });
 
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Matteo_Cremonesi.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Matteo Cremonesi</b><br />
- 
- <small>Carnegie Mellon University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>HL-LHC R&amp;D Analysis Systems Coordinator</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
+    const link = document.createElement('a');
+    link.download = 'uscms-sc-org-chart.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
 
 
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Lindsey-Gray.png" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Lindsey Gray</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>HL-LHC R&amp;D Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Dirk-Hufnagel.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Dirk Hufnagel</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Deputy S&amp;C Operations Program Manager</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/David_Mason.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>David Mason</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Facilities Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Scarlet-Norberg.png" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Scarlet Norberg</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Operations Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Saba_Sehrish.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Saba Sehrish</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Software Co-leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Nick_Smith.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Nick Smith</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>U.S. CMS Fermilab Facility Architect</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
+  });
+</script>
 
 
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/David-Lange.png" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://dlange.web.cern.ch">David Lange</a></b><br />
- 
- <small>Princeton University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Computational Physicist</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Robert-Tuck.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Robert Tuck</b><br />
- 
- <small>Princeton University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Associate Project Manager</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Duong_Nguyen.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Duong Nguyen</b><br />
- 
- <small>University at Buffalo</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Operations Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/James_Letts.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>James Letts</b><br />
- 
- <small>UC San Diego</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>U.S. CMS University Facility Architect</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Philip_Chang.png" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Philip Chang</b><br />
- 
- <small>University of Florida</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>HL-LHC R&amp;D Algorithms Coordinator</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Oksana-Shadura_.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://github.com/oshadura">Oksana Shadura</a></b><br />
- 
- <small>University of Nebraska - Lincoln</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>HL-LHC R&amp;D Analysis Systems Coordinator</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Kevin_Lannon.jpeg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://physics.nd.edu/people/faculty/kevin-lannon/">Kevin Lannon</a></b><br />
- 
- <small>University of Notre Dame</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Software Co-leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Tulika_Bose.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://www.hep.wisc.edu/tulikabose/">Tulika Bose</a></b><br />
- 
- <small>University of Wisconsin-Madison</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>S&amp;C Operations Program Manager</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-      
-
-
-      
-        <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Andrew_Melo.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Andrew Melo</b><br />
- 
- <small>Vanderbilt University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Facilities Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-      
-    
-  </div>
-</div>
-
-<p><br /></p>
-<h1>Former Members</h1>
-<p><br /></p>
-<div class="container-fluid">
-<div class="row">
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Brian-Bockelman.png" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://morgridge.org/profile/brian-bockelman/">Brian Bockelman</a></b><br />
- 
- <small>Morgridge Institute for Research</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Former HL-LHC R&amp;D Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Oliver_Gutsche.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://gutsche.github.io/">Oliver Gutsche</a></b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>S&amp;C Operations Program Manager</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Mike_Hildreth.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="https://physics.nd.edu/people/faculty/mike-hildreth/">Mike Hildreth</a></b><br />
- 
- <small>Univeresity of Notre Dame</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Former HL-LHC R&amp;D Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Burt_Holzman.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Burt Holzman</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Former HL-LHC R&amp;D Analysis Systems Coordinator</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Tanya_Levshina.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Tanya Levshina</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Former Operations Co-Leader</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Mia-Liu.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b><a href="http://mia.physics.purdue.edu/?_ga=2.140227315.1511027680.1632850631-1707541545.1628006093">Mia Liu</a></b><br />
- 
- <small>Purdue University</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Operations Co-leader</p>
-</i><br /></div>
- </div>
-</div>
-
-
-    <div class="card" style="width: 12rem;">
- <img class="card-img-top" src="/assets/images/team/Margaret_Votava.jpg" alt="Card image cap" />
- <div class="card-body d-flex flex-column">
- <div class="card-text">
- 
-    <b>Margaret Votava</b><br />
- 
- <small>Fermilab</small><br /><br />
- </div>
- <div class="card-text mt-auto"><i><p>Former Deputy S&amp;C Operations Program Manager</p>
-</i><br /></div>
- </div>
-</div>
-
-
-</div>
-</div>
-
+          </div>
         </main>
-    </div>
-    <footer>
+      </div>
+
+          <footer>
   <div class="footer-dark">
     <div class="container">
       <div class="d-flex flex-row">
@@ -772,8 +366,6 @@ window.onload = () => {
     </div>
 </footer>
 
-</div>
-
-
-</body>
+    </div>
+  </body>
 </html>

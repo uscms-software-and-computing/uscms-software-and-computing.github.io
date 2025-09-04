@@ -1,0 +1,52 @@
+/* assets/css/org-chart.css */
+.chart-container {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  margin: auto;
+}
+
+.node { position: absolute; text-align: center; }
+.node.root { width: 300px; }
+.node.leaf { width: 200px; }
+
+.node-box {
+  border: 2px solid #000;
+  padding: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.node-box strong {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.person-line { font-size: 12px; }
+.title-line  { font-size: 11px; font-style: italic; color: #555; margin-left: 2px; }
+
+.photo-left,
+.photo-right,
+.photo-below {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.photoBox {
+  position:absolute; width:75px; height:75px;
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+}
+
+.photo-left  { left: -85px; top: 50%; transform: translateY(-50%); }
+.photo-right { right: -85px; top: 50%; transform: translateY(-50%); }
+.photo-below { top: 100%; margin-top: 8px; }
+
+canvas { position: absolute; top: 0; left: 0; z-index: 0; }
