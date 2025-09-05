@@ -12,7 +12,7 @@ dates:
 photo: /assets/images/team/Matteo_Marchegiani.jpg
 institution: Carnegie Mellon University
 e-mail: mmarcheg@andrew.cmu.edu
-project_title: Cost-Benefit Analysis of Strategies for Using GPUs
+project_title: GNN-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter
 mentors:
   - Matteo Cremonesi - (Carnegie Mellon University)
 project_goal: >
