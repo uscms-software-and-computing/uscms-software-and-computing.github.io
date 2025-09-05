@@ -17,5 +17,5 @@ mentors:
   - Matteo Cremonesi - (Carnegie Mellon University)
 project_goal: >
   The goal of the project is to develop new machine learning based algorithms for fast and efficient reconstruction of the HGCAL detector at the HL-LHC.
-proposal: /assets/pdfs/marchegiani_cmu_proposal_2025.pdf
+proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
 ---
