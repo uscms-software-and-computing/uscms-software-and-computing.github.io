@@ -227,7 +227,25 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q2 </b> <br /></p>
+        <p><br /> <b>2025 Q3 </b> <br /></p>
+<ul>
+  <li>Testing the coffea202X skimming capabilities and benchmarking performance:
+    <ul>
+      <li>Implement standalone (i.e., without  Dynamic Data Reduction framework) cortado with the new virtual array based coffea</li>
+      <li>Physics validation of skimmed output: Verify number of events are as expected, identify and report an issue with docstrings not being properly written into the output</li>
+      <li>Tested runs with multiple concurrent instances of the skimming application</li>
+    </ul>
+  </li>
+  <li>Explore the acceleration of the columnar processing via GPU offloading:
+    <ul>
+      <li>Implement finer-grained timing of queries to identify how the CPU/GPU timing compares for each step, and improve the timing method for GPU queries to ensure synchronization</li>
+      <li>Test and validate the bug fixes and new features (via comparison with CPU version of ADL benchmarks) as they are implemented by the developers of awkward</li>
+      <li>Queries 1-7 running on GPU with generally good CPU/GPU agreement. Investigations of precision differences, and of a memory error (in Query 8) ongoing.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2025 Q2 </b> <br /></p>
 <ul>
   <li>Testing the coffea202X skimming capabilities and benchmarking performance:
     <ul>
