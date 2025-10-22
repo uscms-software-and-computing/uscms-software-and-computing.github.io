@@ -5,7 +5,7 @@ shortname: chan-anun
 permalink: /interns/chan-anun.html
 intern-name: Chan-anun Rungphitakchai
 title: Chan-anun Rungphitakchai - USCMS S&C Intern
-active: True
+active: False
 dates:
   start: 2023-06-01
   end: 2025-05-31
