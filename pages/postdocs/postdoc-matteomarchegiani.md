@@ -19,6 +19,13 @@ project_goal: >
   The goal of the project is to develop new machine learning based algorithms for fast and efficient reconstruction of the High-Granularity Calorimeter at the High-Luminosity LHC.
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
 
+presentations:
+  - title: "ML4RECO: GNN and Transformer Based HGCAL Reconstruction"
+    date: "October 13, 2025"
+    url: https://indico.cern.ch/event/1593611/contributions/6737584/attachments/3153545/5600652/25.10.13_MLG_TownHall_HGCAL_reco.pdf
+    meeting: CMS Machine Learning Town Hall
+    meetingurl: https://indico.cern.ch/event/1593611/contributions/6737584/
+
 current_status: >
     <br>
     <b>2025 Q3 </b>
