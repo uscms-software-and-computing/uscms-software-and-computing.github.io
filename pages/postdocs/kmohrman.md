@@ -46,6 +46,11 @@ mentors:
 
 presentations:
   - title: "Towards rapid and efficient analyses at scale"
+    date: "December 8, 2025"
+    url: https://indico.cern.ch/event/1535613/page/40626-poster-session
+    meeting: CMS Week December 2025, Seoul, South Korea (poster session)
+    meetingurl: https://indico.cern.ch/event/1535613/
+  - title: "Towards rapid and efficient analyses at scale"
     date: "August 28, 2025"
     url: https://indico.cern.ch/event/1493037/timetable/?view=standard#347-towards-rapid-and-efficien
     meeting: Lepton Photon 2025 (poster session)
@@ -88,6 +93,17 @@ presentations:
 
 
 current_status: >
+    <br>
+    <b>2025 Q4 </b>
+    <br>
+
+    *   Testing the coffea202X skimming capabilities and benchmarking performance:
+        *   Explored performance of alternative configurations (methods of file access, executors)
+    *   Explore the acceleration of the columnar processing via GPU offloading:
+        *   Investigated precision differences between GPU and CPU implementations in collaboration with awkward and Nvidia experts
+        *   Ran and documented performance of ADL benchmark queries with 10M events on B200 GPU at UF Hipergator
+        *   Identified all awkward functions used in the processor of a representative coffea-based CMS analysis (SMP-24-015) and identified which ones are available or missing on GPU
+
     <br>
     <b>2025 Q3 </b>
     <br>
