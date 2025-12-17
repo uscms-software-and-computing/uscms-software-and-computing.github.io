@@ -191,6 +191,10 @@
         <ul>
           
           
+          <li>8 Dec 2025 - <a href="https://indico.cern.ch/event/1535613/page/40626-poster-session">"Towards rapid and efficient analyses at scale"</a>, Kelci Mohrman, <a href="https://indico.cern.ch/event/1535613/">CMS Week December 2025, Seoul, South Korea (poster session)</a>
+            
+          
+          
           <li>28 Aug 2025 - <a href="https://indico.cern.ch/event/1493037/timetable/?view=standard#347-towards-rapid-and-efficien">"Towards rapid and efficient analyses at scale"</a>, Kelci Mohrman, <a href="https://agenda.hep.wisc.edu/event/2188/">Lepton Photon 2025 (poster session)</a>
             
           
@@ -227,7 +231,23 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q3 </b> <br /></p>
+        <p><br /> <b>2025 Q4 </b> <br /></p>
+<ul>
+  <li>Testing the coffea202X skimming capabilities and benchmarking performance:
+    <ul>
+      <li>Explored performance of alternative configurations (methods of file access, executors)</li>
+    </ul>
+  </li>
+  <li>Explore the acceleration of the columnar processing via GPU offloading:
+    <ul>
+      <li>Investigated precision differences between GPU and CPU implementations in collaboration with awkward and Nvidia experts</li>
+      <li>Ran and documented performance of ADL benchmark queries with 10M events on B200 GPU at UF Hipergator</li>
+      <li>Identified all awkward functions used in the processor of a representative coffea-based CMS analysis (SMP-24-015) and identified which ones are available or missing on GPU</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2025 Q3 </b> <br /></p>
 <ul>
   <li>Testing the coffea202X skimming capabilities and benchmarking performance:
     <ul>
