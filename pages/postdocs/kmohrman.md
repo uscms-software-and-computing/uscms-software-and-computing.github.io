@@ -45,6 +45,11 @@ mentors:
 
 
 presentations:
+  - title: "Update on end-user analysis R&D and benchmarking studies"
+    date: "December 17, 2025"
+    url: https://indico.cern.ch/event/1615345/#2-updates-on-analysis-workflow
+    meeting: CMS CAT general meeting
+    meetingurl: https://indico.cern.ch/event/1615345/
   - title: "Towards rapid and efficient analyses at scale"
     date: "December 8, 2025"
     url: https://indico.cern.ch/event/1535613/page/40626-poster-session
