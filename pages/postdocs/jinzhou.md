@@ -5,7 +5,7 @@ pagetype: postdoc
 shortname: jinzhou
 postdoc-name: Jin Zhou
 title: PhD Student
-active: True
+active: False
 dates:
   start: 2024-08-15
   end: 2025-09-15

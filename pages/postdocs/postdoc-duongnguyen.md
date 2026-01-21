@@ -5,7 +5,7 @@ shortname: dnguyen
 permalink: /postdocs/postdoc-duongnguyen.html
 postdoc-name: Duong Nguyen
 title: Post-doctoral researcher
-active: True
+active: False
 dates:
   start: 2025-01-01
   end: 2025-12-31

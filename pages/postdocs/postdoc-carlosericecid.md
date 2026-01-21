@@ -2,7 +2,7 @@
 permalink: /postdocs/postdoc-carlosericecid.html
 layout: postdoc
 pagetype: postdoc
-active: true
+active: False
 title: Post-doctoral researcher
 postdoc-name: Carlos Erice Cid
 shortname: cericeci

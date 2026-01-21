@@ -5,7 +5,7 @@ shortname: moanwar
 permalink: /postdocs/Moanwar.html
 postdoc-name: Mohamed Darwish
 title: Post-doctoral researcher
-active: True
+active: False
 dates:
   start: 2024-03-01
   end: 2025-11-30
