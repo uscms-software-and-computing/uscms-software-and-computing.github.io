@@ -5,7 +5,7 @@ shortname: jgaglione
 permalink: /postdocs/jgaglione.html
 postdoc-name: Jethro Gaglione
 title: Post-doctoral researcher
-active: True
+active: False
 dates:
   start: 2024-01-01
   end: 2025-09-30

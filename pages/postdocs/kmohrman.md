@@ -6,7 +6,7 @@ permalink: /postdocs/kmohrman.html
 postdoc-name: Kelci Mohrman
 title: Post-doctoral researcher
 project_title: Benchmarking current capabilities and exploring the acceleration of columnar processing via heterogeneous architectures (2025) and Deploying GPU algorithms through SONIC (2023)
-active: True
+active: False
 dates:
   start: 2023-09-01
   end: 2025-08-31
