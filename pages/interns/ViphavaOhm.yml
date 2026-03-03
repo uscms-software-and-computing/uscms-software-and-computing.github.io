@@ -1,0 +1,33 @@
+---
+layout: intern
+pagetype: intern
+shortname: Ohm
+permalink: /interns/LinaresToine.html
+intern-name: Viphava Khlaisuwan (Ohm)
+title: Viphava Khlaisuwan (Ohm) - USCMS S&C Intern
+active: True
+dates:
+  start: 2025-08-01
+  end: 2026-05-30
+photo: assets/images/team/Viphava-ohm.png
+institution: University of Wisconsin Madison
+e-mail: khlaisuwan@wisc.edu
+project_title: CMS T0 Operator
+project_goal: > 
+  "Tier 0 is a mandatory system that make sure to get the data, 
+  which is called Streamer, from the HLT and use this data to produce RAW and reconstructed output, 
+  this data is very important for physics research and as a Tier 0 Operator I am responsible to make sure not to lose any of it because if it is lost those collision events are gone forever since you cannot reproduce what happen inside the LHC. 
+  In detail Tier 0 handles three main workflows, first is Express which is used for fast processing of a subset of data so the team can quickly check data quality through DQM and also feed the Prompt Calibration Loop that gives the calibration conditions needed before running the full reconstruction, 
+  second is Repack which takes the streamer files from HLT and converts them into properly formatted RAW data organized by primary dataset, 
+  and the last one is Prompt Reconstruction which takes that RAW data and produces the reconstructed output that physicists actually use for analysis like AOD, MINIAOD, NANOAOD, ALCARECO and DQM output. 
+  The system uses WMCore as the component for managing all the workflows including job splitting, scheduling and tracking, and uses CMSSW as the physics processing framework which is what actually runs inside each job to unpack, reconstruct and write out the event data. 
+  As a Tier 0 operator I am responsible for monitoring data coming from HLT to make sure runs are injected properly, monitoring all workflows to check they are progressing and completing on time, 
+  handling paused and failed jobs which means investigating why they failed and deciding to retry or escalate, 
+  communicating with other teams especially ones involved in JointOps like HLT team, DQM, AlCa conditions and computing operations because during data taking problems need to be solved fast, 
+  managing configuration for each workflow which includes setting correct CMSSW version and Global Tags and all processing settings, 
+  handling site distribution which is configuring where output data gets sent to tape or disk nodes, 
+  and the last one is decommission which is about making sure every data that Tier 0 decided to send to each site has already reach there before cleaning up from the source because if it gets deleted before it arrive that data is lost.
+  Besides operations, Tier 0 operator is also responsible for fixing bugs in the source code and developing new tools that help the operator monitor the system more effectively."
+mentors:
+  - Jennifer Adelman-McCarthy - (FNAL)
+---
