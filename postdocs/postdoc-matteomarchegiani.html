@@ -191,7 +191,35 @@
         <ul>
           
           
+          <li>10 Feb 2026 - <a href="https://indico.cern.ch/event/1649883/contributions/6935005/attachments/3217627/5732543/26.02.10_ML4reco_maskformers_offline.pdf">"Maskformers for offline reconstruction"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1649883/">ML4RECO</a>
+            
+          
+          
+          <li>3 Dec 2025 - <a href="https://indico.cern.ch/event/1617166/contributions/6819529/attachments/3185911/5668415/hgcal-dpg_gnn-time-resolution.pdf">"Studies on time resolution in GNN-based reco"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1617166/">HGCAL DPG</a>
+            
+          
+          
+          <li>2 Dec 2025 - <a href="https://indico.cern.ch/event/1615761/contributions/6818543/attachments/3184951/5666518/ml4reco_gnn-time-resolution-update.pdf">"Studies on time resolution with the latest HGCAL GNN model"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1615761/">ML4RECO</a>
+            
+          
+          
+          <li>18 Nov 2025 - <a href="https://indico.cern.ch/event/1612036/contributions/6792820/attachments/3176426/5649043/ml4reco_gnn-based-particle-reconstruction_update.pdf">"Update on performance of the latest HGCAL GNN model"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1612036/">ML4RECO</a>
+            
+          
+          
           <li>13 Oct 2025 - <a href="https://indico.cern.ch/event/1593611/contributions/6737584/attachments/3153545/5600652/25.10.13_MLG_TownHall_HGCAL_reco.pdf">"ML4RECO: GNN and Transformer Based HGCAL Reconstruction"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1593611/contributions/6737584/">CMS Machine Learning Town Hall</a>
+            
+          
+          
+          <li>17 Sep 2025 - <a href="https://indico.cern.ch/event/1587360/contributions/6689475/attachments/3137672/5567817/ml4reco-gnn-new-training-physics-metrics-update.pdf">"Single-particle energy resolution with latest GNN model"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1587360/">ML4RECO</a>
+            
+          
+          
+          <li>27 Aug 2025 - <a href="https://indico.cern.ch/event/1579980/contributions/6658969/attachments/3124101/5540514/ml4reco-gnn-finecalo-simtrack-error-fix-training-update.pdf">"Updated GNN training after bugfixes in CMSSW 15_0_X"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1579980/">ML4RECO</a>
+            
+          
+          
+          <li>16 Jul 2025 - <a href="https://indico.cern.ch/event/1569687/contributions/6612371/attachments/3105373/5503441/ml4reco-gnn-finecalo-simtrack-error.pdf">"FineCalo SimTrack Reconstruction Error"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1569687/">ML4RECO</a>
             
           
         </ul>
@@ -199,13 +227,29 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q3 </b> <br /></p>
+        <p><br /> <b>2025 Q4 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Study energy, position and time resolution of the GNN clustering using simulated photons, pions and tau leptons</li>
+      <li>Study issue in time resolution in CMSSW_15_X: change in the timing simulation with respect to CMSSW_11_X</li>
+      <li>Finalize publication on performance metrics of GNN clustering with 0 pileup simulation</li>
+      <li>Study the impact of increased pileup on the GNN training</li>
+      <li>Memory profiling of the training with a dataset including ~250k reconstructed hits</li>
+      <li>Working on pileup simulation: generate hard process alongside minimum bias events</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2025 Q3 </b> <br /></p>
 <ul>
   <li>Progress
     <ul>
       <li>Learned how to train the GNN employing GravConv layers in combination with the object condensation loss for the reconstruction of energy clusters in the HGCAL</li>
       <li>Studied the performance and energy resolution of the GNN-based reconstruction in zero-pileup environments, considering simulated photons, pions and tau leptons</li>
       <li>Ported the training datasets production to CMSSW_15_1_X, making use of the FineCalo simulation</li>
+      <li>Ported the GNN training to Pytorch 2.6.0 and CUDA 12.4</li>
+      <li>Study memory profiling of the model on GPU</li>
     </ul>
   </li>
 </ul>
