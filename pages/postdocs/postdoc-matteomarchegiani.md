@@ -20,6 +20,11 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
 
 presentations:
+  - title: HGCAL simulation with pileup and merging algorithm
+    date: March 24, 2026
+    url: https://indico.cern.ch/event/1667437/contributions/7010124/attachments/3244695/5788733/26.03.24_ML4reco_pileup_simulation.pdf
+    meeting: ML4RECO
+    meetingurl: https://indico.cern.ch/event/1667437/
   - title: Maskformers for offline reconstruction
     date: February 10, 2026
     url: https://indico.cern.ch/event/1649883/contributions/6935005/attachments/3217627/5732543/26.02.10_ML4reco_maskformers_offline.pdf
@@ -62,6 +67,27 @@ presentations:
     meetingurl: https://indico.cern.ch/event/1569687/
 
 current_status: >
+    <br>
+    <b>2026 Q1 </b>
+    <br>
+
+    *   Progress on optimized GNN model
+        *   Study impact of pileup on the training of the GNN-based reconstruction algorithm
+        *   GPU Memory profiling of GNN model trained on dataset with 5x more hits
+        *   Integration of CUDA kernels from FastGraphCompute to speed up KNN and object condensation loss
+    *   Working on training of GNN model with 200 pileup simulation
+        *   First HGCAL simulation with FineCalo + merging algorithm in CMSSW_15_1_0
+        *   Simulated 10 single-electron events + 30 PU interactions from minimum bias events
+        *   Implementation of custom NANO step to save true clusters containing SimHits from primary interaction and pileup
+        *   At 30 PU, the average number of RecHits is ~60k, with ~8k true clusters
+        *   Study a dedicated implementation of the merging algorithm which is compatible with pileup
+        *   Study a dedicated pileup mixing library to save the event history for minimum bias events in the merging
+    *   Study new alternative ML architectures for HGCAL reconstruction
+        *   Masked transformers to reduce the quadratic complexity of self-attention
+        *   Generated 0 PU dataset with RecHits and TICL objects: 2D LayerClusters, 3D Tracksters and TICL Candidates
+        *   Computing the incidence matrix between RecHits and true particles using sparse tensor representation
+        *   First proof-of-concept training using recHits features as input: incidence matrix regression and regression of cluster properties
+
     <br>
     <b>2025 Q4 </b>
     <br>
