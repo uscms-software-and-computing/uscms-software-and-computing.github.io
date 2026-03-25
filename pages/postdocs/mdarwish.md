@@ -131,7 +131,7 @@ current_status: >
       *   Fixed bug in recHitTools (missing geometry assignment) causing jet response distortion; submitted PR #49343 + training PR #10.
       *   Retrained PFN regression model post-fix; added geometry assignment protection in recHitTools.
       *   Optimised GNN: updated training samples, wider energy range, pion+kaon mixture, removed MTD features.
-      *   Results: >98% efficiency, ~50% reduction in compute time vs standard TICL linking.
+      *   'Results: >98% efficiency, ~50% reduction in compute time vs standard TICL linking.'
   *   Next Steps
       *   Submit ticlv5_GNN process modifier PR for HLT and step3 integration.
 
