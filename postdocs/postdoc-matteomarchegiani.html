@@ -191,6 +191,10 @@
         <ul>
           
           
+          <li>24 Mar 2026 - <a href="https://indico.cern.ch/event/1667437/contributions/7010124/attachments/3244695/5788733/26.03.24_ML4reco_pileup_simulation.pdf">"HGCAL simulation with pileup and merging algorithm"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1667437/">ML4RECO</a>
+            
+          
+          
           <li>10 Feb 2026 - <a href="https://indico.cern.ch/event/1649883/contributions/6935005/attachments/3217627/5732543/26.02.10_ML4reco_maskformers_offline.pdf">"Maskformers for offline reconstruction"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1649883/">ML4RECO</a>
             
           
@@ -227,7 +231,36 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q4 </b> <br /></p>
+        <p><br /> <b>2026 Q1 </b> <br /></p>
+<ul>
+  <li>Progress on optimized GNN model
+    <ul>
+      <li>Study impact of pileup on the training of the GNN-based reconstruction algorithm</li>
+      <li>GPU Memory profiling of GNN model trained on dataset with 5x more hits</li>
+      <li>Integration of CUDA kernels from FastGraphCompute to speed up KNN and object condensation loss</li>
+    </ul>
+  </li>
+  <li>Working on training of GNN model with 200 pileup simulation
+    <ul>
+      <li>First HGCAL simulation with FineCalo + merging algorithm in CMSSW_15_1_0</li>
+      <li>Simulated 10 single-electron events + 30 PU interactions from minimum bias events</li>
+      <li>Implementation of custom NANO step to save true clusters containing SimHits from primary interaction and pileup</li>
+      <li>At 30 PU, the average number of RecHits is ~60k, with ~8k true clusters</li>
+      <li>Study a dedicated implementation of the merging algorithm which is compatible with pileup</li>
+      <li>Study a dedicated pileup mixing library to save the event history for minimum bias events in the merging</li>
+    </ul>
+  </li>
+  <li>Study new alternative ML architectures for HGCAL reconstruction
+    <ul>
+      <li>Masked transformers to reduce the quadratic complexity of self-attention</li>
+      <li>Generated 0 PU dataset with RecHits and TICL objects: 2D LayerClusters, 3D Tracksters and TICL Candidates</li>
+      <li>Computing the incidence matrix between RecHits and true particles using sparse tensor representation</li>
+      <li>First proof-of-concept training using recHits features as input: incidence matrix regression and regression of cluster properties</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2025 Q4 </b> <br /></p>
 <ul>
   <li>Progress
     <ul>
