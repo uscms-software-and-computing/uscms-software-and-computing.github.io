@@ -108,7 +108,7 @@ current_status: >
   *   Progress
       *   Identified geometric matching (DeltaR) as the main source of track–trackster linking inefficiency.
       *   Developed a BDT model to dynamically predict optimal DeltaR per track; achieved ~10% efficiency improvement in CMSSW.
-      *   Explored GNN-based linking: ~97% accuracy in preliminary results, presented at TICL meeting.
+      *   "Explored GNN-based linking: ~97% accuracy in preliminary results, presented at TICL meeting."
   *   Next Steps
       *   Validate GNN approach and prepare integration PR into TICL.
 
