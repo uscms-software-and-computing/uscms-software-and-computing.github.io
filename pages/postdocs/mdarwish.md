@@ -15,7 +15,7 @@ e-mail: mohamed.anwar@cern.ch
 project_title: Machine learning based particle flow reconstruction for the CMS Phase 2 detector (2026) and Developing heterogeneous particle flow reconstruction for the CMS Phase 2 detector (2025)
 project_goal: >
     <br>
-    <b>2026-2027: Machine learning based particle flow reconstruction for the CMS Phase 2 detector </b>
+    <b>'2026-2027: Machine learning based particle flow reconstruction for the CMS Phase 2 detector '</b>
     The goal of this project is to develop a machine learning-based approach for producing final particle-flow candidates under the high-pileup conditions expected at the High-Luminosity LHC (HL-LHC) with the Phase2 CMS detector. Inspired by the MLPF model developed during Run 3, the new approach builds directly on top of the existing Phase2 particle-flow reconstruction framework, TICL (The Iterative Clustering), using its tracksters and tracks as inputs to deliver well-optimized final particle-flow objects. Multiple architectures will be explored and benchmarked, including transformer-based models and hypergraph networks, with dedicated validation tools will be developed to ensure fair and rigorous performance comparisons across approaches. The final design will be fully integrated into the TICL algorithm and adapted to run on heterogeneous computing resources, enabling deployment on both CPU and GPU backends depending on available hardware.
     <br>
     <a href=https://mohamed.web.cern.ch/us_projects/proposals/USCMS_HLLHC_SC_2026.pdf>2026 Project proposal</a>
