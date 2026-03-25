@@ -15,13 +15,13 @@ e-mail: mohamed.anwar@cern.ch
 project_title: Machine learning based particle flow reconstruction for the CMS Phase 2 detector (2026) and Developing heterogeneous particle flow reconstruction for the CMS Phase 2 detector (2025)
 project_goal: >
     <br>
-    <b>'2026-2027: Machine learning based particle flow reconstruction for the CMS Phase 2 detector '</b>
+    <b>2026-2027 Machine learning based particle flow reconstruction for the CMS Phase 2 detector '</b>
     The goal of this project is to develop a machine learning-based approach for producing final particle-flow candidates under the high-pileup conditions expected at the High-Luminosity LHC (HL-LHC) with the Phase2 CMS detector. Inspired by the MLPF model developed during Run 3, the new approach builds directly on top of the existing Phase2 particle-flow reconstruction framework, TICL (The Iterative Clustering), using its tracksters and tracks as inputs to deliver well-optimized final particle-flow objects. Multiple architectures will be explored and benchmarked, including transformer-based models and hypergraph networks, with dedicated validation tools will be developed to ensure fair and rigorous performance comparisons across approaches. The final design will be fully integrated into the TICL algorithm and adapted to run on heterogeneous computing resources, enabling deployment on both CPU and GPU backends depending on available hardware.
     <br>
     <a href=https://mohamed.web.cern.ch/us_projects/proposals/USCMS_HLLHC_SC_2026.pdf>2026 Project proposal</a>
     <br>
     <br>
-    <b>2024-2025: Developing heterogeneous particle flow reconstruction for the CMS Phase 2 detector </b>
+    <b>2024-2025 Developing heterogeneous particle flow reconstruction for the CMS Phase 2 detector </b>
     <br>
 The goal of the project is to develop particle flow reconstruction for the CMS Phase 2, using 'The Iterative CLustering' (TICL) as a baseline, to improve physics performance, and to establish a coherent PF reconstruction across all calorimeters. TICL is a modular framework developed for heterogeneous infrastructure that provides particle shower reconstruction and particle flow candidate reconstruction. It was primarily developed for HGCAL but could also work well for other calorimeter regions, thus enabling coherent reconstruction across all calorimeter regions. Additionally, we will work on further completing the transition of the CUDA-based software-implemented PF modules to a portability library, 'Alpaka,' and deploy it not only for use at the high-level trigger (HLT) but also for offline reconstruction.
     <br>
