@@ -28,7 +28,7 @@ The goal of the project is to develop particle flow reconstruction for the CMS P
     <a href=https://mohamed.web.cern.ch/us_projects/proposals/CMS_HLLHC_SC_2023.pdf>2024 Project proposal</a>
     <br>
 
-mentors: >
+mentors:
   - Kenichi Hatakeyama - (Baylor University)
 
 presentations:
