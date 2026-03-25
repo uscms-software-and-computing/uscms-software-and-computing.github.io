@@ -98,7 +98,7 @@ current_status: >
       *   Finalised PFN-based models (PID at CLUE3D, PID at Linking, Regression at Linking) using 200 PU samples; presented at HGCAL DPG meeting with positive feedback.
       *   Integrated all three models into CMSSW as defaults in TICLv5.
   *   Next Steps
-      *   Resolve mismatch: Regression/PID trained on TiclCandidate but applied at Linking step.
+      *   "Resolve mismatch: Regression/PID trained on TiclCandidate but applied at Linking step."
       *   Study trackster-track features to improve matching in TICL.
 
     <br>
