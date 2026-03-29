@@ -20,6 +20,11 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
 
 presentations:
+  - title: HGCAL reconstruction with Graph Neural Networks
+    date: March 26, 2026
+    url: https://indico.cern.ch/event/1639403/contributions/7016065/attachments/3246468/5792247/26.03.26_HGCAL_GNN_offline_reconstruction.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639403/
   - title: HGCAL simulation with pileup and merging algorithm
     date: March 24, 2026
     url: https://indico.cern.ch/event/1667437/contributions/7010124/attachments/3244695/5788733/26.03.24_ML4reco_pileup_simulation.pdf
