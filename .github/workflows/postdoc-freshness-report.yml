@@ -1,0 +1,52 @@
+name: Postdoc Freshness Report
+
+on:
+  # Run on the first day of each quarter at 8:00 AM UTC
+  schedule:
+    - cron: '0 8 1 1 *'   # Jan 1  – Q1 report
+    - cron: '0 8 1 4 *'   # Apr 1  – Q2 report
+    - cron: '0 8 1 7 *'   # Jul 1  – Q3 report
+    - cron: '0 8 1 10 *'  # Oct 1  – Q4 report
+
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit the report back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so commit log queries work
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install reportlab
+
+      - name: Run freshness report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/postdoc_report.py \
+            --token "$GITHUB_TOKEN" \
+            --output reports/postdoc_freshness_report.html \
+            --pdf
+
+      - name: Commit report to repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/postdoc_freshness_report.html \
+                  reports/postdoc_freshness_report.pdf
+          # Only commit if something changed
+          git diff --cached --quiet || \
+            git commit -m "chore: quarterly postdoc freshness report [$(date +'%Y-%m-%d')]"
+          git push
