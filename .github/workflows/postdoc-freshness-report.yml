@@ -37,15 +37,15 @@ jobs:
         run: |
           python scripts/postdoc_report.py \
             --token "$GITHUB_TOKEN" \
-            --output reports/postdoc_freshness_report.html \
+            --output pages/reports/postdoc_freshness_report.html \
             --pdf
 
       - name: Commit report to repo
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/postdoc_freshness_report.html \
-                  reports/postdoc_freshness_report.pdf
+          git add pages/reports/postdoc_freshness_report.html \
+                  pages/reports/postdoc_freshness_report.pdf
           # Only commit if something changed
           git diff --cached --quiet || \
             git commit -m "chore: quarterly postdoc freshness report [$(date +'%Y-%m-%d')]"
