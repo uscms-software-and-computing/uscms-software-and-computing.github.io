@@ -7,4 +7,5 @@ shortname: pchang
 title: HL-LHC R&D Algorithms Coordinator
 website:
 presentations:
-sub-wbs: 3
+sub-wbs:
+  - 3

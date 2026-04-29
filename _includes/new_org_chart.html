@@ -30,7 +30,7 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-    {% if person.sub-wbs == 0 %}
+    {% if person.sub-wbs contains 0 %}
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -48,7 +48,7 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-    {% if person.sub-wbs == 1 %}
+    {% if person.sub-wbs contains 1 %}
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -66,7 +66,7 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-    {% if person.sub-wbs == 2 %}
+    {% if person.sub-wbs contains 2 %}
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -84,7 +84,7 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-    {% if person.sub-wbs == 3 %}
+    {% if person.sub-wbs contains 3 %}
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -102,7 +102,7 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-    {% if person.sub-wbs == 4 %}
+    {% if person.sub-wbs contains 4 %}
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
