@@ -75,7 +75,7 @@
 
 <script>
 /* Parse Liquid-generated JSON */
-const layoutMap = JSON.parse("{            \"management\": [                      {          \"name\": \"Tulika Bose\",          \"shortname\": \"tulika176\",          \"title\": \"S&C Operations Program Manager\",          \"institution\": \"University of Wisconsin-Madison\",          \"photo\": \"/assets/images/team/Tulika_Bose.jpg\"        },                      {          \"name\": \"Dirk Hufnagel\",          \"shortname\": \"d_hufnagel\",          \"title\": \"Deputy S&C Operations Program Manager\\n\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Dirk-Hufnagel.jpg\"        },                      {          \"name\": \"Robert Tuck\",          \"shortname\": \"rct225\",          \"title\": \"Associate Project Manager\",          \"institution\": \"Princeton University\",          \"photo\": \"/assets/images/team/Robert-Tuck.jpg\"        }          ]              ,    \"facilities\": [                      {          \"name\": \"Andrew Melo\",          \"shortname\": \"PerilousApricot\",          \"title\": \"Facilities Co-Leader\",          \"institution\": \"Vanderbilt University\",          \"photo\": \"/assets/images/team/Andrew_Melo.jpg\"        },                      {          \"name\": \"David Mason\",          \"shortname\": \"d_mason\",          \"title\": \"Facilities Co-Leader\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/David_Mason.jpg\"        }          ]              ,    \"software\": [                      {          \"name\": \"Saba Sehrish\",          \"shortname\": \"ssehrish\",          \"title\": \"Software Co-leader\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Saba_Sehrish.jpg\"        },                      {          \"name\": \"Kevin Lannon\",          \"shortname\": \"klannon\",          \"title\": \"Software Co-leader\",          \"institution\": \"University of Notre Dame\",          \"photo\": \"/assets/images/team/Kevin_Lannon.jpeg\"        }          ]              ,    \"operations\": [                      {          \"name\": \"Duong Nguyen\",          \"shortname\": \"nhduongvn\",          \"title\": \"Operations Co-Leader\",          \"institution\": \"University at Buffalo\",          \"photo\": \"/assets/images/team/Duong_Nguyen.jpg\"        },                      {          \"name\": \"Scarlet Norberg\",          \"shortname\": \"s_norberg\",          \"title\": \"Operations Co-Leader\\n\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Scarlet-Norberg.png\"        }          ]          , \"hllhc\": [                          {        \"name\": \"Lindsey Gray\",        \"shortname\": \"l_gray\",        \"title\": \"HL-LHC R&D Co-Leader\",        \"institution\": \"Fermilab\",        \"photo\": \"/assets/images/team/Lindsey-Gray.png\"      }                          ,      {        \"name\": \"David Sperka\",        \"shortname\": \"dsperka\",        \"title\": \"HL-LHC R&D Co-Leader\",        \"institution\": \"Boston University\",        \"photo\": \"/assets/images/team/David_Sperka.jpg\"      }                                                                        ], \"analysis\": [                                            {        \"name\": \"Matteo Cremonesi\",        \"shortname\": \"mcremone\",        \"title\": \"HL-LHC R&D Analysis Systems Coordinator\",        \"institution\": \"Carnegie Mellon University\",        \"photo\": \"/assets/images/team/Matteo_Cremonesi.jpg\"      }                                                                  ,      {        \"name\": \"Oksana Shadura\",        \"shortname\": \"oshadura\",        \"title\": \"HL-LHC R&D Analysis Systems Coordinator\",        \"institution\": \"University of Nebraska - Lincoln\",        \"photo\": \"/assets/images/team/Oksana-Shadura_.jpg\"      }            ], \"infra\": [                                                                          {        \"name\": \"Nick Smith\",        \"shortname\": \"nsmith-\",        \"title\": \"U.S. CMS Fermilab Facility Architect\",        \"institution\": \"Fermilab\",        \"photo\": \"/assets/images/team/Nick_Smith.jpg\"      }                          ,      {        \"name\": \"James Letts\",        \"shortname\": \"j_letts\",        \"title\": \"U.S. CMS University Facility Architect\",        \"institution\": \"UC San Diego\",        \"photo\": \"/assets/images/team/James_Letts.jpg\"      }                      ], \"algo\": [                                                      {        \"name\": \"Philip Chang\",        \"shortname\": \"pchang\",        \"title\": \"HL-LHC R&D Algorithms Coordinator\",        \"institution\": \"University of Florida\",        \"photo\": \"/assets/images/team/Philip_Chang.png\"      }                                                    ], \"blueprint\": [                                                                {        \"name\": \"David Lange\",        \"shortname\": \"dlange\",        \"title\": \"Computational Physicist\",        \"institution\": \"Princeton University\",        \"photo\": \"/assets/images/team/David-Lange.png\"      }                                          ]}");
+const layoutMap = JSON.parse("{            \"management\": [                      {          \"name\": \"Tulika Bose\",          \"shortname\": \"tulika176\",          \"title\": \"S&C Operations Program Manager\",          \"institution\": \"University of Wisconsin-Madison\",          \"photo\": \"/assets/images/team/Tulika_Bose.jpg\"        },                      {          \"name\": \"Dirk Hufnagel\",          \"shortname\": \"d_hufnagel\",          \"title\": \"Deputy S&C Operations Program Manager\\n\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Dirk-Hufnagel.jpg\"        },                      {          \"name\": \"Robert Tuck\",          \"shortname\": \"rct225\",          \"title\": \"Associate Project Manager\",          \"institution\": \"Princeton University\",          \"photo\": \"/assets/images/team/Robert-Tuck.jpg\"        }          ]              ,    \"facilities\": [                      {          \"name\": \"Andrew Melo\",          \"shortname\": \"PerilousApricot\",          \"title\": \"Facilities Co-Leader\",          \"institution\": \"Vanderbilt University\",          \"photo\": \"/assets/images/team/Andrew_Melo.jpg\"        },                      {          \"name\": \"David Mason\",          \"shortname\": \"d_mason\",          \"title\": \"Facilities Co-Leader\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/David_Mason.jpg\"        }          ]              ,    \"software\": [                      {          \"name\": \"Saba Sehrish\",          \"shortname\": \"ssehrish\",          \"title\": \"Software Co-leader\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Saba_Sehrish.jpg\"        },                      {          \"name\": \"Kevin Lannon\",          \"shortname\": \"klannon\",          \"title\": \"Software Co-leader\",          \"institution\": \"University of Notre Dame\",          \"photo\": \"/assets/images/team/Kevin_Lannon.jpeg\"        }          ]              ,    \"operations\": [                      {          \"name\": \"Duong Nguyen\",          \"shortname\": \"nhduongvn\",          \"title\": \"Operations Co-Leader\",          \"institution\": \"University at Buffalo\",          \"photo\": \"/assets/images/team/Duong_Nguyen.jpg\"        },                      {          \"name\": \"Scarlet Norberg\",          \"shortname\": \"s_norberg\",          \"title\": \"Operations Co-Leader\\n\",          \"institution\": \"Fermilab\",          \"photo\": \"/assets/images/team/Scarlet-Norberg.png\"        }          ]          , \"hllhc\": [                                            {        \"name\": \"David Sperka\",        \"shortname\": \"dsperka\",        \"title\": \"HL-LHC R&D Co-Leader\",        \"institution\": \"Boston University\",        \"photo\": \"/assets/images/team/David_Sperka.jpg\"      }                                                                                      ,      {        \"name\": \"James Letts\",        \"shortname\": \"j_letts\",        \"title\": \"U.S. CMS University Facility Architect\",        \"institution\": \"UC San Diego\",        \"photo\": \"/assets/images/team/James_Letts.jpg\"      }                          ], \"analysis\": [                                                        {        \"name\": \"Matteo Cremonesi\",        \"shortname\": \"mcremone\",        \"title\": \"HL-LHC R&D Analysis Systems Coordinator\",        \"institution\": \"Carnegie Mellon University\",        \"photo\": \"/assets/images/team/Matteo_Cremonesi.jpg\"      }                                                                                      ,      {        \"name\": \"Oksana Shadura\",        \"shortname\": \"oshadura\",        \"title\": \"HL-LHC R&D Analysis Systems Coordinator\",        \"institution\": \"University of Nebraska - Lincoln\",        \"photo\": \"/assets/images/team/Oksana-Shadura_.jpg\"      }            ], \"infra\": [                                                                                                  {        \"name\": \"Nick Smith\",        \"shortname\": \"nsmith-\",        \"title\": \"U.S. CMS Fermilab Facility Architect\",        \"institution\": \"Fermilab\",        \"photo\": \"/assets/images/team/Nick_Smith.jpg\"      }                              ,      {        \"name\": \"James Letts\",        \"shortname\": \"j_letts\",        \"title\": \"U.S. CMS University Facility Architect\",        \"institution\": \"UC San Diego\",        \"photo\": \"/assets/images/team/James_Letts.jpg\"      }                          ], \"algo\": [                                                                      {        \"name\": \"Philip Chang\",        \"shortname\": \"pchang\",        \"title\": \"HL-LHC R&D Algorithms Coordinator\",        \"institution\": \"University of Florida\",        \"photo\": \"/assets/images/team/Philip_Chang.png\"      }                                                                    ], \"blueprint\": [                                                                                    {        \"name\": \"David Lange\",        \"shortname\": \"dlange\",        \"title\": \"Computational Physicist\",        \"institution\": \"Princeton University\",        \"photo\": \"/assets/images/team/David-Lange.png\"      }                                                      ]}");
 const titles = JSON.parse("{  \"management\": \"Software & Computing\",  \"facilities\": \"Facilities\",  \"software\": \"Software\",  \"operations\": \"Operations\",  \"hllhc\": \"HL-LHC R&D\",  \"analysis\": \"Analysis\",  \"infra\": \"Infrastructure\",  \"algo\": \"Algorithms\",  \"blueprint\": \"Blueprint\"}");
 const instShortByPerson = JSON.parse("{                                                                                }");
 
@@ -83,12 +83,12 @@ const instShortByPerson = JSON.parse("{                                         
 const positions = {
   management: {left:450, top:40,   title:"Software & Computing", type:"root"},
   facilities: {left:300, top:220,  title:"Facilities", type:"leaf"},
-  software:   {left:300, top:360,  title:"Software", type:"leaf"},
+  software:   {left:300, top:375,  title:"Software", type:"leaf"},
   operations: {left:600, top:220,  title:"Operations", type:"leaf"},
   hllhc:      {left:600, top:360,  title:"HL-LHC R&D", type:"leaf"},
-  infra:      {left:360, top:500,  title:"Infrastructure", type:"leaf"},
-  algo:       {left:470, top:500,  title:"Algorithms", type:"leaf"},
-  analysis:   {left:580, top:500,  title:"Analysis", type:"leaf"}
+  infra:      {left:360, top:520,  title:"Infrastructure", type:"leaf"},
+  algo:       {left:470, top:520,  title:"Algorithms", type:"leaf"},
+  analysis:   {left:580, top:520,  title:"Analysis", type:"leaf"}
   
   /*
   Example: If you ever want to show Blueprint (currently invisible),
@@ -107,54 +107,6 @@ Object.keys(positions).forEach(k => {
 const showTitleForShort = new Set(["tulika176","d_hufnagel","rct225","j_letts","nsmith-"]);
 
 const chart = document.getElementById('chart');
-
-/* Photo helpers */
-// function addPhotos(key, div, names){
-//   if (["facilities","software"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-left';
-//       if (i === 1) img.style.left = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["operations","hllhc"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-right';
-//       if (i === 1) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (key === "management") {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = i === 0 ? 'photo-left' : 'photo-right';
-//       if (i === 1) img.style.right = '-85px';
-//       if (i === 2) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["infra","algo","analysis"].includes(key)) {
-//     const imgSize = 75;
-//     const gap = 8;
-//     const count = names.length;
-//     const groupWidth = count * imgSize + Math.max(0, count - 1) * gap;
-//     const nodeW = div.offsetWidth;
-//     const startX = Math.max(0, Math.round((nodeW - groupWidth) / 2));
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-below';
-//       img.style.left = `${startX + i * (imgSize + gap)}px`;
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   }
-// }
 
 function addPhotos(key, div, names){
   if (["facilities","software"].includes(key)) {
