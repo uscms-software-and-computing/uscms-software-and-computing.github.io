@@ -175,54 +175,6 @@ const showTitleForShort = new Set(["tulika176","d_hufnagel","rct225","j_letts","
 
 const chart = document.getElementById('chart');
 
-/* Photo helpers */
-// function addPhotos(key, div, names){
-//   if (["facilities","software"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-left';
-//       if (i === 1) img.style.left = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["operations","hllhc"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-right';
-//       if (i === 1) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (key === "management") {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = i === 0 ? 'photo-left' : 'photo-right';
-//       if (i === 1) img.style.right = '-85px';
-//       if (i === 2) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["infra","algo","analysis"].includes(key)) {
-//     const imgSize = 75;
-//     const gap = 8;
-//     const count = names.length;
-//     const groupWidth = count * imgSize + Math.max(0, count - 1) * gap;
-//     const nodeW = div.offsetWidth;
-//     const startX = Math.max(0, Math.round((nodeW - groupWidth) / 2));
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-below';
-//       img.style.left = `${startX + i * (imgSize + gap)}px`;
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   }
-// }
-
 function addPhotos(key, div, names){
   if (["facilities","software"].includes(key)) {
     names.forEach((p,i)=>{

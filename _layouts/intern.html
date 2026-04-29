@@ -8,8 +8,9 @@
 
       <div>
         <br>
-        <center><h1>USCMS S&C Intern: {{ page.intern-name }}</h1>
+        <h1 class="text-center">USCMS S&C Intern: {{ page.intern-name }}</h1>
 
+          <div class="text-center">
           <img src="{{page.photo}}" width="150px">
           <br>
           <br>
@@ -19,7 +20,7 @@
           <b> Home Institution:</b> {{ page.institution }}
           <br>
           <br>
-        </center>
+          </div>
 
         {%- assign projects = page.projects | default: page | ensure_array -%}
 
@@ -77,7 +78,7 @@
           {% endif %}
           {% if page.website.size > 4 %}
           <li>
-            <i class="fas fa-link"></i><a href = {{page.website}}> Visit my website</a><br>
+            <i class="fas fa-link"></i><a href="{{ page.website }}"> Visit my website</a><br>
           </li>
           {% endif %}
           {% if page.github-username.size > 4 %}
