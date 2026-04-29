@@ -30,7 +30,12 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
+<<<<<<< HEAD
     {% if person.sub-wbs contains 0 %}
+=======
+    {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
+    {% if subwbs contains "|0|" %}
+>>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -48,7 +53,12 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
+<<<<<<< HEAD
     {% if person.sub-wbs contains 1 %}
+=======
+    {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
+    {% if subwbs contains "|1|" %}
+>>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -66,7 +76,12 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
+<<<<<<< HEAD
     {% if person.sub-wbs contains 2 %}
+=======
+    {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
+    {% if subwbs contains "|2|" %}
+>>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -84,7 +99,12 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
+<<<<<<< HEAD
     {% if person.sub-wbs contains 3 %}
+=======
+    {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
+    {% if subwbs contains "|3|" %}
+>>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -102,7 +122,12 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
+<<<<<<< HEAD
     {% if person.sub-wbs contains 4 %}
+=======
+    {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
+    {% if subwbs contains "|4|" %}
+>>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -150,12 +175,12 @@ const instShortByPerson = JSON.parse({{ liquid_instShortByPerson | strip_newline
 const positions = {
   management: {left:450, top:40,   title:"Software & Computing", type:"root"},
   facilities: {left:300, top:220,  title:"Facilities", type:"leaf"},
-  software:   {left:300, top:360,  title:"Software", type:"leaf"},
+  software:   {left:300, top:370,  title:"Software", type:"leaf"},
   operations: {left:600, top:220,  title:"Operations", type:"leaf"},
   hllhc:      {left:600, top:360,  title:"HL-LHC R&D", type:"leaf"},
-  infra:      {left:360, top:500,  title:"Infrastructure", type:"leaf"},
-  algo:       {left:470, top:500,  title:"Algorithms", type:"leaf"},
-  analysis:   {left:580, top:500,  title:"Analysis", type:"leaf"}
+  infra:      {left:360, top:520,  title:"Infrastructure", type:"leaf"},
+  algo:       {left:470, top:520,  title:"Algorithms", type:"leaf"},
+  analysis:   {left:580, top:520,  title:"Analysis", type:"leaf"}
   
   /*
   Example: If you ever want to show Blueprint (currently invisible),
