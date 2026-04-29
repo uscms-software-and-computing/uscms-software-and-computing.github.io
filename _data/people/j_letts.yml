@@ -6,4 +6,6 @@ shortname: j_letts
 title: U.S. CMS University Facility Architect
 website:
 presentations:
-sub-wbs: 2
+sub-wbs: 
+  - 0
+  - 2

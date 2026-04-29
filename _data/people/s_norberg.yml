@@ -8,4 +8,5 @@ institution: Fermilab
 website:
 photo: /assets/images/team/Scarlet-Norberg.png
 presentations:
-sub-wbs: 0
+sub-wbs:
+  - 0

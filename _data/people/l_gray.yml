@@ -1,4 +1,4 @@
-active: true
+active: false
 hidden: false
 institution: Fermilab
 name: Lindsey Gray
@@ -7,4 +7,3 @@ shortname: l_gray
 title: HL-LHC R&D Co-Leader
 website:
 presentations:
-sub-wbs: 0

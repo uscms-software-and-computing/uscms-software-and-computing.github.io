@@ -7,4 +7,5 @@ shortname: mcremone
 title: HL-LHC R&D Analysis Systems Coordinator
 website:
 presentations:
-sub-wbs: 1
+sub-wbs:
+  - 1
