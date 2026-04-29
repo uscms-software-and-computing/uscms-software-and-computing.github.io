@@ -191,6 +191,10 @@
         <ul>
           
           
+          <li>23 Apr 2026 - <a href="https://indico.cern.ch/event/1639405/sessions/645094/attachments/3262322/5825235/26.04.23_HGCAL_GNN_offline_reconstruction.pdf">"HGCAL reconstruction with Graph Neural Networks"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1639405/">TICL Reconstruction Working Meeting</a>
+            
+          
+          
           <li>26 Mar 2026 - <a href="https://indico.cern.ch/event/1639403/contributions/7016065/attachments/3246468/5792247/26.03.26_HGCAL_GNN_offline_reconstruction.pdf">"HGCAL reconstruction with Graph Neural Networks"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1639403/">TICL Reconstruction Working Meeting</a>
             
           
@@ -235,7 +239,19 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2026 Q1 </b> <br /></p>
+        <p><br /> <b>2026 Q2 </b> <br /> *   Working on training of GNN model with 200 pileup simulation
+    *   First training with 30 PU using SimCluster features as input</p>
+<ul>
+  <li>Study new alternative ML architectures for HGCAL reconstruction
+    <ul>
+      <li>Generated large 0 PU dataset with RecHits and TICL objects to train a large model</li>
+      <li>New training using recHits features as input on 1000 events: incidence matrix regression and regression of cluster properties</li>
+      <li>Optimization of the model’s architecture and parameters</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2026 Q1 </b> <br /></p>
 <ul>
   <li>Progress on optimized GNN model
     <ul>
