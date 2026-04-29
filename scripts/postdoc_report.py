@@ -15,6 +15,7 @@ Usage:
 
 import argparse
 import json
+import re
 import sys
 import urllib.request
 import urllib.parse
@@ -51,7 +52,6 @@ def previous_quarter(today=None):
 
 def parse_quarter_override(s):
     """Parse a manual override like '2025Q4' into (label, start, end)."""
-    import re
     m = re.fullmatch(r"(\d{4})Q([1-4])", s.strip(), re.IGNORECASE)
     if not m:
         raise argparse.ArgumentTypeError(
@@ -238,8 +238,8 @@ ROW_TEMPLATE = """    <tr>
       <td>{last_commit}</td>
       <td>{q_count}</td>
       <td>{total_count}</td>
-      <td><a class="gh-link" href="{web_url}" target="_blank">page ↗</a></td>
-      <td><a class="gh-link" href="{gh_url}" target="_blank">commits ↗</a></td>
+      <td><a class="gh-link" href="{web_url}" target="_blank" rel="noopener noreferrer">page ↗</a></td>
+      <td><a class="gh-link" href="{gh_url}" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>"""
 
 
