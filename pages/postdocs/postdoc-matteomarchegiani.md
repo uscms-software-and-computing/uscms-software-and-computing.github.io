@@ -21,6 +21,11 @@ proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
 
 presentations:
   - title: HGCAL reconstruction with Graph Neural Networks
+    date: April 23, 2026
+    url: https://indico.cern.ch/event/1639405/sessions/645094/attachments/3262322/5825235/26.04.23_HGCAL_GNN_offline_reconstruction.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639405/
+  - title: HGCAL reconstruction with Graph Neural Networks
     date: March 26, 2026
     url: https://indico.cern.ch/event/1639403/contributions/7016065/attachments/3246468/5792247/26.03.26_HGCAL_GNN_offline_reconstruction.pdf
     meeting: TICL Reconstruction Working Meeting
@@ -72,6 +77,16 @@ presentations:
     meetingurl: https://indico.cern.ch/event/1569687/
 
 current_status: >
+    <br>
+    <b>2026 Q2 </b>
+    <br>
+    *   Working on training of GNN model with 200 pileup simulation
+        *   First training with 30 PU using SimCluster features as input
+    *   Study new alternative ML architectures for HGCAL reconstruction
+        *   Generated large 0 PU dataset with RecHits and TICL objects to train a large model
+        *   New training using recHits features as input on 1000 events: incidence matrix regression and regression of cluster properties
+        *   Optimization of the model's architecture and parameters
+
     <br>
     <b>2026 Q1 </b>
     <br>
