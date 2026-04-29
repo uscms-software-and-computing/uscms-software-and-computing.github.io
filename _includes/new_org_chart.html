@@ -30,12 +30,8 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-<<<<<<< HEAD
-    {% if person.sub-wbs contains 0 %}
-=======
     {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
     {% if subwbs contains "|0|" %}
->>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -53,12 +49,8 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-<<<<<<< HEAD
-    {% if person.sub-wbs contains 1 %}
-=======
     {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
     {% if subwbs contains "|1|" %}
->>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -76,12 +68,8 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-<<<<<<< HEAD
-    {% if person.sub-wbs contains 2 %}
-=======
     {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
     {% if subwbs contains "|2|" %}
->>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -99,12 +87,8 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-<<<<<<< HEAD
-    {% if person.sub-wbs contains 3 %}
-=======
     {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
     {% if subwbs contains "|3|" %}
->>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -122,12 +106,8 @@
   {% assign count = 0 %}
   {% for sn in hllhc.personnel %}
     {% assign person = site.data.people[sn] %}
-<<<<<<< HEAD
-    {% if person.sub-wbs contains 4 %}
-=======
     {% capture subwbs %}|{{ person.sub-wbs | join: "|" }}|{% endcapture %}
     {% if subwbs contains "|4|" %}
->>>>>>> f36d4d6 (Org chart updates)
       {% if count > 0 %},{% endif %}
       {
         "name": {{ person.name | jsonify }},
@@ -175,7 +155,7 @@ const instShortByPerson = JSON.parse({{ liquid_instShortByPerson | strip_newline
 const positions = {
   management: {left:450, top:40,   title:"Software & Computing", type:"root"},
   facilities: {left:300, top:220,  title:"Facilities", type:"leaf"},
-  software:   {left:300, top:370,  title:"Software", type:"leaf"},
+  software:   {left:300, top:375,  title:"Software", type:"leaf"},
   operations: {left:600, top:220,  title:"Operations", type:"leaf"},
   hllhc:      {left:600, top:360,  title:"HL-LHC R&D", type:"leaf"},
   infra:      {left:360, top:520,  title:"Infrastructure", type:"leaf"},
@@ -199,54 +179,6 @@ Object.keys(positions).forEach(k => {
 const showTitleForShort = new Set(["tulika176","d_hufnagel","rct225","j_letts","nsmith-"]);
 
 const chart = document.getElementById('chart');
-
-/* Photo helpers */
-// function addPhotos(key, div, names){
-//   if (["facilities","software"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-left';
-//       if (i === 1) img.style.left = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["operations","hllhc"].includes(key)) {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-right';
-//       if (i === 1) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (key === "management") {
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = i === 0 ? 'photo-left' : 'photo-right';
-//       if (i === 1) img.style.right = '-85px';
-//       if (i === 2) img.style.right = '-170px';
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   } else if (["infra","algo","analysis"].includes(key)) {
-//     const imgSize = 75;
-//     const gap = 8;
-//     const count = names.length;
-//     const groupWidth = count * imgSize + Math.max(0, count - 1) * gap;
-//     const nodeW = div.offsetWidth;
-//     const startX = Math.max(0, Math.round((nodeW - groupWidth) / 2));
-//     names.forEach((p,i)=>{
-//       const img = document.createElement('img');
-//       img.className = 'photo-below';
-//       img.style.left = `${startX + i * (imgSize + gap)}px`;
-//       if (p.photo) img.src = p.photo;
-//       img.alt = p.name;
-//       div.appendChild(img);
-//     });
-//   }
-// }
 
 function addPhotos(key, div, names){
   if (["facilities","software"].includes(key)) {
