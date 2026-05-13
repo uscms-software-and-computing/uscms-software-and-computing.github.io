@@ -80,9 +80,9 @@ current_status: >
       *   Next Steps
           *   Extend model validation to 200 PU samples for robustness.
     
-        <br>
-        <b>2024 Q3 </b>
-        <br>
+    <br>
+    <b>2024 Q3 </b>
+    <br>
     
       *   Progress
           *   Group presented TICL framework at CHEP24 conference (as contributing authors).
@@ -90,9 +90,9 @@ current_status: >
       *   Next Steps
           *   Finalise and integrate updated models into CMSSW.
     
-        <br>
-        <b>2024 Q4 </b>
-        <br>
+    <br>
+    <b>2024 Q4 </b>
+    <br>
     
       *   Progress
           *   Finalised PFN-based models (PID at CLUE3D, PID at Linking, Regression at Linking) using 200 PU samples; presented at HGCAL DPG meeting with positive feedback.
@@ -101,9 +101,9 @@ current_status: >
           *   'Resolve mismatch: Regression/PID trained on TiclCandidate but applied at Linking step.'
           *   Study trackster-track features to improve matching in TICL.
     
-        <br>
-        <b>2025 Q1 </b>
-        <br>
+    <br>
+    <b>2025 Q1 </b>
+    <br>
     
       *   Progress
           *   Identified geometric matching (DeltaR) as the main source of track–trackster linking inefficiency.
@@ -112,9 +112,9 @@ current_status: >
       *   Next Steps
           *   Validate GNN approach and prepare integration PR into TICL.
     
-        <br>
-        <b>2025 Q2 </b>
-        <br>
+      <br>
+      <b>2025 Q2 </b>
+      <br>
     
       *   Progress
           *   GNN linking achieved >98% efficiency vs ~80% with previous cuts; presented at TICL meeting.
@@ -123,9 +123,9 @@ current_status: >
       *   Next Steps
           *   Submit GNN linking PR; complete regression retraining.
     
-        <br>
-        <b>2025 Q3 </b>
-        <br>
+      <br>
+      <b>2025 Q3 </b>
+      <br>
     
       *   Progress
           *   Fixed bug in recHitTools (missing geometry assignment) causing jet response distortion; submitted PR #49343 + training PR #10.
@@ -135,9 +135,9 @@ current_status: >
       *   Next Steps
           *   Submit ticlv5_GNN process modifier PR for HLT and step3 integration.
     
-        <br>
-        <b>2025 Q4 </b>
-        <br>
+      <br>
+      <b>2025 Q4 </b>
+      <br>
     
       *   Progress
           *   Merged GNN linking model (PR #49652) via ticlv5_GNN modifier; >98% efficiency.
