@@ -191,6 +191,10 @@
         <b>Presentations</b>
         <ul>
           
+          
+          <li>26 May 2026 - <a href="https://indico.cern.ch/event/1471803/contributions/6967988/attachments/3283390/5868173/NegWeights_CHEP2026_Hay.pdf">"Cell Reweighting Algorithms for Pathological Weight Mitigation in LHC Simulations using Optimal Transport"</a>, Lauren Hay, <a href="https://indico.cern.ch/event/1471803/contributions/6967988/">CHEP 2026</a>
+            
+          
         </ul>
         <hr>
 
@@ -200,7 +204,17 @@
 <ul>
   <li>Progress
     <ul>
-      <li>Coming soon</li>
+      <li>Finalized studies of OT based cell-resampling of negative weights in generic herwig samples.
+        <ul>
+          <li>Presented results at CHEP 2026.</li>
+        </ul>
+      </li>
+      <li>First attempt at training AE for compressing particle candidates.
+        <ul>
+          <li>Tried MSE and sliced-Wasserstein based loss functions with little success.</li>
+          <li>Issue likely lies in structuring the input/masking of the particles – may have more success with transformer-based model.</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
