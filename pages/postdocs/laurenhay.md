@@ -20,14 +20,22 @@ project_goal: >
 
 proposal: /assets/pdfs/Lauren-Hay.pdf
 
-presentations: >
-
+presentations:
+  - title: "Cell Reweighting Algorithms for Pathological Weight Mitigation in LHC Simulations using Optimal Transport"
+    date: "May 26, 2026"
+    url: https://indico.cern.ch/event/1471803/contributions/6967988/attachments/3283390/5868173/NegWeights_CHEP2026_Hay.pdf
+    meeting: CHEP 2026
+    meetingurl: https://indico.cern.ch/event/1471803/contributions/6967988/
+    
 current_status: >
-    <br>
-    <b>2026 Q2 </b>
-    <br>
+   <br>
+   <b>2026 Q2 </b>
+   <br>
 
-    *   Progress
-        *   Coming soon
-
+   *   Progress
+       *   Finalized studies of OT based cell-resampling of negative weights in generic herwig samples.
+           *   Presented results at CHEP 2026.
+       *   First attempt at training AE for compressing particle candidates.
+           *   Tried MSE and sliced-Wasserstein based loss functions with little success.
+           *   Issue likely lies in structuring the input/masking of the particles -- may have more success with transformer-based model.
 ---
