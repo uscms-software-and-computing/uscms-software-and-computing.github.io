@@ -44,6 +44,17 @@ jobs:
         run: |
           git log -1 --format=fuller
           git rev-parse HEAD  
+
+      - name: Verify actual file content
+        run: |
+          echo "=== HTML HEAD ==="
+          head -n 20 pages/reports/postdoc_freshness_report.html
+      
+          echo "=== FILE TIMESTAMP ==="
+          ls -l pages/reports/postdoc_freshness_report.html
+      
+          echo "=== GIT TRACKED FILE ==="
+          git ls-files | grep postdoc
       
       - name: Commit report to repo
         run: |
