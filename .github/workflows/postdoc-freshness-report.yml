@@ -2,6 +2,13 @@ name: Postdoc Freshness Report
 
 on:
   # Run on the first day of each quarter at 8:00 AM UTC
+  push:
+    branches: [ master ]
+    paths:
+      - "pages/postdocs/**"
+      - "scripts/postdoc_report.py"
+      - "pages/reports/**"
+  
   schedule:
     - cron: '0 8 1 1 *'   # Jan 1  – Q1 report
     - cron: '0 8 1 4 *'   # Apr 1  – Q2 report
