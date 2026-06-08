@@ -40,6 +40,11 @@ jobs:
             --output pages/reports/postdoc_freshness_report.html \
             --pdf
 
+      - name: Show commit info
+        run: |
+          git log -1 --format=fuller
+          git rev-parse HEAD  
+      
       - name: Commit report to repo
         run: |
           git config user.name  "github-actions[bot]"
@@ -50,3 +55,7 @@ jobs:
           git diff --cached --quiet || \
             git commit -m "chore: quarterly postdoc freshness report [$(date +'%Y-%m-%d')]"
           git push
+
+      - name: Verify remote
+        run: |
+          git ls-remote origin refs/heads/master
