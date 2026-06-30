@@ -192,23 +192,35 @@
         <ul>
           
           
-          <li>10 Nov 2025 - <a href="<https://indico.fnal.gov/event/71764/contributions/327176/attachments/193267/268012/SONIC_at_CMS_20251110.pdf>">"SONIC at CMS"</a>, Yao Yao, <a href="<https://indico.fnal.gov/event/71764/>"><SONIC workshop 2025 at the LPC></a>
+          <li>4 Jun 2026 - <a href="https://indico.cern.ch/event/1669067/contributions/7021913/attachments/3287943/5878136/SONIC_ML_reconstruction_20260526_v2.pdf">"SONIC for CMS Phase 2"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1669067/">ML for reconstruction workshop</a>
             
           
           
-          <li>13 Oct 2025 - <a href="<https://indico.cern.ch/event/1593611/contributions/6731952/attachments/3153354/5600246/25_10_13%20-%20ML%20townhall%202025%20-%20Production%20update.pdf>">"MLG L3 report: Production group"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1593611/>"><2025 CMS ML Town Hall></a>
+          <li>23 Feb 2026 - <a href="https://indico.cern.ch/event/1643166/contributions/6948257/attachments/3225300/5747918/Computing%20Resources%20Demo.pdf">"Introduction to computing resources, Purdue analysis facility and NRP"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1643166/">ML Inference for CMS Data Production Hackathon at the LPC</a>
             
           
           
-          <li>2 Apr 2025 - <a href="<https://indico.cern.ch/event/1530757/contributions/6440909/attachments/3043765/5377591/SONIC%20updates%20-%20O&C%20April%202025.pdf>">"SONIC updates"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1530757/>"><O&C weekly meeting></a>
+          <li>23 Feb 2026 - <a href="https://indico.cern.ch/event/1643166/contributions/6948253/attachments/3225262/5748272/IaaS_at_CMS_and%20SONIC.pdf">"Inference as a service and SONIC"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1643166/">ML Inference for CMS Data Production Hackathon at the LPC</a>
             
           
           
-          <li>25 Jun 2024 - <a href="<https://indico.cern.ch/event/1427247/contributions/6010809/attachments/2884511/5055317/SONIC%20for%20ML%20algorithms-1.pdf>">"SONIC for ML algorithms"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1427247/>"><CMS week Machine Learning Forum></a>
+          <li>10 Nov 2025 - <a href="https://indico.fnal.gov/event/71764/contributions/327176/attachments/193267/268012/SONIC_at_CMS_20251110.pdf">"SONIC at CMS"</a>, Yao Yao, <a href="https://indico.fnal.gov/event/71764/">SONIC workshop 2025 at the LPC</a>
             
           
           
-          <li>1 Mar 2024 - <a href="<https://indico.cern.ch/event/1372201/contributions/5834098/attachments/2811033/4906211/SONIC%20in%20CMS%20and%20ATLAS.pdf>">"SONIC in CMS and ATLAS"</a>, Yao Yao, <a href="<https://indico.cern.ch/event/1372201/overview>"><SONIC Heterogeneous Computing for Science Workshop></a>
+          <li>13 Oct 2025 - <a href="https://indico.cern.ch/event/1593611/contributions/6731952/attachments/3153354/5600246/25_10_13%20-%20ML%20townhall%202025%20-%20Production%20update.pdf">"MLG L3 report: Production group"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1593611/">2025 CMS ML Town Hall</a>
+            
+          
+          
+          <li>2 Apr 2025 - <a href="https://indico.cern.ch/event/1530757/contributions/6440909/attachments/3043765/5377591/SONIC%20updates%20-%20O&C%20April%202025.pdf">"SONIC updates"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1530757/">O&C weekly meeting</a>
+            
+          
+          
+          <li>25 Jun 2024 - <a href="https://indico.cern.ch/event/1427247/contributions/6010809/attachments/2884511/5055317/SONIC%20for%20ML%20algorithms-1.pdf">"SONIC for ML algorithms"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1427247/">CMS week Machine Learning Forum</a>
+            
+          
+          
+          <li>1 Mar 2024 - <a href="https://indico.cern.ch/event/1372201/contributions/5834098/attachments/2811033/4906211/SONIC%20in%20CMS%20and%20ATLAS.pdf">"SONIC in CMS and ATLAS"</a>, Yao Yao, <a href="https://indico.cern.ch/event/1372201/overview">SONIC Heterogeneous Computing for Science Workshop</a>
             
           
         </ul>
@@ -216,7 +228,29 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q4 </b> <br /></p>
+        <p><br /> <b>2026 Q2 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Delivered a complete workflow in which a CMS job sends inputs to a Triton server, runs LST algorithm and receives output. The backend is now able to load the LST algorithm on CPU or GPU through a simple change in the config.pbtxt setup. The CMSSW client can use a process modifier to enable SONIC, and the original local workflow still works if there is no SONIC process modifier in the cmsConfig file.</li>
+      <li>Validated input/output being delivered to/from a Triton server that loads the LST Alpaka algorithm.</li>
+      <li>Performance benchmarking of the LST Alpaka algorithm on a Triton server at the Purdue Hammer cluster.</li>
+      <li>Documentation: LST Alpaka backend compilation and model setup, and the LST SONIC workflow in CMSSW, are documented, and the code is pushed to GitHub.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2026 Q1 </b> <br /></p>
+<ul>
+  <li>Progress
+    <ul>
+      <li>Organized the 1-week ML Inference for CMS Data Production Hackathon at the LPC on Feb 23–27. Preparation work included proposing projects, contacting experts, and connecting participants with experts. Also prepared GPU resources for participants on the National Research Platform (NRP) with Dr. Daniel Diaz and Dr. Dmitry Kondratyev, including setting up single Triton servers, as well as deploying SuperSONIC on NRP and sending client jobs from the Purdue AF. During the workshop, gave an introduction talk on SONIC and a tutorial about it.</li>
+      <li>The workshop helped kick off multiple developments, including SONIC-related activities: 1) Connecting with the KIT team for deploying SuperSONIC at their Tier2 site; 2) Deploying SuperSONIC for analysis purposes.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2025 Q4 </b> <br /></p>
 <ul>
   <li>Progress
     <ul>
