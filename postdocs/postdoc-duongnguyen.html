@@ -82,8 +82,7 @@
           <br>
           <br>
           <b> Postdoc dates: </b>
-          
-    Jan - Dec 2025<br/>
+          Jan 2025 - Feb 2027<br/>
 
           <br>
           <b> Home Institution:</b> University at Buffalo
@@ -94,7 +93,7 @@
         <br>
         <h3>Project: Tape data quality of service and tape data carousel</h3>
 
-        <br> <b>2024-2025:  </b> <br>
+        <br> <b>2025-2027:  </b> <br>
 This project aims to optimize tape access for various use cases, particularly in data reprocessing workflows. Typical examples include ReReco campaigns, where RAW data needs to be staged, and ReMINIAOD, which requires staging of AOD data. By analyzing current tape access patterns, the project seeks to enhance the quality of service for tape-based data access within the collaboration. Additionally, the project will prototype a production workflow using the "carousel" model, where a sliding buffer of tape data is staged to disk for processing and automatically removes it once processing is complete. The impact of this approach on CMS data production and reprocessing will be assessed, focusing on improving storage efficiency and reducing overall storage costs for the collaboration.
 
         <br>
@@ -198,9 +197,21 @@ This project aims to optimize tape access for various use cases, particularly in
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2025 Q1 </b> <br /></p>
+        <p><br /> <b>2026 Q2 </b></p>
 <ul>
-  <li>Progress</li>
+  <li>Continued works on the input data deletion in the tape data carousel data processing
+    <ul>
+      <li>Implemented the new codes to separate the input data deletion CherryPy service from other workqueue services. This prevents interruption of those services in case there are crashes in the execution of input data deletion</li>
+    </ul>
+  </li>
+  <li>Completed implementation of codes to reduce the disk usage of output data in production workflow * Study of the tape archive metadata continued:
+    <ul>
+      <li>The results of data collocation of FNAL tape analysis are presented at CHEP which show that the tape recalls often request data that are poorly collocated. This reduced the performance of the data staging to disk</li>
+      <li>Analyze the collocation hints using Rucio tape recall rules in CRAB user analysis jobs and tape recall data reported in FNAL dCache disk buffer: first schema was derived using physic process name as collocation hint</li>
+    </ul>
+  </li>
+  <li>Planned to perform studies to quantify the performance of recall under different data collocation settings. The FNAL tape operation team will provide the layout of data on tapes and synthetic datasets are fabricated in Rucio to simulate different levels of data collocation. The tape recall metrics are measured to quantify the performance corresponding to these data collocation levels.
+<br /></li>
 </ul>
 
         <br>
