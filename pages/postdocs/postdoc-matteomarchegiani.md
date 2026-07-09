@@ -8,7 +8,7 @@ title: Post-doctoral researcher
 active: True
 dates:
   start: 2025-07-01
-  end: 2026-06-30
+  end: 2027-06-30
 photo: /assets/images/team/Matteo-Marchegiani.jpeg
 institution: Carnegie Mellon University
 e-mail: mmarcheg@andrew.cmu.edu
