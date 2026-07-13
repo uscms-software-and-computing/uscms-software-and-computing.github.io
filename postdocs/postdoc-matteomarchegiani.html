@@ -93,11 +93,11 @@
         <br>
         <h3>Project: GNN-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter</h3>
 
-        The goal of the project is to develop new machine learning based algorithms for fast and efficient reconstruction of the High-Granularity Calorimeter at the High-Luminosity LHC.
+        <br> <b>2026-2027 Transformer-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter</b> <br> Building on the GNN-based reconstruction developed in the first year, the goal of this second project is to study transformer-based architectures, and specifically MaskFormers, as an alternative approach to end-to-end reconstruction in the HGCAL. A transformer with full self-attention is equivalent to a fully-connected message-passing GNN, offering greater expressivity than the local graph connectivity used by GNNs, and masked attention mitigates the quadratic complexity that would otherwise result from attending over the up to 200k hits expected per event at 200 pile-up. The project starts by interfacing the existing HGCAL training datasets with a MaskFormer model, aggregating information from multiple detector hits into composed objects, the topoclusters, to keep the self-attention matrix computationally tractable. The model is then trained with progressively higher pile-up (0, 30, and 200 collisions), monitoring memory and compute costs against the CMS Phase-2 offline processing budget, before its energy, position and time resolution and response are benchmarked against the GNN baseline using the same performance-metric infrastructure developed in the prior award. <br> <a href=/assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf>2026 Project proposal</a> <br> <br> <b>2025-2026 GNN-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter</b> <br> The High-Luminosity LHC (HL-LHC) will deliver up to 200 simultaneous interactions per bunch crossing (pile-up), posing an exceptional challenge for particle-shower reconstruction in the CMS Phase 2 High-Granularity Calorimeter (HGCAL). The goal of this project is to develop Graph Neural Network (GNN) based algorithms for fast and efficient end-to-end reconstruction of particle showers in the HGCAL, capable of meeting this challenge. Building on an existing proof-of-concept model that uses GravConv layers together with the Object Condensation loss function to reconstruct energy clusters from simulated di-tau decays with zero pile-up, the project extends this approach to realistic HL-LHC pile-up conditions. This requires deriving a scalable, pile-up-aware training dataset by combining full-simulation truth information from FineCalo with a dedicated library of minimum-bias events and a merging algorithm that reconciles truth information between the hard-scatter and pile-up interactions, as well as re-engineering and optimizing the Object Condensation loss function to overcome GPU memory limitations at high pile-up and to improve physics performance, exploring alternatives such as the modified differential multiplier method and the influencer loss. <br> <a href=/assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf>2025 Project proposal</a> <br>
 
         <br>
         <br>
-        More information: <a href = "/assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf">My project proposal</a><br> 
+        More information: <a href = "/assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf">My project proposal</a><br> 
 
         <br>
         <b>Mentors: </b> <br>
@@ -192,6 +192,18 @@
         <ul>
           
           
+          <li>25 May 2026 - <a href="https://indico.cern.ch/event/1471803/contributions/6967243/attachments/3281070/5863445/CHEP-2026_GNN-based_end-to-end_reconstruction_CMS-HGCAL.pdf">"GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1471803/">CHEP 2026</a>
+            
+          
+          
+          <li>15 May 2026 - <a href="https://indico.cern.ch/event/1686056/contributions/7087349/attachments/3275631/5853132/GNN-HGCAL-Reconstruction_DP-Note_final.pdf">"GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1686056/">DPG Plot Approval Meeting</a>
+            
+          
+          
+          <li>7 May 2026 - <a href="https://indico.cern.ch/event/1639406/contributions/7083113/attachments/3270778/5842725/GNN-DP-Note_v0.pdf">"GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1639406/">TICL Reconstruction Working Meeting</a>
+            
+          
+          
           <li>23 Apr 2026 - <a href="https://indico.cern.ch/event/1639405/sessions/645094/attachments/3262322/5825235/26.04.23_HGCAL_GNN_offline_reconstruction.pdf">"HGCAL reconstruction with Graph Neural Networks"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1639405/">TICL Reconstruction Working Meeting</a>
             
           
@@ -240,14 +252,25 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2026 Q2 </b> <br /> *   Working on training of GNN model with 200 pileup simulation
-    *   First training with 30 PU using SimCluster features as input</p>
+        <p><br /> <b>2026 Q2 </b> <br /></p>
 <ul>
+  <li>Working on training of GNN model with 200 pileup simulation
+    <ul>
+      <li>First training with 30 PU using SimCluster features as input</li>
+    </ul>
+  </li>
   <li>Study new alternative ML architectures for HGCAL reconstruction
     <ul>
       <li>Generated large 0 PU dataset with RecHits and TICL objects to train a large model</li>
       <li>New training using recHits features as input on 1000 events: incidence matrix regression and regression of cluster properties</li>
       <li>Optimization of the model’s architecture and parameters</li>
+    </ul>
+  </li>
+  <li>Publication of DP Note on GNN-based HGCAL reconstruction
+    <ul>
+      <li>GravNet model trained with object condensation loss with 0 PU simulation</li>
+      <li>MC truth: CMSSW-native SimClusters</li>
+      <li>Presentation at CHEP 2026</li>
     </ul>
   </li>
 </ul>
