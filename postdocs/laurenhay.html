@@ -195,6 +195,10 @@
           <li>26 May 2026 - <a href="https://indico.cern.ch/event/1471803/contributions/6967988/attachments/3283390/5868173/NegWeights_CHEP2026_Hay.pdf">"Cell Reweighting Algorithms for Pathological Weight Mitigation in LHC Simulations using Optimal Transport"</a>, Lauren Hay, <a href="https://indico.cern.ch/event/1471803/contributions/6967988/">CHEP 2026</a>
             
           
+          
+          <li>17 Jul 2026 - <a href="https://indico.fnal.gov/event/73553/contributions/344375/attachments/199579/278158/Fermilab_FP_2026_NegWeights.pdf">"Resampling Away Negative Weights with Optimal Transport"</a>, Lauren Hay, <a href="https://indico.fnal.gov/event/73553/contributions/344375/">CHEP 2026</a>
+            
+          
         </ul>
         <hr>
 
@@ -211,12 +215,14 @@
       </li>
       <li>First attempt at training AE for compressing particle candidates.
         <ul>
-          <li>Tried MSE and sliced-Wasserstein based loss functions with little success.</li>
-          <li>Issue likely lies in structuring the input/masking of the particles – may have more success with transformer-based model.</li>
+          <li>Tried MSE and sliced-Wasserstein based loss functions with some success.</li>
+          <li>Still have issues in deconding constituent pT’s – this causes an underestimation of jet mass and pT.</li>
+          <li>Likely need to try an alternative architecture</li>
         </ul>
       </li>
     </ul>
   </li>
+  <li>Began investigating lossy compression implementation in CMSSW and it’s physics performance.</li>
 </ul>
 
         <br>
