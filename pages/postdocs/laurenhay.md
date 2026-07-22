@@ -26,6 +26,11 @@ presentations:
     url: https://indico.cern.ch/event/1471803/contributions/6967988/attachments/3283390/5868173/NegWeights_CHEP2026_Hay.pdf
     meeting: CHEP 2026
     meetingurl: https://indico.cern.ch/event/1471803/contributions/6967988/
+  - title: "Resampling Away Negative Weights with Optimal Transport"
+    date: "July 17, 2026"
+    url: https://indico.fnal.gov/event/73553/contributions/344375/attachments/199579/278158/Fermilab_FP_2026_NegWeights.pdf
+    meeting: CHEP 2026
+    meetingurl: https://indico.fnal.gov/event/73553/contributions/344375/
     
 current_status: >
    <br>
@@ -36,6 +41,8 @@ current_status: >
        *   Finalized studies of OT based cell-resampling of negative weights in generic herwig samples.
            *   Presented results at CHEP 2026.
        *   First attempt at training AE for compressing particle candidates.
-           *   Tried MSE and sliced-Wasserstein based loss functions with little success.
-           *   Issue likely lies in structuring the input/masking of the particles -- may have more success with transformer-based model.
+           *   Tried MSE and sliced-Wasserstein based loss functions with some success.
+           *   Still have issues in deconding constituent pT's -- this causes an underestimation of jet mass and pT.
+           *   Likely need to try an alternative architecture
+      *   Began investigating lossy compression implementation in CMSSW and it's physics performance.
 ---
