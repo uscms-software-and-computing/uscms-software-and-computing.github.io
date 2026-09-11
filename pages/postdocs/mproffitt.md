@@ -21,4 +21,27 @@ project_goal: >
 
 mentors:
   - Yongbin Feng (Texas Tech University)
+
+
+current_status: >
+    <br>
+    <b>2026 Q3</b>
+    <br>
+
+    *   Isolated reconstruction step in MLPF performance tests to investigate discrepancy in producer execution time between cases with and without SONIC
+        *   Determined that difference was due to how times are reported for SONIC’s asynchronous mode (difference disappears in synchronous mode)
+    *   Prepared the GitHub branches needed for implementing the MLPF SONIC producer
+    *   Created pull request in FastML fork of CMSSW for review
+        *   Cleaned up code and factored out some common functionality between standard MLPF producer and SONIC version
+
+    <br>
+    <b>2026 Q2</b>
+    <br>
+
+    *   Followed tutorial from Yao to get acquainted with SONIC and CMSSW
+    *   Tested new MLPF model with perf_analyzer and in CMSSW
+        *   Testing with perf_analyzer suggested that performance could be modestly improved with concurrency greater than 1 and with multiple model instances
+        *   CMSSW timing tests showed discrepancy when running with SONIC versus without, to be investigated
+
+
 ---
