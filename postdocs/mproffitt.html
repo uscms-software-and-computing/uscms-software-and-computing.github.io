@@ -196,7 +196,29 @@
 
         <b>Current Status</b>
         <br>
-        
+        <p><br /> <b>2026 Q3</b> <br /></p>
+<ul>
+  <li>Isolated reconstruction step in MLPF performance tests to investigate discrepancy in producer execution time between cases with and without SONIC
+    <ul>
+      <li>Determined that difference was due to how times are reported for SONIC’s asynchronous mode (difference disappears in synchronous mode)</li>
+    </ul>
+  </li>
+  <li>Prepared the GitHub branches needed for implementing the MLPF SONIC producer *   Created pull request in FastML fork of CMSSW for review
+    <ul>
+      <li>Cleaned up code and factored out some common functionality between standard MLPF producer and SONIC version</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2026 Q2</b> <br /></p>
+<ul>
+  <li>Followed tutorial from Yao to get acquainted with SONIC and CMSSW *   Tested new MLPF model with perf_analyzer and in CMSSW
+    <ul>
+      <li>Testing with perf_analyzer suggested that performance could be modestly improved with concurrency greater than 1 and with multiple model instances</li>
+      <li>CMSSW timing tests showed discrepancy when running with SONIC versus without, to be investigated</li>
+    </ul>
+  </li>
+</ul>
 
         <br>
         <br>
