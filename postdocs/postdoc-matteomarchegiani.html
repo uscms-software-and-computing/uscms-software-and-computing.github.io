@@ -192,6 +192,10 @@
         <ul>
           
           
+          <li>1 Sep 2026 - <a href="https://indico.cern.ch/event/1721040/contributions/7240569/attachments/3335528/5976552/26.09.01_ML4reco_merging_comparison.pdf">"Comparison of merging algorithms for MC truth in HGCAL"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1721040/">ML4RECO</a>
+            
+          
+          
           <li>25 May 2026 - <a href="https://indico.cern.ch/event/1471803/contributions/6967243/attachments/3281070/5863445/CHEP-2026_GNN-based_end-to-end_reconstruction_CMS-HGCAL.pdf">"GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter"</a>, Matteo Marchegiani, <a href="https://indico.cern.ch/event/1471803/">CHEP 2026</a>
             
           
@@ -252,7 +256,46 @@
 
         <b>Current Status</b>
         <br>
-        <p><br /> <b>2026 Q2 </b> <br /></p>
+        <p><br /> <b>2026 Q3 </b> <br /></p>
+<ul>
+  <li>Study new alternative ML architectures for HGCAL reconstruction: masked transformers
+    <ul>
+      <li>High-statistics trainings with 10k events at 0 PU using recHits features as input</li>
+      <li>Study of the clustering performance: energy and position resolution</li>
+      <li>Optimization of the model’s architecture: sparse matrix representation of the incidence matrix and reduction of the MaskFormer model dimension</li>
+      <li>Support for multiple (topocluster, particle) collections: (RecHitHGC, SimCluster) for a more granular target, (RecHitHGC, MergedSimCluster) and (LayerCluster, SimCluster) using 2D topoclusters on each HGCAL layer</li>
+      <li>Full training and evaluation with 10k single tau lepton events at 0 PU, with the full set of evaluation plots to diagnose the model’s performance: outstanding angular and position resolution, but poor energy resolution</li>
+      <li>Cross-check training with 10k single photon events at 0 PU to investigate the energy resolution issue</li>
+    </ul>
+  </li>
+  <li>Optimization of the input feature normalization
+    <ul>
+      <li>Refactor input feature normalization code</li>
+      <li>Dedicated normalization for each topocluster collection and each particle target, since RecHitHGC, LayerClusters and SimClusters have different energy distributions</li>
+    </ul>
+  </li>
+  <li>Optimization of the attention mechanism
+    <ul>
+      <li>Study masked attention matrix</li>
+      <li>Optimize attention window size: 64, 128, 256, …</li>
+      <li>Study tradeoff between model’s performance and attention window size</li>
+    </ul>
+  </li>
+  <li>Study of the optimal MC truth definition
+    <ul>
+      <li>Support for both SimClusters and MergedSimClusters as true particle targets</li>
+      <li>Comparison between FineCalo + MergedSimClusters and MergedCaloTruthMergedSimClusters</li>
+      <li>Summary presentation on the comparison of merging algorithms for MC truth in HGCAL at ML4RECO</li>
+    </ul>
+  </li>
+  <li>Upgrade of the simulation pipeline to CMSSW_20_0_0_pre1 and D121 geometry
+    <ul>
+      <li>Save TICLv5 objects, FineCalo, merging and the new MC truth collections</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /> <b>2026 Q2 </b> <br /></p>
 <ul>
   <li>Working on training of GNN model with 200 pileup simulation
     <ul>
