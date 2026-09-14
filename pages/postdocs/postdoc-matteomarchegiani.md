@@ -33,6 +33,11 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf
 
 presentations:
+  - title: Comparison of merging algorithms for MC truth in HGCAL
+    date: September 1, 2026
+    url: https://indico.cern.ch/event/1721040/contributions/7240569/attachments/3335528/5976552/26.09.01_ML4reco_merging_comparison.pdf
+    meeting: ML4RECO
+    meetingurl: https://indico.cern.ch/event/1721040/
   - title: GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter
     date: May 25, 2026
     url: https://indico.cern.ch/event/1471803/contributions/6967243/attachments/3281070/5863445/CHEP-2026_GNN-based_end-to-end_reconstruction_CMS-HGCAL.pdf
@@ -105,6 +110,31 @@ presentations:
     meetingurl: https://indico.cern.ch/event/1569687/
 
 current_status: >
+    <br>
+    <b>2026 Q3 </b>
+    <br>
+
+    *   Study new alternative ML architectures for HGCAL reconstruction: masked transformers
+        *   High-statistics trainings with 10k events at 0 PU using recHits features as input
+        *   Study of the clustering performance: energy and position resolution
+        *   Optimization of the model's architecture: sparse matrix representation of the incidence matrix and reduction of the MaskFormer model dimension
+        *   Support for multiple (topocluster, particle) collections: (RecHitHGC, SimCluster) for a more granular target, (RecHitHGC, MergedSimCluster) and (LayerCluster, SimCluster) using 2D topoclusters on each HGCAL layer
+        *   Full training and evaluation with 10k single tau lepton events at 0 PU, with the full set of evaluation plots to diagnose the model's performance: outstanding angular and position resolution, but poor energy resolution
+        *   Cross-check training with 10k single photon events at 0 PU to investigate the energy resolution issue
+    *   Optimization of the input feature normalization
+        *   Refactor input feature normalization code
+        *   Dedicated normalization for each topocluster collection and each particle target, since RecHitHGC, LayerClusters and SimClusters have different energy distributions
+    *   Optimization of the attention mechanism
+        *   Study masked attention matrix
+        *   Optimize attention window size: 64, 128, 256, ...
+        *   Study tradeoff between model's performance and attention window size
+    *   Study of the optimal MC truth definition
+        *   Support for both SimClusters and MergedSimClusters as true particle targets
+        *   Comparison between FineCalo + MergedSimClusters and MergedCaloTruthMergedSimClusters
+        *   Summary presentation on the comparison of merging algorithms for MC truth in HGCAL at ML4RECO
+    *   Upgrade of the simulation pipeline to CMSSW_20_0_0_pre1 and D121 geometry
+        *   Save TICLv5 objects, FineCalo, merging and the new MC truth collections
+
     <br>
     <b>2026 Q2 </b>
     <br>
