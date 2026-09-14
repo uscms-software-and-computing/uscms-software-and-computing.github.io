@@ -18,6 +18,10 @@ on:
   # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
+concurrency:
+  group: postdoc-freshness-report
+  cancel-in-progress: true
+
 jobs:
   generate-report:
     runs-on: ubuntu-latest
@@ -64,15 +68,19 @@ jobs:
           git ls-files | grep postdoc
       
       - name: Commit report to repo
+        if: github.event_name != 'push'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add pages/reports/postdoc_freshness_report.html \
                   pages/reports/postdoc_freshness_report.pdf
-          # Only commit if something changed
-          git diff --cached --quiet || \
-            git commit -m "chore: quarterly postdoc freshness report [$(date +'%Y-%m-%d')]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: quarterly postdoc freshness report [$(date +'%Y-%m-%d')]"
+          git pull --rebase origin master
+          git push origin HEAD:master
 
       - name: Verify remote
         run: |
