@@ -22,25 +22,35 @@
   .badge-up-to-date { background:#dcfce7; color:#166534; }
   .badge-outdated   { background:#fee2e2; color:#991b1b; }
   .badge-no-commits { background:#fef9c3; color:#854d0e; }
+  .badge-inactive   { background:#e2e8f0; color:#475569; }
+  .grey { color:#94a3b8; }
   .filename { font-family:monospace; font-size:.82rem; }
   .gh-link { color:#3b82f6; text-decoration:none; font-size:.8rem; }
   .gh-link:hover { text-decoration:underline; }
   footer { margin-top:24px; font-size:.78rem; color:#94a3b8; }
+  h2 { font-size:1.15rem; margin:32px 0 10px; display:flex; align-items:center; gap:10px; }
+  h2 .count { font-size:.8rem; font-weight:600; color:#64748b; background:#e2e8f0; border-radius:999px; padding:2px 10px; }
+  .section-note { color:#64748b; font-size:.85rem; margin:-4px 0 10px; }
+  .empty { color:#94a3b8; font-style:italic; padding:12px 0; }
+  .inactive-table td { color:#64748b; }
 </style>
 </head>
 <body>
 <h1>📋 Postdoc Research Update – Freshness Report</h1>
 <p class="subtitle">Repository: <strong>uscms-software-and-computing/uscms-software-and-computing.github.io</strong> &nbsp;|&nbsp; Path: <code>pages/postdocs</code> &nbsp;|&nbsp;
-  Reporting quarter: <strong>Q3 2026</strong> (Jul 01, 2026 – Sep 30, 2026) &nbsp;|&nbsp; Generated: <strong>2026-09-28 23:00 UTC</strong></p>
+  Reporting quarter: <strong>Q3 2026</strong> (Jul 01, 2026 – Sep 30, 2026) &nbsp;|&nbsp; Generated: <strong>2026-09-28 23:08 UTC</strong></p>
 
 <div class="summary">
-  <div class="stat"><div class="num">21</div><div class="label">Total files</div></div>
-  <div class="stat"><div class="num green">7</div><div class="label">Updated in Q3 2026</div></div>
-  <div class="stat"><div class="num red">14</div><div class="label">Not updated in Q3 2026</div></div>
+  <div class="stat"><div class="num">6</div><div class="label">Active postdocs</div></div>
+  <div class="stat"><div class="num green">6</div><div class="label">Updated in Q3 2026</div></div>
+  <div class="stat"><div class="num red">0</div><div class="label">Not updated in Q3 2026</div></div>
   <div class="stat"><div class="num yellow">0</div><div class="label">No commits found</div></div>
+  <div class="stat"><div class="num grey">15</div><div class="label">Inactive (listed below)</div></div>
 </div>
 
-<table>
+<h2>Active postdocs <span class="count">6</span></h2>
+<p class="section-note">Pages with <code>active: true</code>, checked for updates in Q3 2026.</p>
+<table class="active-table">
   <thead>
     <tr>
       <th>#</th>
@@ -114,10 +124,29 @@
       <td><a class="gh-link" href="https://uscms-software-and-computing.github.io/postdocs/dalfonso.html" target="_blank" rel="noopener noreferrer">page ↗</a></td>
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/mdalfonso.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
+  </tbody>
+</table>
+
+<h2>Inactive postdocs <span class="count">15</span></h2>
+<p class="section-note">Pages without <code>active: true</code>. Listed for reference; not counted in the totals above.</p>
+<table class="inactive-table">
+  <thead>
     <tr>
-      <td>7</td>
+      <th>#</th>
+      <th>File</th>
+      <th>Status</th>
+      <th>Last Commit</th>
+      <th>Q3 2026 Commits</th>
+      <th>Total Commits</th>
+      <th>Page</th>
+      <th>Commits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
       <td class="filename">y19y19.md</td>
-      <td><span class="badge badge-up-to-date">✅ Updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2026-07-01</td>
       <td>1</td>
       <td>9</td>
@@ -125,9 +154,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/y19y19.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>2</td>
       <td class="filename">jinzhou.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2026-02-22</td>
       <td>—</td>
       <td>13</td>
@@ -135,9 +164,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/jinzhou.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>9</td>
+      <td>3</td>
       <td class="filename">jgaglione.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2026-01-21</td>
       <td>—</td>
       <td>11</td>
@@ -145,9 +174,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/jgaglione.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>4</td>
       <td class="filename">kmohrman.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2026-01-21</td>
       <td>—</td>
       <td>19</td>
@@ -155,9 +184,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/kmohrman.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>5</td>
       <td class="filename">postdoc-carlosericecid.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2026-01-21</td>
       <td>—</td>
       <td>10</td>
@@ -165,9 +194,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-carlosericecid.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>6</td>
       <td class="filename">NJManganelli.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2025-05-02</td>
       <td>—</td>
       <td>3</td>
@@ -175,9 +204,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/NJManganelli.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>7</td>
       <td class="filename">nsmith-.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2025-05-02</td>
       <td>—</td>
       <td>7</td>
@@ -185,9 +214,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/nsmith-.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>8</td>
       <td class="filename">ozamram.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2025-05-02</td>
       <td>—</td>
       <td>8</td>
@@ -195,9 +224,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/ozamram.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>9</td>
       <td class="filename">postdoc-ruchichudasama.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2025-05-02</td>
       <td>—</td>
       <td>3</td>
@@ -205,9 +234,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-ruchichudasama.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>10</td>
       <td class="filename">postdoc-marksaunders.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2023-08-01</td>
       <td>—</td>
       <td>5</td>
@@ -215,9 +244,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-marksaunders.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>17</td>
+      <td>11</td>
       <td class="filename">postdoc-patrickmccormack.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2023-08-01</td>
       <td>—</td>
       <td>3</td>
@@ -225,9 +254,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-patrickmccormack.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>18</td>
+      <td>12</td>
       <td class="filename">postdoc-savannahthais.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2022-08-12</td>
       <td>—</td>
       <td>6</td>
@@ -235,9 +264,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-savannahthais.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>19</td>
+      <td>13</td>
       <td class="filename">janFSchulte.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2022-08-12</td>
       <td>—</td>
       <td>4</td>
@@ -245,9 +274,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/janFSchulte.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>20</td>
+      <td>14</td>
       <td class="filename">postdoc-matteocremonesi.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2022-08-12</td>
       <td>—</td>
       <td>6</td>
@@ -255,9 +284,9 @@
       <td><a class="gh-link" href="https://github.com/uscms-software-and-computing/uscms-software-and-computing.github.io/commits/master/pages/postdocs/postdoc-matteocremonesi.md" target="_blank" rel="noopener noreferrer">commits ↗</a></td>
     </tr>
     <tr>
-      <td>21</td>
+      <td>15</td>
       <td class="filename">postdoc-davidedicroce.md</td>
-      <td><span class="badge badge-outdated">❌ Not updated</span></td>
+      <td><span class="badge badge-inactive">⏸ Inactive</span></td>
       <td>2022-08-12</td>
       <td>—</td>
       <td>4</td>
@@ -266,6 +295,7 @@
     </tr>
   </tbody>
 </table>
+
 
 <footer>Report generated by postdoc_report.py &nbsp;•&nbsp; Data source: GitHub Commits API</footer>
 </body>
