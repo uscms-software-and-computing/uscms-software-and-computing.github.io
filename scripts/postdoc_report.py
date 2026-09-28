@@ -3,17 +3,20 @@
 Postdoc Research Update Freshness Report
 -----------------------------------------
 Analyzes GitHub commit history for the postdocs directory and reports
-which markdown files were updated during the previous quarter.
-The quarter window is calculated dynamically from today's date.
+which markdown files were updated during the current quarter (default)
+or the previous quarter (--previous). The quarter window is calculated
+dynamically from today's date (UTC).
 
 Usage:
     python postdoc_report.py
     python postdoc_report.py --token YOUR_GITHUB_TOKEN   # for higher rate limits
     python postdoc_report.py --output report.html        # save HTML report
+    python postdoc_report.py --previous                  # report on previous quarter
     python postdoc_report.py --quarter 2025Q4            # override quarter manually
 """
 
 import argparse
+import base64
 import json
 import re
 import sys
@@ -31,23 +34,30 @@ API_BASE    = "https://api.github.com"
 # ─────────────────────────────────────────────────────────────────────────────
 
 
+def quarter_bounds(year, q):
+    """Return (label, start, end) for quarter q (1-4) of the given year."""
+    starts = {1: (1, 1), 2: (4, 1), 3: (7, 1), 4: (10, 1)}
+    ends   = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
+    sm, sd = starts[q]
+    em, ed = ends[q]
+    start = datetime(year, sm, sd, tzinfo=timezone.utc)
+    end   = datetime(year, em, ed, 23, 59, 59, 999999, tzinfo=timezone.utc)
+    return f"Q{q} {year}", start, end
+
+
+def current_quarter(today=None):
+    """Return (label, start, end) for the current calendar quarter."""
+    today = today or datetime.now(tz=timezone.utc)
+    return quarter_bounds(today.year, (today.month - 1) // 3 + 1)
+
+
 def previous_quarter(today=None):
     """Return (label, start, end) for the previous calendar quarter."""
-    if today is None:
-        today = datetime.now(tz=timezone.utc)
-    q = (today.month - 1) // 3 + 1          # current quarter (1-4)
+    today = today or datetime.now(tz=timezone.utc)
+    q = (today.month - 1) // 3 + 1
     if q == 1:
-        pq, year = 4, today.year - 1
-    else:
-        pq, year = q - 1, today.year
-    quarter_starts = {1: (1,1), 2: (4,1), 3: (7,1), 4: (10,1)}
-    quarter_ends   = {1: (3,31), 2: (6,30), 3: (9,30), 4: (12,31)}
-    sm, sd = quarter_starts[pq]
-    em, ed = quarter_ends[pq]
-    start = datetime(year, sm, sd, tzinfo=timezone.utc)
-    end   = datetime(year, em, ed, 23, 59, 59, tzinfo=timezone.utc)
-    label = f"Q{pq} {year}"
-    return label, start, end
+        return quarter_bounds(today.year - 1, 4)
+    return quarter_bounds(today.year, q - 1)
 
 
 def parse_quarter_override(s):
@@ -56,14 +66,7 @@ def parse_quarter_override(s):
     if not m:
         raise argparse.ArgumentTypeError(
             f"Invalid quarter format '{s}'. Use e.g. 2025Q4")
-    year, pq = int(m.group(1)), int(m.group(2))
-    quarter_starts = {1: (1,1), 2: (4,1), 3: (7,1), 4: (10,1)}
-    quarter_ends   = {1: (3,31), 2: (6,30), 3: (9,30), 4: (12,31)}
-    sm, sd = quarter_starts[pq]
-    em, ed = quarter_ends[pq]
-    start = datetime(year, sm, sd, tzinfo=timezone.utc)
-    end   = datetime(year, em, ed, 23, 59, 59, tzinfo=timezone.utc)
-    return f"Q{pq} {year}", start, end
+    return quarter_bounds(int(m.group(1)), int(m.group(2)))
 
 
 def gh_get(url, token=None):
@@ -110,13 +113,12 @@ def list_md_files(token=None):
 
 def get_permalink(filepath, token=None):
     """Fetch file content and extract permalink from YAML front matter."""
-    import base64, re
     url = (f"{API_BASE}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{filepath}"
            f"?ref={BRANCH}")
     try:
         data, _ = gh_get(url, token)
         content = base64.b64decode(data["content"]).decode("utf-8", errors="replace")
-        fm_match = re.match(r"^---\s*\n(.*?)\n---", content, re.DOTALL)
+        fm_match = re.match(r"^---\s*\r?\n(.*?)\r?\n---", content, re.DOTALL)
         if fm_match:
             fm = fm_match.group(1)
             pl_match = re.search(r"^permalink\s*:\s*(.+)$", fm, re.MULTILINE)
@@ -134,7 +136,7 @@ def get_permalink(filepath, token=None):
 def get_file_commits(filepath, token=None):
     """Return all commits that touched a specific file (newest first)."""
     url = (f"{API_BASE}/repos/{REPO_OWNER}/{REPO_NAME}/commits"
-           f"?path={filepath}&sha={BRANCH}&per_page=100")
+           f"?path={urllib.parse.quote(filepath)}&sha={BRANCH}&per_page=100")
     return list(paginate(url, token))
 
 
@@ -163,6 +165,10 @@ def classify(commits, q_start, q_end):
     last = dates[0]
     q_dates = [d for d in dates if q_start <= d <= q_end]
     return last, bool(q_dates), len(q_dates), len(dates)
+
+
+def utc_now_str():
+    return datetime.now(tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
 # ── HTML report ───────────────────────────────────────────────────────────────
@@ -271,7 +277,7 @@ def build_html(results, repo_slug, base_path, quarter, q_start, q_end):
     return HTML_TEMPLATE.format(
         repo=repo_slug, path=base_path, quarter=quarter,
         q_start=q_start.strftime("%b %d, %Y"), q_end=q_end.strftime("%b %d, %Y"),
-        generated=datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+        generated=utc_now_str(),
         total=total, up_to_date=up_to_date, outdated=outdated, no_commits=no_commits,
         rows="\n".join(rows)
     )
@@ -299,7 +305,7 @@ def build_pdf(results, repo_slug, base_path, quarter, q_start, q_end, output_pat
     story.append(Paragraph(
         f"Repo: {repo_slug} &nbsp;|&nbsp; Path: {base_path} &nbsp;|&nbsp; "
         f"Quarter: {quarter} ({q_start.strftime('%b %d, %Y')} – {q_end.strftime('%b %d, %Y')}) "
-        f"&nbsp;|&nbsp; Generated: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}",
+        f"&nbsp;|&nbsp; Generated: {utc_now_str()}",
         sub_style
     ))
 
@@ -392,7 +398,9 @@ def main():
     parser.add_argument("--token",   help="GitHub personal access token")
     parser.add_argument("--output",  default="postdoc_freshness_report.html",
                         help="Output HTML file")
-    parser.add_argument("--quarter", help="Override quarter, e.g. 2025Q4 (default: previous quarter)")
+    parser.add_argument("--quarter", help="Override quarter, e.g. 2025Q4 (default: current quarter)")
+    parser.add_argument("--previous", action="store_true",
+                        help="Report on the previous quarter instead of the current one")
     parser.add_argument("--json",    action="store_true", help="Also write JSON results")
     parser.add_argument("--pdf",     action="store_true", help="Also write a PDF report")
     args = parser.parse_args()
@@ -400,8 +408,10 @@ def main():
     # Resolve quarter window
     if args.quarter:
         quarter, q_start, q_end = parse_quarter_override(args.quarter)
-    else:
+    elif args.previous:
         quarter, q_start, q_end = previous_quarter()
+    else:
+        quarter, q_start, q_end = current_quarter()
 
     token     = args.token
     repo_slug = f"{REPO_OWNER}/{REPO_NAME}"
