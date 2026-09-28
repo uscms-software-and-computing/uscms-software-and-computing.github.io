@@ -66,6 +66,14 @@ presentations:
     date: "Feb 9, 2026"
     url: https://indico.cern.ch/event/1645749/#17-overview-of-ml-in-ticl
     meeting: CMS-Week (HGCAL DPG - Focus on reconstruction)
+  - title: "ML Application in PF"
+    date: "June 5, 2026"
+    url: https://indico.cern.ch/event/1669067/#20-pf
+    meeting: Machine Learning Applications in Reconstruction (workshop)    
+  - title: "MLPF + TICL Updates"
+    date: "Sept 18, 2026"
+    url: https://indico.cern.ch/event/1725357/#3-mlpf-plans-and-timelines
+    meeting: Joint PF+EGM+TICL meeting
 
 
 current_status: >
@@ -104,7 +112,6 @@ current_status: >
     <br>
     <b>2025 Q1 </b>
     <br>
-    
       *   Progress
           *   Identified geometric matching (DeltaR) as the main source of track–trackster linking inefficiency.
           *   Developed a BDT model to dynamically predict optimal DeltaR per track; achieved ~10% efficiency improvement in CMSSW.
@@ -145,4 +152,29 @@ current_status: >
           *   Presented ML-in-TICL summary at CMS Week, TICL meeting, and ML4Reco meeting.
       *   Next Steps
           *   Continue ML maintenance in TICLv5; monitor and optimise models in production.
+	  
+    <br>
+    <b>2026 Q2 </b>
+    <br>
+
+  *   Progress
+      *   Built the Phase-2 MLPF training and validation workflow, including TICL graph production.
+      *   Prepared and validated training samples, moving from particle-gun to realistic ttbar and qcd events.
+      *   Extended the model inputs, including additional features and GSF tracks.
+      *   Started optimizing MLPF training for realistic Phase-2 conditions.
+  *   Next Steps
+      *   Work on the DP note that extending the MLPF(Run3) model studies to high-pileup Phase-2 samples
+
+    <br>
+    <b>2026 Q3 </b>
+    <br>
+
+  *   Progress
+      *   Updated the TICL NanoAOD and validation workflow for MLPF studies.
+      *   Implemented and trained HEPTv2, with promising results and improved performance over Run 3 MLPF.
+      *   Published the DP note and CMS Briefing (CMS-DP-2026-111) on MLPF vs. standard PF in high-pileup 2025 data.
+      *   Started MLPF+TICL integration in CMSSW, with promising initial 0PU results and ongoing work toward high-PU.
+  *   Next Steps
+      *   Optimize the MLPF+TICL integration and extend validation from 0PU to high-PU conditions.
+
 ---
