@@ -9,8 +9,9 @@
 
       <div>
         <br>
-        <center><h1>USCMS Researcher: {{ page.postdoc-name }}</h1>
+        <h1 class="text-center">USCMS Researcher: {{ page.postdoc-name }}</h1>
 
+          <div class="text-center">
           <img src="{{page.photo}}" width="150px">
           <br>
           <br>
@@ -20,7 +21,7 @@
           <b> Home Institution:</b> {{ page.institution }}
           <br>
           <br>
-        </center>
+          </div>
 
         {%- if page.projects -%}
         {%-   assign projects = page.projects -%}
@@ -88,7 +89,7 @@
           {% endif %}
           {% if page.website.size > 4 %}
           <li>
-            <i class="fas fa-link"></i><a href = {{page.website}}> Visit my website</a><br>
+            <i class="fas fa-link"></i><a href="{{ page.website }}"> Visit my website</a><br>
           </li>
           {% endif %}
           {% if page.github-username.size > 4 %}
@@ -115,7 +116,7 @@
       </div>
     </main>
   </div>
-  {% include footer.html %}
+  {% include_cached footer.html %}
 </div>
 
 </body>

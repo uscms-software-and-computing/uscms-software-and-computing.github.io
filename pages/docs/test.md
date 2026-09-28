@@ -3,6 +3,7 @@ permalink: /docs/test.html
 layout: default
 title: Mermaid test
 pagetype: doc
+published: false
 ---
 
 ## Testing Mermaid diagram

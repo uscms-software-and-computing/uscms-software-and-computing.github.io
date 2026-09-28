@@ -6,4 +6,5 @@ photo: "/assets/images/team/Burt_Holzman.jpg"
 shortname: burt
 title: Former HL-LHC R&D Analysis Systems Coordinator
 presentations:
-sub-wbs: 0
+sub-wbs:
+  - 0

@@ -6,4 +6,5 @@ institution: Princeton University
 website: https://dlange.web.cern.ch
 photo: /assets/images/team/David-Lange.png
 presentations:
-sub-wbs: 4
+sub-wbs:
+  - 4

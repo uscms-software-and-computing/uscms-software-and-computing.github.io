@@ -6,4 +6,5 @@ institution: University of Notre Dame
 website: https://physics.nd.edu/people/faculty/kevin-lannon/
 photo: /assets/images/team/Kevin_Lannon.jpeg
 presentations:
-sub-wbs: 0
+sub-wbs:
+  - 0

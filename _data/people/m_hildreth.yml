@@ -7,4 +7,5 @@ shortname: m_hildreth
 title: Former HL-LHC R&D Co-Leader
 website: https://physics.nd.edu/people/faculty/mike-hildreth/
 presentations:
-sub-wbs: 0
+sub-wbs:
+  - 0

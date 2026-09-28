@@ -8,7 +8,7 @@ title: Post-doctoral researcher
 active: True
 dates:
   start: 2025-07-01
-  end: 2026-06-30
+  end: 2027-06-30
 photo: /assets/images/team/Matteo-Marchegiani.jpeg
 institution: Carnegie Mellon University
 e-mail: mmarcheg@andrew.cmu.edu
@@ -16,10 +16,58 @@ project_title: GNN-based End-to-End Reconstruction in the CMS Phase 2 High-Granu
 mentors:
   - Matteo Cremonesi - (Carnegie Mellon University)
 project_goal: >
-  The goal of the project is to develop new machine learning based algorithms for fast and efficient reconstruction of the High-Granularity Calorimeter at the High-Luminosity LHC.
-proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf
+    <br>
+    <b>2026-2027 Transformer-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter</b>
+    <br>
+    Building on the GNN-based reconstruction developed in the first year, the goal of this second project is to study transformer-based architectures, and specifically MaskFormers, as an alternative approach to end-to-end reconstruction in the HGCAL. A transformer with full self-attention is equivalent to a fully-connected message-passing GNN, offering greater expressivity than the local graph connectivity used by GNNs, and masked attention mitigates the quadratic complexity that would otherwise result from attending over the up to 200k hits expected per event at 200 pile-up. The project starts by interfacing the existing HGCAL training datasets with a MaskFormer model, aggregating information from multiple detector hits into composed objects, the topoclusters, to keep the self-attention matrix computationally tractable. The model is then trained with progressively higher pile-up (0, 30, and 200 collisions), monitoring memory and compute costs against the CMS Phase-2 offline processing budget, before its energy, position and time resolution and response are benchmarked against the GNN baseline using the same performance-metric infrastructure developed in the prior award.
+    <br>
+    <a href=/assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf>2026 Project proposal</a>
+    <br>
+    <br>
+    <b>2025-2026 GNN-based End-to-End Reconstruction in the CMS Phase 2 High-Granularity Calorimeter</b>
+    <br>
+    The High-Luminosity LHC (HL-LHC) will deliver up to 200 simultaneous interactions per bunch crossing (pile-up), posing an exceptional challenge for particle-shower reconstruction in the CMS Phase 2 High-Granularity Calorimeter (HGCAL). The goal of this project is to develop Graph Neural Network (GNN) based algorithms for fast and efficient end-to-end reconstruction of particle showers in the HGCAL, capable of meeting this challenge. Building on an existing proof-of-concept model that uses GravConv layers together with the Object Condensation loss function to reconstruct energy clusters from simulated di-tau decays with zero pile-up, the project extends this approach to realistic HL-LHC pile-up conditions. This requires deriving a scalable, pile-up-aware training dataset by combining full-simulation truth information from FineCalo with a dedicated library of minimum-bias events and a merging algorithm that reconciles truth information between the hard-scatter and pile-up interactions, as well as re-engineering and optimizing the Object Condensation loss function to overcome GPU memory limitations at high pile-up and to improve physics performance, exploring alternatives such as the modified differential multiplier method and the influencer loss.
+    <br>
+    <a href=/assets/pdfs/Matteo-Marchegiani_proposal_2025.pdf>2025 Project proposal</a>
+    <br>
+proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf
 
 presentations:
+  - title: Comparison of merging algorithms for MC truth in HGCAL
+    date: September 1, 2026
+    url: https://indico.cern.ch/event/1721040/contributions/7240569/attachments/3335528/5976552/26.09.01_ML4reco_merging_comparison.pdf
+    meeting: ML4RECO
+    meetingurl: https://indico.cern.ch/event/1721040/
+  - title: GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter
+    date: May 25, 2026
+    url: https://indico.cern.ch/event/1471803/contributions/6967243/attachments/3281070/5863445/CHEP-2026_GNN-based_end-to-end_reconstruction_CMS-HGCAL.pdf
+    meeting: CHEP 2026
+    meetingurl: https://indico.cern.ch/event/1471803/
+  - title: GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter
+    date: May 15, 2026
+    url: https://indico.cern.ch/event/1686056/contributions/7087349/attachments/3275631/5853132/GNN-HGCAL-Reconstruction_DP-Note_final.pdf
+    meeting: DPG Plot Approval Meeting
+    meetingurl: https://indico.cern.ch/event/1686056/
+  - title: GNN-based end-to-end reconstruction in the CMS Phase-2 High-Granularity Calorimeter
+    date: May 7, 2026
+    url: https://indico.cern.ch/event/1639406/contributions/7083113/attachments/3270778/5842725/GNN-DP-Note_v0.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639406/
+  - title: HGCAL reconstruction with Graph Neural Networks
+    date: April 23, 2026
+    url: https://indico.cern.ch/event/1639405/sessions/645094/attachments/3262322/5825235/26.04.23_HGCAL_GNN_offline_reconstruction.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639405/
+  - title: HGCAL reconstruction with Graph Neural Networks
+    date: March 26, 2026
+    url: https://indico.cern.ch/event/1639403/contributions/7016065/attachments/3246468/5792247/26.03.26_HGCAL_GNN_offline_reconstruction.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639403/
+  - title: HGCAL simulation with pileup and merging algorithm
+    date: March 24, 2026
+    url: https://indico.cern.ch/event/1667437/contributions/7010124/attachments/3244695/5788733/26.03.24_ML4reco_pileup_simulation.pdf
+    meeting: ML4RECO
+    meetingurl: https://indico.cern.ch/event/1667437/
   - title: Maskformers for offline reconstruction
     date: February 10, 2026
     url: https://indico.cern.ch/event/1649883/contributions/6935005/attachments/3217627/5732543/26.02.10_ML4reco_maskformers_offline.pdf
@@ -62,6 +110,67 @@ presentations:
     meetingurl: https://indico.cern.ch/event/1569687/
 
 current_status: >
+    <br>
+    <b>2026 Q3 </b>
+    <br>
+
+    *   Study new alternative ML architectures for HGCAL reconstruction: masked transformers
+        *   High-statistics trainings with 10k events at 0 PU using recHits features as input
+        *   Study of the clustering performance: energy and position resolution
+        *   Optimization of the model's architecture: sparse matrix representation of the incidence matrix and reduction of the MaskFormer model dimension
+        *   Support for multiple (topocluster, particle) collections: (RecHitHGC, SimCluster) for a more granular target, (RecHitHGC, MergedSimCluster) and (LayerCluster, SimCluster) using 2D topoclusters on each HGCAL layer
+        *   Full training and evaluation with 10k single tau lepton events at 0 PU, with the full set of evaluation plots to diagnose the model's performance: outstanding angular and position resolution, but poor energy resolution
+        *   Cross-check training with 10k single photon events at 0 PU to investigate the energy resolution issue
+    *   Optimization of the input feature normalization
+        *   Refactor input feature normalization code
+        *   Dedicated normalization for each topocluster collection and each particle target, since RecHitHGC, LayerClusters and SimClusters have different energy distributions
+    *   Optimization of the attention mechanism
+        *   Study masked attention matrix
+        *   Optimize attention window size: 64, 128, 256, ...
+        *   Study tradeoff between model's performance and attention window size
+    *   Study of the optimal MC truth definition
+        *   Support for both SimClusters and MergedSimClusters as true particle targets
+        *   Comparison between FineCalo + MergedSimClusters and MergedCaloTruthMergedSimClusters
+        *   Summary presentation on the comparison of merging algorithms for MC truth in HGCAL at ML4RECO
+    *   Upgrade of the simulation pipeline to CMSSW_20_0_0_pre1 and D121 geometry
+        *   Save TICLv5 objects, FineCalo, merging and the new MC truth collections
+
+    <br>
+    <b>2026 Q2 </b>
+    <br>
+
+    *   Working on training of GNN model with 200 pileup simulation
+        *   First training with 30 PU using SimCluster features as input
+    *   Study new alternative ML architectures for HGCAL reconstruction
+        *   Generated large 0 PU dataset with RecHits and TICL objects to train a large model
+        *   New training using recHits features as input on 1000 events: incidence matrix regression and regression of cluster properties
+        *   Optimization of the model's architecture and parameters
+    *   Publication of DP Note on GNN-based HGCAL reconstruction
+        *   GravNet model trained with object condensation loss with 0 PU simulation
+        *   MC truth: CMSSW-native SimClusters
+        *   Presentation at CHEP 2026
+
+    <br>
+    <b>2026 Q1 </b>
+    <br>
+
+    *   Progress on optimized GNN model
+        *   Study impact of pileup on the training of the GNN-based reconstruction algorithm
+        *   GPU Memory profiling of GNN model trained on dataset with 5x more hits
+        *   Integration of CUDA kernels from FastGraphCompute to speed up KNN and object condensation loss
+    *   Working on training of GNN model with 200 pileup simulation
+        *   First HGCAL simulation with FineCalo + merging algorithm in CMSSW_15_1_0
+        *   Simulated 10 single-electron events + 30 PU interactions from minimum bias events
+        *   Implementation of custom NANO step to save true clusters containing SimHits from primary interaction and pileup
+        *   At 30 PU, the average number of RecHits is ~60k, with ~8k true clusters
+        *   Study a dedicated implementation of the merging algorithm which is compatible with pileup
+        *   Study a dedicated pileup mixing library to save the event history for minimum bias events in the merging
+    *   Study new alternative ML architectures for HGCAL reconstruction
+        *   Masked transformers to reduce the quadratic complexity of self-attention
+        *   Generated 0 PU dataset with RecHits and TICL objects: 2D LayerClusters, 3D Tracksters and TICL Candidates
+        *   Computing the incidence matrix between RecHits and true particles using sparse tensor representation
+        *   First proof-of-concept training using recHits features as input: incidence matrix regression and regression of cluster properties
+
     <br>
     <b>2025 Q4 </b>
     <br>

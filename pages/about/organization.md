@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About
-permalink: /about/orgranization.html
+title: People
+permalink: /about/organization.html
 ---
 # People
 

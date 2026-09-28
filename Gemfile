@@ -23,9 +23,7 @@ group :development do
   # Allow running this with rake (especially for rake check)
   gem 'rake', require: false
 
-  # Verify good coding practices in Ruby files
-  # Pinning 1.12.x since 1.13 drops 2.4 support
-  gem 'rubocop', '~>1.12.0', require: false
+  gem 'rubocop', require: false
 
   # Extension for Rake files
   gem 'rubocop-rake', require: false

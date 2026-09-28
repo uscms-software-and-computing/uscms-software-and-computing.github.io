@@ -6,4 +6,5 @@ institution: Princeton University
 website:
 photo: /assets/images/team/Robert-Tuck.jpg
 presentations:
-sub-wbs: 0
+sub-wbs:
+  - 0

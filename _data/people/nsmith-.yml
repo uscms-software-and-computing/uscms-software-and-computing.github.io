@@ -6,4 +6,5 @@ shortname: nsmith-
 title: U.S. CMS Fermilab Facility Architect
 website:
 presentations:
-sub-wbs: 2
+sub-wbs:
+  - 2
