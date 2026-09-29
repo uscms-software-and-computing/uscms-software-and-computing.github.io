@@ -29,6 +29,12 @@ presentations:
 
 current_status: >
     <br>
+    <b>2026 Q3 </b>
+    <br>
+      
+      * Significant progress has been made over the last quarter on tape archive metadata and data collocation. Data access patterns in CMS production workflows during 2025–2026 were analyzed, and methods for grouping datasets based on these access patterns were studied. A new tape archive metadata schema was developed to optimize data layout on tape and improve tape recall performance. The physical locations of files on FNAL tapes were also obtained, enabling us to quantify the impact of data collocation on tape recall throughput.
+
+    <br>
     <b>2026 Q2 </b>
     <br>
 
