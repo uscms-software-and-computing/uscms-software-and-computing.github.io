@@ -33,6 +33,11 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf
 
 presentations:
+  - title: Usage of machine learning in HGCAL reconstruction
+    date: September 23, 2026
+    url: https://indico.cern.ch/event/1704277/contributions/7168159/attachments/3348372/6002985/26.09.23_Phase2_SDays_HGCAL_ML_reconstruction.pdf
+    meeting: Phase-2 Software Days
+    meetingurl: https://indico.cern.ch/event/1704277/
   - title: Comparison of merging algorithms for MC truth in HGCAL
     date: September 1, 2026
     url: https://indico.cern.ch/event/1721040/contributions/7240569/attachments/3335528/5976552/26.09.01_ML4reco_merging_comparison.pdf
