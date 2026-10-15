@@ -33,6 +33,11 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf
 
 presentations:
+  - title: PID and regression with maskformers in TICL
+    date: October 15, 2026
+    url: https://indico.cern.ch/event/1639393/sessions/645083/attachments/3362901/6033623/26.10.15_TICL_PID_and_regression_with_maskformers-2.pdf
+    meeting: TICL Reconstruction Working Meeting
+    meetingurl: https://indico.cern.ch/event/1639393/
   - title: Usage of machine learning in HGCAL reconstruction
     date: September 23, 2026
     url: https://indico.cern.ch/event/1704277/contributions/7168159/attachments/3348372/6002985/26.09.23_Phase2_SDays_HGCAL_ML_reconstruction.pdf
