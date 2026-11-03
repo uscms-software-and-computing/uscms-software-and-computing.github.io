@@ -33,6 +33,16 @@ project_goal: >
 proposal: /assets/pdfs/Matteo-Marchegiani_proposal_2026.pdf
 
 presentations:
+  - title: Study of overlapping showers in HGCAL
+    date: November 3, 2026
+    url: https://indico.cern.ch/event/1747570/contributions/7345521/attachments/3374536/6057818/overlapping_shower_study.pdf
+    meeting: ML4RECO
+    meetingurl: https://indico.cern.ch/event/1747570/
+  - title: Pileup removal from tracksters with MaskFormers
+    date: October 27, 2026
+    url: https://indico.cern.ch/event/1731397/contributions/7280151/attachments/3372682/6053643/Final%20Scrum%20-%20Day%205.pdf
+    meeting: 22nd Patatrack Hackathon
+    meetingurl: https://indico.cern.ch/event/1731397/
   - title: PID and regression with maskformers in TICL
     date: October 15, 2026
     url: https://indico.cern.ch/event/1639393/sessions/645083/attachments/3362901/6033623/26.10.15_TICL_PID_and_regression_with_maskformers-2.pdf
