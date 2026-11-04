@@ -29,20 +29,29 @@ presentations:
   - title: "Resampling Away Negative Weights with Optimal Transport"
     date: "July 17, 2026"
     url: https://indico.fnal.gov/event/73553/contributions/344375/attachments/199579/278158/Fermilab_FP_2026_NegWeights.pdf
-    meeting: CHEP 2026
+    meeting: Fermilab New Perspectives
     meetingurl: https://indico.fnal.gov/event/73553/contributions/344375/
-    
+  - title: "Understanding Data Reduction for Jets with Optimal Transport"
+    dat: "July 23, 2026"
+    url: https://indico.fnal.gov/event/72820/contributions/343314/
+    meeting: APS Division of Particles and Fields
+    meetingurl: https://indico.fnal.gov/event/72820/
 current_status: >
    <br>
    <b>2026 Q2 </b>
    <br>
 
-   *   Progress
-       *   Finalized studies of OT based cell-resampling of negative weights in generic herwig samples.
-           *   Presented results at CHEP 2026.
-       *   First attempt at training AE for compressing particle candidates.
-           *   Tried MSE and sliced-Wasserstein based loss functions with some success.
-           *   Still have issues in deconding constituent pT's -- this causes an underestimation of jet mass and pT.
-           *   Likely need to try an alternative architecture
-      *   Began investigating lossy compression implementation in CMSSW and it's physics performance.
+   *   Finalized studies of OT based cell-resampling of negative weights in generic herwig samples.
+       *   Presented results at CHEP 2026.
+   *   First attempt at training AE for compressing particle candidates.
+       *   Tried MSE and sliced-Wasserstein based loss functions with some success.
+       *   Still have issues in deconding constituent pT's -- this causes an underestimation of jet mass and pT.
+       *   Likely need to try an alternative architecture
+   *   Began investigating lossy compression implementation in CMSSW and it's physics performance.
+
+   <br>
+   <b>2026 Q3 </b>
+   <br>
+
+   *   Implemented cell-resampling afterburner in personal CMSSW fork and began evaluation performance on CMS MC samples.   
 ---
